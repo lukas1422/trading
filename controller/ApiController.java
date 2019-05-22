@@ -323,6 +323,7 @@ public class ApiController implements EWrapper {
     }
 
     private boolean isConnected() {
+        //return m_connectionHandler.
         return m_connected;
     }
 
@@ -400,10 +401,10 @@ public class ApiController implements EWrapper {
     }
 
     public void reqPositions(IPositionHandler handler) {
-//        if (!checkConnection()) {
-//            pr("not connected ");
-//            return;
-//        }
+        if (!checkConnection()) {
+            pr("not connected ");
+            return;
+        }
 
         m_positionHandlers.add(handler);
         m_client.reqPositions();
@@ -668,6 +669,7 @@ public class ApiController implements EWrapper {
     @Override
     public void tickGeneric(int reqId, int tickType, double value) {
         IBDataHandler.tickGeneric(reqId, tickType, value);
+
         ITopMktDataHandler handler = m_topMktDataMap.get(reqId);
         if (handler != null) {
             handler.tickPrice(TickType.get(tickType), value, new TickAttrib());
@@ -1284,6 +1286,7 @@ public class ApiController implements EWrapper {
     }
 
     public void setConnected() {
+        pr(" apicontroller set connected true");
         m_connected = true;
     }
 

@@ -1,1292 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89ead1a1-7ff5-4e91-9d68-12c25b28bac3" name="Default Changelist" comment="522 tradingmain2 first commit">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/antlr_2_7_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_math3_3_6_1_javadoc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/derby.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API_VersionNum.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoTraderOld/AutoOrderDefaultHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoTraderOld/AutoTraderMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoTraderOld/AutoTraderXU.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoTraderOld/GuaranteeXUHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoTraderOld/InventoryOrderHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoTraderOld/XuTraderHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DevTrader/BreachMonitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DevTrader/BreachTrader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DevTrader/DevUSNamesAdder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DevTrader/GuaranteeDevHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DevTrader/PatientDevHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IBJts.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/AccountDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/AccountSummary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/AcctUpdatesDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/AlgoParamsDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/ComboLegDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/ConnectDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/DeltaNeutralContractDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/ExecFilterDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/ExtOrdDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/FAAllocationInfoDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/FinancialAdvisorDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/GroupsDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/HistoricalDataDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/HistoricalNewsDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/IBGridBagPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/IBTextPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/JDialogBox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/LogConfigDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/MarketRuleDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/MktDepthDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/NewsArticleDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/NewsBulletinDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/OrderDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/PnLDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/PnLSingleDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/PositionsDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/SampleFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/ScannerDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/SecDefOptParamsReqDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/SmartComboRoutingParamsDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestJavaClient/SmartComponentsParamsReqDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeType/FutureTrade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeType/IBStockTrade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeType/MAIdea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeType/MarginTrade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeType/NormalTrade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeType/Trade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TradeType/TradeBlock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/CNHHKDLive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaBigGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaCompute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaDataMapYtd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaDataYesterday.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaFut.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaGraphIndustry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaIdeaTimeCompute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaIndex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaKeyMonitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaOption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaOptionHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaPosition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaSizeData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaSizeDataDifferenced.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaSizeDataYtd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaSizeRatio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaStock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ChinaStockHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ControllerCalls.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/CurrencyArb.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/IBDataHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/IBStockTrader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/IConnectionConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/MorningTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/OrderAugmented.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/QuarterHour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/Shcomp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/SinaStock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/TradingConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/USOvernightTrader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/USStock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/XU.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/AccountInfoPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/AccountPositionsMultiPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/AccountSummaryPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/AdjustedPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/AdvisorPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/ApiDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/Chart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/ComboPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/CompletedOrdersPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/ConditionDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/ConditionsModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/ConditionsPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/ContractConditionPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/ContractDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/ContractInfoPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/ContractLookupButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/ContractPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/ContractSearchDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/ExercisePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/FamilyCodesPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/Histogram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/HistoricalTickBidAskModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/HistoricalTickLastModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/HistoricalTickModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/HistoricalTickResultsPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/MarginConditionPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/MarketDataPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/MarketValueSummaryPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/MktDepthExchangesPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/NewsPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/OnOKPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/OperatorConditionPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/OptParamsModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/OptionChainsPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/OptionsPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/OrdersPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/PegBenchPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/PercentConditionPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/PnLModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/PnLSingleModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/PositionsPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/PriceConditionPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/StratPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/TickByTickModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/TickByTickResultsPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/TicketDlg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/TimeConditionPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/TopModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/TradeConditionPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/TradesPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/TradingPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apidemo/VolumeConditionPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auxiliary/Bench.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auxiliary/Chart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auxiliary/ChinaBidAskData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auxiliary/ChinaBidAskGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auxiliary/ChinaIdeaCompute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auxiliary/ChinaIdeaPMCompute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auxiliary/ChinaStrategyTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auxiliary/Dividends.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auxiliary/FTXIN9.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auxiliary/IdeaProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auxiliary/IdeaProcessorJolt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auxiliary/IdeaProcessorPM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auxiliary/SimpleBar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auxiliary/Strategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auxiliary/TestProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auxiliary/Trait.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auxiliary/VolBar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/Bar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/BitMask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/Builder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/ComboLeg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/CommissionReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/Contract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/ContractCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/ContractDescription.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/ContractDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/ContractLookuper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/DefaultEWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/DeltaNeutralContract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/DepthMktDataDescription.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/EClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/EClientErrors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/EClientMsgSink.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/EClientSocket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/EClientSocketSSL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/EDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/EJavaSignal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/EMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/EOrderDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/EReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/EReaderSignal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/ESocket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/ETransport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/EWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/EWrapperMsgGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/Execution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/ExecutionCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/ExecutionFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/FamilyCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/HistogramEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/HistoricalTick.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/HistoricalTickBidAsk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/HistoricalTickLast.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/IApiEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/MarginCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/MarketDataType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/NewsProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/OperatorCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/OrderComboLeg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/OrderCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/OrderConditionType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/OrderState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/OrderStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/OrderType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/PercentChangeCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/PriceCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/PriceIncrement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/ScannerSubscription.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/SoftDollarTier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/TagValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/TickAttrib.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/TickAttribBidAsk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/TickAttribLast.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/TickByTick.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/TickType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/TimeCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/Types.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/VolumeCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts/ComboContract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts/FutContract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts/OptContract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts/StkContract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/AccountSummaryTag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/AdvisorUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/Alias.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/ApiConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/ApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/Bar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/ConcurrentHashSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/Formats.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/Group.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/Instrument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/LocationCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/MarketValueTag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/Position.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/Profile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/ScanCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/TradeId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enums/AutoOrderType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enums/Currency.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enums/Direction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enums/Eagerness.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enums/FutType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enums/HalfHour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enums/IND.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enums/MASentiment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enums/MinuteHour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/DisplayGranularity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/Graph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphBar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphBarGen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphBarTemporal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphBidAsk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphBig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphBigIndex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphBigYtd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphChinaFut.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphChinaPnl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphFillable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphIndustry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphMonitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphMonitorFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphMonitorLDT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphOptionIntraday.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphOptionLapse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphOptionVol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphOptionVolDiff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphPnl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphSize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphXU.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphXUSI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/GraphXuTrader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graph/graphFutRoll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/GeneralHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/HistDataConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/HistoricalHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/IBPositionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/IBTradesHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/LiveHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/SGXFutureReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/SGXPositionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/XUOvernightTradeExecHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hibernate.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/historical/HistChinaHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/historical/HistChinaStocks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/historical/Request.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/libraries/antlr_2_7_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/libraries/commons_math3_3_6_1_javadoc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/libraries/derby.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/API_VersionNum.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/AutoTraderOld/AutoOrderDefaultHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/AutoTraderOld/AutoTraderMain$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/AutoTraderOld/AutoTraderMain$BarModel_AUTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/AutoTraderOld/AutoTraderMain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/AutoTraderOld/AutoTraderXU$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/AutoTraderOld/AutoTraderXU$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/AutoTraderOld/AutoTraderXU$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/AutoTraderOld/AutoTraderXU$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/AutoTraderOld/AutoTraderXU$5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/AutoTraderOld/AutoTraderXU.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/AutoTraderOld/GuaranteeXUHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/AutoTraderOld/InventoryOrderHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/AutoTraderOld/XuTraderHelper$XUConnectionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/AutoTraderOld/XuTraderHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachMonitor$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachMonitor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/DevUSNamesAdder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/GuaranteeDevHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/PatientDevHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/IBJts.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/AccountDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/AccountSummary.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/AcctUpdatesDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/AcctValueModel$AccountTableRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/AcctValueModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/AlgoParamModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/AlgoParamsDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/ComboLegDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/ComboLegModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/ConnectDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/DeltaNeutralContractDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/ExecFilterDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/ExtOrdDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/FAAllocationInfoDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/FinancialAdvisorDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/GroupsDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/HistoricalDataDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/HistoricalNewsDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/IBGridBagPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/IBTextPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/JDialogBox.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/LogConfigDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/MarketRuleDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/MktDepthDlg$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/MktDepthDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/MktDepthModel$MktDepthTableRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/MktDepthModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/NewsArticleDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/NewsBulletinDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/OrderDlg$CallableWithParam.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/OrderDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/PnLDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/PnLSingleDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/PortfolioTable$PortfolioTableRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/PortfolioTable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/PositionsDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/SampleFrame$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/SampleFrame$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/SampleFrame$BtnPairSlot.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/SampleFrame$ContractDetailsCallback.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/SampleFrame.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/ScannerDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/SecDefOptParamsReqDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/SmartComboRoutingParamModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/SmartComboRoutingParamsDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TestJavaClient/SmartComponentsParamsReqDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TradeType/FutureTrade.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TradeType/IBStockTrade.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TradeType/MAIdea.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TradeType/MarginTrade.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TradeType/NormalTrade.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TradeType/Trade.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/TradeType/TradeBlock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/CNHHKDLive$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/CNHHKDLive$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/CNHHKDLive$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/CNHHKDLive.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/CallOption.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/CallPutFlag.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaBigGraph$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaBigGraph$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaBigGraph$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaBigGraph.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaCompute.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaData$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaData$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaData$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaData$BarModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaDataMapYtd$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaDataMapYtd$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaDataMapYtd$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaDataMapYtd$BarModel_YTD.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaDataMapYtd.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaDataYesterday$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaDataYesterday$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaDataYesterday$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaDataYesterday$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaDataYesterday$BarModel_YTD.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaDataYesterday.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaFut$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaFut$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaFut$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaFut$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaFut$5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaFut$6.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaFut.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaGraphIndustry$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaGraphIndustry$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaGraphIndustry$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaGraphIndustry$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaGraphIndustry$LINKEDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaGraphIndustry.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaIdeaTimeCompute.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaIndex$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaIndex$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaIndex$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaIndex$BarModel_INDEX.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaIndex.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor$10.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor$11.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor$12.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor$13.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor$14.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor$15.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor$16.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor$17.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor$18.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor$19.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor$5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor$6.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor$7.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor$8.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor$9.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaKeyMonitor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaMain$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaMain$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaMain$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaMain$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaMain$ChinaMainHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaMain$ConnectionPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaMain$ConnectionPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaMain$ConnectionPanel$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaMain$ConnectionPanel$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaMain$ConnectionPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaMain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaOption$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaOption$10.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaOption$11.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaOption$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaOption$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaOption$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaOption$5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaOption$6.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaOption$7.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaOption$8.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaOption$9.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaOption$OptionTableModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaOption.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaOptionHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaPosition$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaPosition$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaPosition$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaPosition$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaPosition$BarModel_POS.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaPosition$UpdateFrequency.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaPosition.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaPositionHistHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaSizeData$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaSizeData$BarModel_Size.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaSizeData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaSizeDataDifferenced$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaSizeDataDifferenced$BarModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaSizeDataDifferenced.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaSizeDataYtd$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaSizeDataYtd$BarModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaSizeDataYtd.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaSizeRatio$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaSizeRatio$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaSizeRatio$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaSizeRatio$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaSizeRatio$5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaSizeRatio$6.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaSizeRatio$7.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaSizeRatio$8.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaSizeRatio$BarModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaSizeRatio.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaStock$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaStock$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaStock$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaStock$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaStock$5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaStock$BarModel_STOCK.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaStock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaStockHelper$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaStockHelper$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ChinaStockHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/ControllerCalls.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/CurrencyArb.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/IBDataHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/IBPosTradesHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/IBStockTrader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/IConnectionConfiguration$DefaultConnectionConfiguration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/IConnectionConfiguration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/MorningTask.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/Option.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/OrderAugmented.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/PutOption.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/QuarterHour.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/SharpePeriod.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/Shcomp$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/Shcomp$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/Shcomp$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/Shcomp$BarModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/Shcomp$Prob.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/Shcomp$ShcompSave.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/Shcomp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/SinaStock$BidAsk.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/SinaStock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/TradingConstants.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/USConnectionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/USLiveOrderHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/USOrderHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/USOvernightTrader$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/USOvernightTrader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/USPositionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/USStock$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/USStock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/USTradeDefaultHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/WhatToDisplay.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/XU$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/XU$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/XU$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/XU$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/XU$5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/XU$6.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/XU$7.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/XU$8.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/XU$9.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/XU$BarModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/XU.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/api/YQM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel$MarginModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel$MarginRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel$MarginRowKey.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel$MktValModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel$MktValRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel$PortfolioModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel$Table.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$AccountUpdateKey.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$AccountUpdateRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$AccountUpdatesMultiPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$AccountUpdatesMultiPanel$AccountUpdatesResultsPanel$AccountUpdatesModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$AccountUpdatesMultiPanel$AccountUpdatesResultsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$AccountUpdatesMultiPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$PositionRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$PositionsMultiPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$PositionsMultiPanel$PositionsResultsPanel$PositionsModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$PositionsMultiPanel$PositionsResultsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$PositionsMultiPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$RequestPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountSummaryPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountSummaryPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountSummaryPanel$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountSummaryPanel$SummaryModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountSummaryPanel$SummaryRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountSummaryPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AdjustedPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AdvisorPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AdvisorPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AdvisorPanel$AliasModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AdvisorPanel$GroupModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AdvisorPanel$GroupsPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AdvisorPanel$GroupsPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AdvisorPanel$GroupsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AdvisorPanel$ProfileModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AdvisorPanel$ProfilesPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AdvisorPanel$ProfilesPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AdvisorPanel$ProfilesPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AdvisorPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ApiDemo$ConnectionPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ApiDemo$ConnectionPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ApiDemo$ConnectionPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ApiDemo$Logger.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ApiDemo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/Chart.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$EfpPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$EfpPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$EfpPanel$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$EfpPanel$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$EfpPanel$EfpModel$EfpRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$EfpPanel$EfpModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$EfpPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$LegModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$LegRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$SpreadsPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$SpreadsPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$SpreadsPanel$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$SpreadsPanel$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$SpreadsPanel$5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$SpreadsPanel$ComboContractPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$SpreadsPanel$DnPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$SpreadsPanel$DnPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel$SpreadsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ComboPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/CompletedOrdersPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/CompletedOrdersPanel$CompletedOrder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/CompletedOrdersPanel$Model.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/CompletedOrdersPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ConditionDlg$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ConditionDlg$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ConditionDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ConditionsModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ConditionsPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ConditionsPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ConditionsPanel$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ConditionsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractConditionPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractConditionPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractDlg$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractDlg$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractInfoPanel$DetailsRequestPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractInfoPanel$DetailsRequestPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractInfoPanel$DetailsResultsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractInfoPanel$FundaRequestPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractInfoPanel$FundaRequestPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractInfoPanel$FundaResultPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractInfoPanel$FundaResultPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractInfoPanel$MarketRuleRequestPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractInfoPanel$MarketRuleRequestPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractInfoPanel$MarketRuleResultsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractInfoPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractLookupButton.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractSearchDlg$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractSearchDlg$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ContractSearchDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ExercisePanel$ExPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ExercisePanel$ExPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/ExercisePanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/FamilyCodesPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/FamilyCodesPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/FamilyCodesPanel$FamilyCodeRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/FamilyCodesPanel$FamilyCodesModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/FamilyCodesPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/Histogram.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/HistoricalTickBidAskModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/HistoricalTickLastModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/HistoricalTickModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/HistoricalTickResultsPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/HistoricalTickResultsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarginConditionPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$BarResultsPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$BarResultsPanel$BarModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$BarResultsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$DeepRequestPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$DeepRequestPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$DeepResultsPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$DeepResultsPanel$DeepModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$DeepResultsPanel$DeepRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$DeepResultsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$HistRequestPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$HistRequestPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$HistRequestPanel$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$HistRequestPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$HistogramResultsPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$HistogramResultsPanel$HistogramModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$HistogramResultsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$HtsResultsPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$HtsResultsPanel$BarModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$HtsResultsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$PnLPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$PnLPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$PnLPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$PnLResultsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$RealtimeRequestPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$RealtimeRequestPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$RealtimeRequestPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$RequestMatchingSymbolsPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$RequestMatchingSymbolsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$RequestSmartComponentsPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$RequestSmartComponentsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$ScannerRequestPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$ScannerRequestPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$ScannerRequestPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$ScannerResultsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$SecDefOptParamsPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$SecDefOptParamsPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$SecDefOptParamsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$SecDefOptParamsReqResultsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$SmartComponentsResPanel$SmartComponentsModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$SmartComponentsResPanel$SmartComponentsRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$SmartComponentsResPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$SymbolSamplesPanel$SymbolSamplesModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$SymbolSamplesPanel$SymbolSamplesRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$SymbolSamplesPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$TickByTickRequestPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$TickByTickRequestPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$TopRequestPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$TopRequestPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$TopRequestPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$TopResultsPanel$TopTable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel$TopResultsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketDataPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketValueSummaryPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketValueSummaryPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MarketValueSummaryPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MktDepthExchangesPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MktDepthExchangesPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MktDepthExchangesPanel$DepthMktDataDescriptionRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MktDepthExchangesPanel$MktDepthExchangesModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/MktDepthExchangesPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel$HistoricalNewsRequestPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel$HistoricalNewsRequestPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel$HistoricalNewsResultsPanel$HistoricalNewsModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel$HistoricalNewsResultsPanel$HistoricalNewsRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel$HistoricalNewsResultsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel$NewsArticleRequestPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel$NewsArticleRequestPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel$NewsArticleResultsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel$NewsProvidersPanel$NewsProvidersModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel$NewsProvidersPanel$NewsProvidersRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel$NewsProvidersPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel$NewsTicksRequestPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel$NewsTicksRequestPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel$NewsTicksResultsPanel$NewsTickRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel$NewsTicksResultsPanel$NewsTicksModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel$NewsTicksResultsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel$RequestNewsProvidersPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel$RequestNewsProvidersPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel$RequestPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/NewsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OnOKPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OperatorConditionPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OptParamsModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OptionChainsPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OptionChainsPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OptionChainsPanel$ChainPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OptionChainsPanel$ChainPanel$ChainModel$ChainRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OptionChainsPanel$ChainPanel$ChainModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OptionChainsPanel$ChainPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OptionChainsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OptionsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OrdersPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OrdersPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OrdersPanel$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OrdersPanel$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OrdersPanel$5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OrdersPanel$6.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OrdersPanel$7.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OrdersPanel$8.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OrdersPanel$9.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OrdersPanel$Key.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OrdersPanel$OrderRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OrdersPanel$OrdersModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/OrdersPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/PegBenchPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/PegBenchPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/PercentConditionPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/PnLModel$PnLItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/PnLModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/PnLSingleModel$Row.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/PnLSingleModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/PositionsPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/PositionsPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/PositionsPanel$PositionKey.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/PositionsPanel$PositionModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/PositionsPanel$PositionRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/PositionsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/PriceConditionPanel$Method.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/PriceConditionPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/StratPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/StratPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/StratPanel$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/StratPanel$HPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/StratPanel$QueryLength.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/StratPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/Test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TickByTickModel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TickByTickModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TickByTickResultsPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TickByTickResultsPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TicketDlg$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TicketDlg$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TicketDlg$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TicketDlg$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TicketDlg$5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TicketDlg$AdvisorTicketPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TicketDlg$AlgoPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TicketDlg$AmntUnit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TicketDlg$ComboTicketPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TicketDlg$MiscTicketPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TicketDlg$OrderPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TicketDlg$ScalePanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TicketDlg$VolatilityTicketPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TicketDlg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TimeConditionPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TopModel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TopModel$TopRow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TopModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TradeConditionPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TradesPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TradesPanel$FullExec.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TradesPanel$Model.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TradesPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/TradingPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/VolumeConditionPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/Bench.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/Chart.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/ChinaBidAskData$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/ChinaBidAskData$BarModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/ChinaBidAskData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/ChinaBidAskGraph$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/ChinaBidAskGraph.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/ChinaIdeaCompute.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/ChinaIdeaPMCompute.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/ChinaStrategyTable$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/ChinaStrategyTable$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/ChinaStrategyTable$BarModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/ChinaStrategyTable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/Dividends.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/FTXIN9.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$10.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$11.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$12.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$13.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$14.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$15.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$16.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$17.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$18.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$19.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$6.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$7.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$8.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$9.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$Idea.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor$STRATTYPE.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt$10.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt$11.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt$12.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt$13.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt$14.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt$15.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt$16.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt$17.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt$18.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt$19.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt$5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt$6.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt$7.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt$8.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt$9.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorJolt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM$10.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM$11.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM$12.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM$13.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM$14.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM$15.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM$16.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM$17.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM$18.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM$19.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM$5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM$6.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM$7.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM$8.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM$9.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/IdeaProcessorPM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/SimpleBar.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/Strategy$StratType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/Strategy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/TestProxy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/Trait.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/VolBar$LEVEL.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/auxiliary/VolBar.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Bar.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/BitMask.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Builder$ByteBuffer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Builder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/ComboLeg$OpenClose.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/ComboLeg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/CommissionReport.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Contract.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/ContractCondition.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/ContractDescription.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/ContractDetails.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/ContractLookuper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/DefaultEWrapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/DeltaNeutralContract.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/DepthMktDataDescription.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/EClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/EClientErrors$CodeMsgPair.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/EClientErrors.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/EClientMsgSink.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/EClientSocket.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/EClientSocketSSL$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/EClientSocketSSL$DefaultTrustManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/EClientSocketSSL.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/EDecoder$IMessageReader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/EDecoder$PreV100MessageReader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/EDecoder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/EJavaSignal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/EMessage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/EOrderDecoder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/EReader$InvalidMessageLengthException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/EReader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/EReaderSignal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/ESocket.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/ETransport.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/EWrapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/EWrapperMsgGenerator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Execution.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/ExecutionCondition.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/ExecutionFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/FamilyCode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/HistogramEntry.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/HistoricalTick.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/HistoricalTickBidAsk.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/HistoricalTickLast.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/IApiEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Liquidities.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/MarginCondition.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/MarketDataType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/NewsProvider.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/OperatorCondition.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Order.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/OrderComboLeg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/OrderCondition$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/OrderCondition.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/OrderConditionType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/OrderState.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/OrderStatus.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/OrderType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/PercentChangeCondition.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/PriceCondition.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/PriceIncrement.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/ScannerSubscription.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/SoftDollarTier.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/TagValue.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/TickAttrib.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/TickAttribBidAsk.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/TickAttribLast.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/TickByTick.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/TickType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/TimeCondition.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$Action.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$AlgoParam.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$AlgoStrategy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$BarSize.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$ComboParam.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$DeepSide.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$DeepType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$DurationUnit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$ExerciseType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$FADataType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$FundamentalType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$HedgeType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$Method.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$MktDataType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$NewsType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$OcaType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$ReferencePriceType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$Right.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$Rule80A.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$SecIdType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$SecType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$TickByTickType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$TimeInForce.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$TriggerMethod.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$UsePriceMgmtAlgo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$VolatilityType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types$WhatToShow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Types.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Util$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/Util.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/client/VolumeCondition.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/contracts/ComboContract.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/contracts/FutContract.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/contracts/OptContract.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/contracts/StkContract.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/AccountSummaryTag.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/AdvisorUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/Alias.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiConnection$ILogger.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiConnection.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IAccountHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IAccountSummaryHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IAccountUpdateMultiHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IAdvisorHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IBulletinHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$ICompletedOrdersHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IConnectionHandler$DefaultConnectionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IConnectionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IContractDetailsHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IDeepMktDataHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IEfpHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IFamilyCodesHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IFundamentalsHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IHeadTimestampHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IHistogramDataHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IHistoricalDataHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IHistoricalNewsHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IHistoricalTickHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IInternalHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$ILiveOrderHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IMarketRuleHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IMarketValueSummaryHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IMktDepthExchangesHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$INewsArticleHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$INewsProvidersHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IOptHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IOrderHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IPnLHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IPnLSingleHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IPositionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IPositionMultiHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IRealTimeBarHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$IScannerHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$ISecDefOptParamsReqHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$ISmartComponentsHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$ISoftDollarTiersReqHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$ISymbolSamplesHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$ITickByTickDataHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$ITickNewsHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$ITimeHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$ITopMktDataHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$ITradeReportHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$TopMktDataAdapter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/Bar.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ConcurrentHashSet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/Formats.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/Group.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/Instrument.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/LocationCode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/MarketValueTag.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/Position.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/Profile$Allocation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/Profile$Type.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/Profile.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ScanCode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/controller/TradeId.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/enums/AutoOrderType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/enums/Currency.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/enums/Direction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/enums/Eagerness.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/enums/FutType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/enums/HalfHour.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/enums/IND.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/enums/MASentiment.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/enums/MinuteHour.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/DisplayGranularity.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/Graph.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphBar.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphBarGen.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphBarTemporal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphBidAsk.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphBig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphBigIndex.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphBigYtd.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphChinaFut.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphChinaPnl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphFillable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphIndustry.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphMonitor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphMonitorFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphMonitorLDT.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphOptionIntraday.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphOptionLapse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphOptionVol.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphOptionVolDiff.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphPnl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphSize.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphXU.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphXUSI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/GraphXuTrader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/graph/graphFutRoll.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/handler/GeneralHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/handler/HistDataConsumer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/handler/HistoricalHandler$DefaultHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/handler/HistoricalHandler$DefaultHistHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/handler/HistoricalHandler$TodayHistHandle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/handler/HistoricalHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/handler/IBPositionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/handler/IBTradesHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/handler/LiveHandler$DefaultLiveHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/handler/LiveHandler$PriceMapUpdater.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/handler/LiveHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/handler/SGXFutureReceiver$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/handler/SGXFutureReceiver.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/handler/SGXPositionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/handler/XUOvernightTradeExecHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/hibernate.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/historical/HistChinaHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/historical/HistChinaStocks$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/historical/HistChinaStocks$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/historical/HistChinaStocks$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/historical/HistChinaStocks$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/historical/HistChinaStocks$5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/historical/HistChinaStocks$6.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/historical/HistChinaStocks$BarModel_China.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/historical/HistChinaStocks$ChinaResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/historical/HistChinaStocks.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/historical/Request.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/samples/Java/ApiDemo.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/samples/dnhedge/DNHedgeOrder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/samples/dnhedge/SampleDNHedge$Status.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/samples/dnhedge/SampleDNHedge.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/samples/rfq/RfqOrder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/samples/rfq/SampleRfq$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/samples/rfq/SampleRfq$Status.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/samples/rfq/SampleRfq.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/samples/rfq/SimpleWrapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/samples/testbed/EWrapperImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/samples/testbed/Testbed.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/samples/testbed/advisor/FAMethodSamples.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/samples/testbed/contracts/ContractSamples.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/samples/testbed/orders/AvailableAlgoParams.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/samples/testbed/orders/OrderSamples.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/samples/testbed/scanner/ScannerSubscriptionSamples.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/saving/ChinaSave.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/saving/ChinaSaveBidAsk.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/saving/ChinaSaveDetailed.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/saving/ChinaSaveInterface1Blob.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/saving/ChinaSaveInterface2Blob.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/saving/ChinaSaveOHLCYV.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/saving/ChinaSaveStrat.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/saving/ChinaSaveY2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/saving/ChinaSaveYest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/saving/ChinaVolIntraday.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/saving/ChinaVolSave.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/saving/HibernateUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/saving/Hibtask.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/saving/MainBoardSave5m.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/saving/MainBoardSaveDay.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/saving/StudentScore.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/saving/XuSave.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/sound/EmbeddedSoundPlayer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/sound/SoundPlayer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/sound/SoundPlayer2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/source/JavaClient/TwsApi.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/source/JavaClient/TwsApi_debug.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/source/JavaClient/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/HtmlButton$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/HtmlButton$B.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/HtmlButton$HtmlRadioButton.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/HtmlButton.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/IConnectionConfiguration$DefaultConnectionConfiguration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/IConnectionConfiguration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/NewLookAndFeel$NewCheckUI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/NewLookAndFeel$NewComboUI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/NewLookAndFeel$NewLabelUI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/NewLookAndFeel$NewTableUI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/NewLookAndFeel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/NewTabbedPanel$But.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/NewTabbedPanel$INewTab.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/NewTabbedPanel$NewTabPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/NewTabbedPanel$Tab.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/NewTabbedPanel$TabBorder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/NewTabbedPanel$TabIcon.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/NewTabbedPanel$UnderBorder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/NewTabbedPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/TCombo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/UpperField$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/UpperField.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/Util$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/Util.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/VerticalPanel$BorderPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/VerticalPanel$FlowPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/VerticalPanel$HorzPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/VerticalPanel$StackPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/util/VerticalPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/utility/Alarm.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/utility/BetweenTime.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/utility/BiFunction1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/utility/BiFunction2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/utility/GenTimePred.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/utility/IBCode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/utility/SharpeUtility.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/utility/Test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/utility/Test1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/utility/TestAPI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/utility/TradingUtility.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/utility/Utility$DefaultLogger.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/utility/Utility.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IBJts/utility/VarCorrUtility.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/Java/ApiDemo.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/dnhedge/DNHedgeOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/dnhedge/SampleDNHedge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/rfq/RfqOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/rfq/SampleRfq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/rfq/SimpleWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/testbed/EWrapperImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/testbed/Testbed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/testbed/advisor/FAMethodSamples.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/testbed/contracts/ContractSamples.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/testbed/orders/AvailableAlgoParams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/testbed/orders/OrderSamples.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/testbed/scanner/ScannerSubscriptionSamples.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saving/ChinaSave.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saving/ChinaSaveBidAsk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saving/ChinaSaveDetailed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saving/ChinaSaveInterface1Blob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saving/ChinaSaveInterface2Blob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saving/ChinaSaveOHLCYV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saving/ChinaSaveStrat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saving/ChinaSaveY2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saving/ChinaSaveYest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saving/ChinaVolIntraday.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saving/ChinaVolSave.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saving/HibernateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saving/Hibtask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saving/MainBoardSave5m.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saving/MainBoardSaveDay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saving/StudentScore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saving/XuSave.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sound/EmbeddedSoundPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sound/SoundPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sound/SoundPlayer2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/JavaClient/TwsApi.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/JavaClient/TwsApi_debug.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/JavaClient/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/HtmlButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/IConnectionConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/NewLookAndFeel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/NewTabbedPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/TCombo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/UpperField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/VerticalPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utility/Alarm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utility/BetweenTime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utility/BiFunction1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utility/BiFunction2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utility/GenTimePred.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utility/IBCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utility/SharpeUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utility/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utility/Test1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utility/TestAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utility/TradingUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utility/Utility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utility/VarCorrUtility.java" afterDir="false" />
+    <list default="true" id="89ead1a1-7ff5-4e91-9d68-12c25b28bac3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DevTrader/BreachTrader.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevTrader/BreachTrader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBJts.iml" beforeDir="false" afterPath="$PROJECT_DIR$/IBJts.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$TopMktDataAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$TopMktDataAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1315,57 +43,53 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/EDecoder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29084">
+              <caret line="1337" column="19" selection-start-line="1337" selection-start-column="19" selection-end-line="1337" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/ApiController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="660" column="35" lean-forward="true" selection-start-line="660" selection-start-column="35" selection-end-line="660" selection-end-column="35" />
+            <state relative-caret-position="418">
+              <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#61876#61877#0" expanded="true" />
-                <element signature="e#61918#61919#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/TickType.java">
+        <entry file="file://$PROJECT_DIR$/.idea/dataSources/1a2075f6-b4b6-4cf3-aeab-c915aa90f1a5.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+            <state relative-caret-position="506">
+              <caret line="208" column="28" selection-start-line="208" selection-start-column="28" selection-end-line="208" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/Bar.java">
+        <entry file="file://$PROJECT_DIR$/client/EClientSocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="61" column="13" lean-forward="true" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+            <state relative-caret-position="1540">
+              <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
               <folding>
-                <element signature="e#1128#1129#0" expanded="true" />
-                <element signature="e#1159#1160#0" expanded="true" />
-                <element signature="e#1320#1321#0" expanded="true" />
-                <element signature="e#1342#1343#0" expanded="true" />
+                <element signature="e#2207#2208#0" expanded="true" />
+                <element signature="e#2254#2255#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/IBDataHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DevTrader/BreachTrader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="603" column="23" lean-forward="true" selection-start-line="603" selection-start-column="23" selection-end-line="603" selection-end-column="23" />
+            <state relative-caret-position="175">
+              <caret line="232" column="77" selection-start-line="232" selection-start-column="77" selection-end-line="232" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -1373,8 +97,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utility/TradingUtility.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="425" column="56" lean-forward="true" selection-start-line="425" selection-start-column="56" selection-end-line="425" selection-end-column="56" />
+            <state>
+              <caret lean-forward="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TestJavaClient/OrderDlg.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="11506">
+              <caret line="574" column="14" selection-start-line="574" selection-start-column="14" selection-end-line="574" selection-end-column="14" />
+              <folding>
+                <element signature="e#26210#26211#0" expanded="true" />
+                <element signature="e#26267#26268#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1382,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/EClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="785" column="23" lean-forward="true" selection-start-line="785" selection-start-column="23" selection-end-line="785" selection-end-column="23" />
+            <state relative-caret-position="16720">
+              <caret line="767" column="7" selection-start-line="767" selection-start-column="7" selection-end-line="767" selection-end-column="7" />
               <folding>
                 <element signature="e#17945#17946#0" expanded="true" />
                 <element signature="e#17983#17984#0" expanded="true" />
@@ -1403,10 +140,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/historical/Request.java">
+        <entry file="file://$PROJECT_DIR$/TestJavaClient/SampleFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+            <state relative-caret-position="12738">
+              <caret line="623" column="93" selection-start-line="623" selection-start-column="93" selection-end-line="623" selection-end-column="93" />
+              <folding>
+                <element signature="e#64694#64695#0" expanded="true" />
+                <element signature="e#64736#64737#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/EWrapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -1415,22 +165,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>import com.ib.client.*;</find>
-      <find>accoun</find>
-      <find>signed</find>
-      <find>m_totalQuantity</find>
-      <find>orderstatus</find>
-      <find>accountlist</find>
-      <find>m_reqId++</find>
-      <find>position</find>
-      <find>default conn han</find>
-      <find>m_connec</find>
-      <find>m_connected</find>
-      <find>reqpos</find>
-      <find>IConnectionHandler</find>
-      <find>tickprice</find>
-      <find>globalRequestMap</find>
-      <find>ytdopen</find>
       <find>historicalEnd</find>
       <find>historicEnd</find>
       <find>custom handling</find>
@@ -1445,6 +179,22 @@
       <find>m</find>
       <find>mnq</find>
       <find>handle price</find>
+      <find>reqposition</find>
+      <find>m_connec</find>
+      <find>checkc</find>
+      <find>m_</find>
+      <find>m_connectionHandler</find>
+      <find>connected</find>
+      <find>m_conn</find>
+      <find>checkconnec</find>
+      <find>m_connected</find>
+      <find>nextvalidid</find>
+      <find>setconne</find>
+      <find>breachtrader</find>
+      <find>keepupt</find>
+      <find>keepuptodate</find>
+      <find>keepup</find>
+      <find>ytdopen after</find>
     </findStrings>
     <replaceStrings>
       <replace>import client.*;</replace>
@@ -1487,9 +237,9 @@
         <option value="$PROJECT_DIR$/api/IBDataHandler.java" />
         <option value="$PROJECT_DIR$/utility/TradingUtility.java" />
         <option value="$PROJECT_DIR$/client/Bar.java" />
-        <option value="$PROJECT_DIR$/DevTrader/BreachTrader.java" />
-        <option value="$PROJECT_DIR$/controller/ApiController.java" />
         <option value="$PROJECT_DIR$/api/MorningTask.java" />
+        <option value="$PROJECT_DIR$/controller/ApiController.java" />
+        <option value="$PROJECT_DIR$/DevTrader/BreachTrader.java" />
       </list>
     </option>
   </component>
@@ -1498,13 +248,6 @@
       <expand />
       <select />
     </treeState>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-      </list>
-    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="293" />
@@ -1525,6 +268,11 @@
               <item name="tradingMain2" type="b2602c69:ProjectViewProjectNode" />
               <item name="IBJts" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tradingMain2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IBJts" type="462c0819:PsiDirectoryNode" />
+              <item name="DevTrader" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -1534,13 +282,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="derby" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -1557,13 +306,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ChinaMain">
+  <component name="RunManager" selected="Application.BreachTrader">
     <configuration name="ApiDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="apidemo.ApiDemo" />
       <module name="IBJts" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="apidemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BreachMonitor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DevTrader.BreachMonitor" />
+      <module name="IBJts" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DevTrader.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -1599,9 +361,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ChinaMain" />
         <item itemvalue="Application.BreachTrader" />
         <item itemvalue="Application.ApiDemo" />
+        <item itemvalue="Application.BreachMonitor" />
+        <item itemvalue="Application.ChinaMain" />
       </list>
     </recent_temporary>
   </component>
@@ -1618,17 +381,28 @@
       <workItem from="1558510512929" duration="1152000" />
       <workItem from="1558511904883" duration="2231000" />
       <workItem from="1558514187738" duration="550000" />
-      <workItem from="1558515066254" duration="3821000" />
+      <workItem from="1558515066254" duration="4337000" />
+      <workItem from="1558519656741" duration="1250000" />
+      <workItem from="1558520961400" duration="148000" />
     </task>
+    <task id="LOCAL-00001" summary="522 tradingmain2 first commit">
+      <created>1558519066706</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1558519066706</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7754000" />
+    <option name="totallyTimeSpent" value="9668000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18753478" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27712855" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -1636,8 +410,8 @@
       <window_info id="Persistence" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2935378" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.40331492" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41546962" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40331492" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1669,55 +443,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apidemo/OptionsPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apidemo/ApiDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apidemo/MarketDataPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/rfq/SimpleWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/ApiConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/EWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/rfq/SampleRfq.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/ChinaPosition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -2384,13 +1109,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/EDecoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29084">
-          <caret line="1337" column="19" selection-start-line="1337" selection-start-column="19" selection-end-line="1337" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AutoTraderOld/AutoTraderMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12870">
@@ -2435,13 +1153,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handler/DefaultConnectionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/handler/DefaultConnectionHandler.java" />
     <entry file="file://$PROJECT_DIR$/api/ChinaMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
@@ -2470,27 +1182,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/ETFReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/PositionReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/ResearchAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/api/ETFReport.java" />
+    <entry file="file://$PROJECT_DIR$/api/PositionReport.java" />
+    <entry file="file://$PROJECT_DIR$/api/ResearchAPI.java" />
     <entry file="file://$PROJECT_DIR$/historical/HistChinaStocks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
@@ -2510,28 +1204,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestJavaClient/SampleFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="1690" column="8" selection-start-line="1690" selection-start-column="8" selection-end-line="1690" selection-end-column="8" />
-          <folding>
-            <element signature="e#64694#64695#0" expanded="true" />
-            <element signature="e#64736#64737#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DevTrader/DevUSNamesAdder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="136" column="43" lean-forward="true" selection-start-line="136" selection-start-column="43" selection-end-line="136" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DevTrader/BreachMonitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="190" column="51" lean-forward="true" selection-start-line="190" selection-start-column="51" selection-end-line="190" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -2552,13 +1228,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/historical/Request.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utility/TestAPI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
@@ -2576,10 +1245,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/TickType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/Bar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="968">
+          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handler/LiveHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/historical/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b0bc7169-d387-4615-992d-9a77249867e9/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevTrader/BreachMonitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="210" column="61" lean-forward="true" selection-start-line="210" selection-start-column="61" selection-end-line="210" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/IBDataHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apidemo/ApiDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4774">
+          <caret line="247" column="26" selection-start-line="247" selection-start-column="26" selection-end-line="247" selection-end-column="26" />
+          <folding>
+            <element signature="e#7038#7039#0" expanded="true" />
+            <element signature="e#7076#7077#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/EDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29084">
+          <caret line="1337" column="19" selection-start-line="1337" selection-start-column="19" selection-end-line="1337" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/EClientSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1540">
+          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
+          <folding>
+            <element signature="e#2207#2208#0" expanded="true" />
+            <element signature="e#2254#2255#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestJavaClient/OrderDlg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11506">
+          <caret line="574" column="14" selection-start-line="574" selection-start-column="14" selection-end-line="574" selection-end-column="14" />
+          <folding>
+            <element signature="e#26210#26211#0" expanded="true" />
+            <element signature="e#26267#26268#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/EClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="785" column="23" lean-forward="true" selection-start-line="785" selection-start-column="23" selection-end-line="785" selection-end-column="23" />
+        <state relative-caret-position="16720">
+          <caret line="767" column="7" selection-start-line="767" selection-start-column="7" selection-end-line="767" selection-end-column="7" />
           <folding>
             <element signature="e#17945#17946#0" expanded="true" />
             <element signature="e#17983#17984#0" expanded="true" />
@@ -2597,56 +1351,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TestJavaClient/SampleFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12738">
+          <caret line="623" column="93" selection-start-line="623" selection-start-column="93" selection-end-line="623" selection-end-column="93" />
+          <folding>
+            <element signature="e#64694#64695#0" expanded="true" />
+            <element signature="e#64736#64737#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/EWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/utility/TradingUtility.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="425" column="56" lean-forward="true" selection-start-line="425" selection-start-column="56" selection-end-line="425" selection-end-column="56" />
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/ApiController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="660" column="35" lean-forward="true" selection-start-line="660" selection-start-column="35" selection-end-line="660" selection-end-column="35" />
+        <state relative-caret-position="418">
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#61876#61877#0" expanded="true" />
-            <element signature="e#61918#61919#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/TickType.java">
+    <entry file="file://$PROJECT_DIR$/.idea/dataSources/1a2075f6-b4b6-4cf3-aeab-c915aa90f1a5.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/Bar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="61" column="13" lean-forward="true" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
-          <folding>
-            <element signature="e#1128#1129#0" expanded="true" />
-            <element signature="e#1159#1160#0" expanded="true" />
-            <element signature="e#1320#1321#0" expanded="true" />
-            <element signature="e#1342#1343#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="506">
+          <caret line="208" column="28" selection-start-line="208" selection-start-column="28" selection-end-line="208" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DevTrader/BreachTrader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="603" column="23" lean-forward="true" selection-start-line="603" selection-start-column="23" selection-end-line="603" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/IBDataHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        <state relative-caret-position="175">
+          <caret line="232" column="77" selection-start-line="232" selection-start-column="77" selection-end-line="232" selection-end-column="77" />
         </state>
       </provider>
     </entry>

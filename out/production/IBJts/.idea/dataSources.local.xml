@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="tradingDB@localhost" uuid="b0bc7169-d387-4615-992d-9a77249867e9">
+      <database-info product="Apache Derby" version="10.14.2.0 - (1828579)" jdbc-version="4.2" driver-name="Apache Derby Network Client JDBC Driver" driver-version="10.14.1.0 - (1808820)" dbms="DERBY" exact-version="10.14.2.0" exact-driver-version="10.14">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>app</user-name>
+      <introspection-schemas>*:@</introspection-schemas>
+    </data-source>
+  </component>
+</project>

@@ -203,6 +203,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
         try {
             l.await();
+            ap.setConnected();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -229,7 +230,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
             ytdDayData.get(symbol).put(ld, new SimpleBar(open, high, low, close));
         } else {
             if (!ytdDayData.get(symbol).firstKey().isBefore(LAST_YEAR_DAY)) {
-                pr("YtdOpen after 1/1, check", symbol, ytdDayData.get(symbol).firstEntry());
+                pr("check YtdOpen", symbol, ytdDayData.get(symbol).firstKey());
             }
             histSemaphore.release(1);
         }
@@ -605,7 +606,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         String symbol = ibContractToSymbol(ct);
         LocalDate prevMonthCutoff = getPrevMonthDay(ct, LAST_MONTH_DAY);
 
-        pr("handle price ", tt, symbol, price, t);
+//        pr("handle price ", tt, symbol, price, t);
 
         switch (tt) {
             case LAST:
