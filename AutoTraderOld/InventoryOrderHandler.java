@@ -81,9 +81,7 @@ public class InventoryOrderHandler implements ApiController.IOrderHandler {
 
     @Override
     public void orderStatus(OrderStatus status, double filled, double remaining, double avgFillPrice, int permId, int parentId, double lastFillPrice, int clientId, String whyHeld, double mktCapPrice) {
-        System.out.println(" in orderStatus Inventory Order handler  ");
-        System.out.println(str(" status filled remained avgFillprice permId parentID, lastFill, clientID, whyheld "
-                , status, filled, remaining, avgFillPrice, permId, parentId, lastFillPrice, clientId, whyHeld));
+        System.out.println(" in orderStatus Inventory Order handler  ");;
     }
 
 

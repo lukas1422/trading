@@ -8,6 +8,7 @@ import client.Types;
 import enums.AutoOrderType;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import static DevTrader.BreachTrader.f2;
@@ -103,7 +104,7 @@ public class OrderAugmented {
     }
 
     public String getSymbol() {
-        if (!contract.symbol().equals("")) {
+        if (!Optional.ofNullable(contract.symbol()).orElse("").equals("")) {
             return ibContractToSymbol(contract);
         }
         return "";

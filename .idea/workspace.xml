@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89ead1a1-7ff5-4e91-9d68-12c25b28bac3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/DevTrader/BreachMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevTrader/BreachMonitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/DefaultConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/handler/DefaultConnectionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoTraderOld/AutoTraderXU.java" beforeDir="false" afterPath="$PROJECT_DIR$/AutoTraderOld/AutoTraderXU.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoTraderOld/InventoryOrderHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/AutoTraderOld/InventoryOrderHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/OrderAugmented.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/OrderAugmented.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DevTrader/BreachMonitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="117" column="52" selection-start-line="117" selection-start-column="52" selection-end-line="117" selection-end-column="52" />
+            <state relative-caret-position="110">
+              <caret line="120" column="43" lean-forward="true" selection-start-line="120" selection-start-column="43" selection-end-line="120" selection-end-column="43" />
               <folding>
                 <element signature="e#5717#5718#0" expanded="true" />
                 <element signature="e#5754#5755#0" expanded="true" />
@@ -73,17 +72,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/OrderAugmented.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="96" column="13" lean-forward="true" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+            <state relative-caret-position="67">
+              <caret line="106" column="61" lean-forward="true" selection-start-line="106" selection-start-column="61" selection-end-line="106" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AutoTraderOld/AutoTraderXU.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="2785" column="5" selection-start-line="2785" selection-start-column="5" selection-end-line="2785" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graph/GraphXuTrader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="67">
+              <caret line="226" column="23" selection-start-line="226" selection-start-column="23" selection-end-line="226" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/ApiController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="1305" column="16" lean-forward="true" selection-start-line="1305" selection-start-column="16" selection-end-line="1305" selection-end-column="16" />
+            <state relative-caret-position="167">
+              <caret line="895" column="22" selection-start-line="895" selection-start-column="22" selection-end-line="895" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,11 +140,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>handle price</find>
-      <find>reqposition</find>
-      <find>m_connec</find>
-      <find>checkc</find>
-      <find>m_</find>
       <find>m_connectionHandler</find>
       <find>connected</find>
       <find>m_conn</find>
@@ -153,6 +165,11 @@
       <find>place</find>
       <find>running@</find>
       <find>check YtdOpen</find>
+      <find>ofnullable</find>
+      <find>status fill</find>
+      <find>in order status</find>
+      <find>status filled</find>
+      <find>orderstatus</find>
     </findStrings>
     <replaceStrings>
       <replace>import client.*;</replace>
@@ -178,10 +195,8 @@
         <option value="$PROJECT_DIR$/graph/GraphMonitor.java" />
         <option value="$PROJECT_DIR$/AutoTraderOld/AutoOrderDefaultHandler.java" />
         <option value="$PROJECT_DIR$/client/OrderStatus.java" />
-        <option value="$PROJECT_DIR$/AutoTraderOld/InventoryOrderHandler.java" />
         <option value="$PROJECT_DIR$/AutoTraderOld/XuTraderHelper.java" />
         <option value="$PROJECT_DIR$/AutoTraderOld/AutoTraderMain.java" />
-        <option value="$PROJECT_DIR$/AutoTraderOld/AutoTraderXU.java" />
         <option value="$PROJECT_DIR$/api/ChinaMain.java" />
         <option value="$PROJECT_DIR$/AutoTraderOld/GuaranteeXUHandler.java" />
         <option value="$PROJECT_DIR$/api/USOvernightTrader.java" />
@@ -200,6 +215,9 @@
         <option value="$PROJECT_DIR$/DevTrader/BreachMonitor.java" />
         <option value="$PROJECT_DIR$/handler/DefaultConnectionHandler.java" />
         <option value="$PROJECT_DIR$/controller/ApiController.java" />
+        <option value="$PROJECT_DIR$/api/OrderAugmented.java" />
+        <option value="$PROJECT_DIR$/AutoTraderOld/InventoryOrderHandler.java" />
+        <option value="$PROJECT_DIR$/AutoTraderOld/AutoTraderXU.java" />
       </list>
     </option>
   </component>
@@ -227,11 +245,6 @@
             <path>
               <item name="tradingMain2" type="b2602c69:ProjectViewProjectNode" />
               <item name="IBJts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tradingMain2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IBJts" type="462c0819:PsiDirectoryNode" />
-              <item name="utility" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -272,7 +285,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BreachMonitor">
+  <component name="RunManager" selected="Application.ChinaMain">
     <configuration name="ApiDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="apidemo.ApiDemo" />
       <module name="IBJts" />
@@ -340,11 +353,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ChinaMain" />
         <item itemvalue="Application.BreachMonitor" />
         <item itemvalue="Application.BreachTrader" />
         <item itemvalue="Application.IBCode" />
         <item itemvalue="Application.ApiDemo" />
-        <item itemvalue="Application.ChinaMain" />
       </list>
     </recent_temporary>
   </component>
@@ -363,7 +376,7 @@
       <workItem from="1558514187738" duration="550000" />
       <workItem from="1558515066254" duration="4337000" />
       <workItem from="1558519656741" duration="1250000" />
-      <workItem from="1558520961400" duration="6426000" />
+      <workItem from="1558520961400" duration="7535000" />
     </task>
     <task id="LOCAL-00001" summary="522 tradingmain2 first commit">
       <created>1558519066706</created>
@@ -393,14 +406,22 @@
       <option name="project" value="LOCAL" />
       <updated>1558531513141</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="522">
+      <created>1558535065092</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1558535065092</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15946000" />
+    <option name="totallyTimeSpent" value="17055000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16527545" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -411,7 +432,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.6718232" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.53370166" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.6265193" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -445,27 +466,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AutoTraderOld/AutoTraderMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12870">
-          <caret line="620" column="74" selection-start-line="620" selection-start-column="74" selection-end-line="620" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AutoTraderOld/XuTraderHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/USOvernightTrader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AutoTraderOld/GuaranteeXUHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -778,13 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/OrderAugmented.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="96" column="13" lean-forward="true" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DevTrader/BreachTrader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -820,17 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DevTrader/BreachMonitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="117" column="52" selection-start-line="117" selection-start-column="52" selection-end-line="117" selection-end-column="52" />
-          <folding>
-            <element signature="e#5717#5718#0" expanded="true" />
-            <element signature="e#5754#5755#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/handler/DefaultConnectionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -844,13 +826,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DevTrader/BreachMonitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="120" column="43" lean-forward="true" selection-start-line="120" selection-start-column="43" selection-end-line="120" selection-end-column="43" />
+          <folding>
+            <element signature="e#5717#5718#0" expanded="true" />
+            <element signature="e#5754#5755#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/OrderAugmented.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="106" column="61" lean-forward="true" selection-start-line="106" selection-start-column="61" selection-end-line="106" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controller/ApiController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="1305" column="16" lean-forward="true" selection-start-line="1305" selection-start-column="16" selection-end-line="1305" selection-end-column="16" />
+        <state relative-caret-position="167">
+          <caret line="895" column="22" selection-start-line="895" selection-start-column="22" selection-end-line="895" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/GraphXuTrader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="226" column="23" selection-start-line="226" selection-start-column="23" selection-end-line="226" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoTraderOld/InventoryOrderHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="83" column="72" selection-start-line="83" selection-start-column="72" selection-end-line="83" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoTraderOld/AutoTraderXU.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="2785" column="5" selection-start-line="2785" selection-start-column="5" selection-end-line="2785" selection-end-column="5" />
         </state>
       </provider>
     </entry>
