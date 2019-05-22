@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="field">
+
+    <class name="saving.ChinaSave" table="CHINASAVE">
+        <id column="STOCK" name="stockName" type="string"/>
+        <property column="DATA" name="dayPriceMapBlob" type="blob"/>
+        <property column="VOL" name="volMapBlob" type="blob"/>
+    </class>
+
+    <class name="saving.ChinaSaveDetailed" table="CHINASAVEDETAILED">
+        <id column="STOCK" name="stockName" type="string"/>
+        <property column="DATA" name="dayPriceMapBlob" type="blob"/>
+    </class>
+
+    <class name="saving.ChinaSaveYest" table="CHINASAVEYEST">
+        <id column="STOCK" name="stockName" type="string"/>
+        <property column="DATA1" name="dayPriceMapBlob" type="blob"/>
+        <property column="VOL" name="volMapBlob" type="blob"/>
+    </class>
+
+    <class name="saving.ChinaSaveY2" table="CHINASAVEY2">
+        <id column="STOCK" name="stockName" type="string"/>
+        <property column="DATA1" name="dayPriceMapBlob" type="blob"/>
+        <property column="VOL" name="volMapBlob" type="blob"/>
+    </class>
+
+    <class name="saving.ChinaSaveBidAsk" table="CHINASAVEBIDASK">
+        <id column="STOCK" name="stockName" type="string"/>
+        <property column="BID" name="bidMapBlob" type="blob"/>
+        <property column="ASK" name="askMapBlob" type="blob"/>
+    </class>
+
+
+    <class name="saving.ChinaSaveOHLCYV" table="CHINASAVEOHLC">
+        <id column="STOCK" name="stockName" type="string"/>
+        <property column="O" name="open" type="double"/>
+        <property column="H" name="high" type="double"/>
+        <property column="L" name="low" type="double"/>
+        <property column="C" name="close" type="double"/>
+        <property column="CY" name="closeY" type="double"/>
+        <property column="V" name="volume" type="double"/>
+    </class>
+
+    <!-->
+        <class name="saving.ChinaSaveStrat" table="CHINASAVESTRAT">
+            <id column="STOCK" name="stock" type="string"/>
+            <property column="STRAT" name="stratBlob" type="blob"/>
+        </class>
+
+        <class name="saving.XuSave" table="XU">
+            <id column="STOCK" name="name" type="string"/>
+            <property column="FUT" name="lastFutPriceBlob" type="blob"/>
+            <property column="INDEX" name="indexPriceBlob" type="blob"/>
+            <property column="FUTVOL" name="futVolBlob" type="blob"/>
+            <property column="INDEXVOL" name="indexVolBlob" type="blob"/>
+        </class>
+        <-->
+
+    <class name="saving.ChinaVolSave" table="CHINAVOLSAVE">
+        <id column="ID" name="id" type="integer">
+            <generator class="identity"/>
+        </id>
+        <property column="VOLDATE" name="volDate" type="java.time.LocalDate"/>
+        <property column="CALLPUT" name="callPut" type="string"/>
+        <property column="STRIKE" name="strike" type="double"/>
+        <property column="EXPIRYDATE" name="expiryDate" type="java.time.LocalDate"/>
+        <property column="VOL" name="vol" type="double"/>
+        <property column="MONEYNESS" name="moneyness" type="integer"/>
+        <property column="OPTIONTICKER" name="optionTicker" type="string"/>
+    </class>
+
+    <class name="saving.ChinaVolIntraday" table="CHINAVOLINTRADAY">
+        <id column="TICKER" name="ticker" type="string"/>
+        <property column="VOLMAP" name="intradayVolBlob" type="blob"/>
+    </class>
+
+    <class name="saving.MainBoardSaveDay" table="MAINBOARDSAVEDAY">
+        <id column="TIME" name="time" type="java.time.LocalDate"/>
+        <property column="O" name="open" type="double"/>
+        <property column="H" name="high" type="double"/>
+        <property column="L" name="low" type="double"/>
+        <property column="C" name="close" type="double"/>
+    </class>
+
+    <class name="saving.MainBoardSave5m" table="MAINBOARDSAVE5M">
+        <id column="TIME" name="time" type="java.time.LocalDateTime"/>
+        <property column="O" name="open" type="double"/>
+        <property column="H" name="high" type="double"/>
+        <property column="L" name="low" type="double"/>
+        <property column="C" name="close" type="double"/>
+    </class>
+
+
+</hibernate-mapping>
