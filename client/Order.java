@@ -6,6 +6,8 @@ package client;
 import java.util.ArrayList;
 import java.util.List;
 
+import static utility.Utility.str;
+
 public class Order {
     final public static int CUSTOMER = 0;
     final public static int FIRM = 1;
@@ -19,7 +21,7 @@ public class Order {
     final public static int AUCTION_MATCH = 1;
     final public static int AUCTION_IMPROVEMENT = 2;
     final public static int AUCTION_TRANSPARENT = 3;
-    final public static String EMPTY_STR = "";
+    private final static String EMPTY_STR = "";
 
     // order id's
     private int m_clientId;
@@ -1567,6 +1569,11 @@ public class Order {
     public int hashCode() {
         // Use m_permId only due to the definition of equals.
         return (int) (m_permId ^ (m_permId >>> 32));
+    }
+
+    @Override
+    public String toString() {
+        return str(m_orderId, m_action, m_tif, m_orderType, m_totalQuantity, m_lmtPrice);
     }
 
 }

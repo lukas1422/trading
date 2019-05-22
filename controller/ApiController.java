@@ -366,7 +366,7 @@ public class ApiController implements EWrapper {
 
     public void reqPositions(IPositionHandler handler) {
         if (!checkConnection()) {
-            pr("not connected ");
+            pr("req positions not connected ");
             return;
         }
 
@@ -1292,7 +1292,7 @@ public class ApiController implements EWrapper {
 
     @Override
     public void updateNewsBulletin(int msgId, int msgType, String message, String origExchange) {
-        m_bulletinHandler.bulletin(msgId, NewsType.get(msgType), message, origExchange);
+        //m_bulletinHandler.bulletin(msgId, NewsType.get(msgType), message, origExchange);
         recEOM();
     }
 

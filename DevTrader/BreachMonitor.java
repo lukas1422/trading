@@ -140,6 +140,7 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
 
         try {
             l.await();
+            brMonController.setConnected();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
