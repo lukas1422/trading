@@ -5,6 +5,7 @@ import auxiliary.SimpleBar;
 import client.Contract;
 import client.Types;
 import controller.ApiController;
+import handler.DefaultConnectionHandler;
 import utility.TradingUtility;
 import utility.Utility;
 
@@ -56,7 +57,7 @@ public class DevUSNamesAdder implements ApiController.IPositionHandler {
     }
 
     private void getFromIB() {
-        ApiController ap = new ApiController(new ApiController.IConnectionHandler.DefaultConnectionHandler(),
+        ApiController ap = new ApiController(new DefaultConnectionHandler(),
                 new DefaultLogger(), new DefaultLogger());
         staticController = ap;
         CountDownLatch l = new CountDownLatch(1);

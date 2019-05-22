@@ -5,6 +5,7 @@ import client.Contract;
 import client.TickType;
 import client.Types;
 import controller.AccountSummaryTag;
+import handler.DefaultConnectionHandler;
 import utility.Utility.DefaultLogger;
 import controller.ApiController;
 import handler.HistoricalHandler;
@@ -511,7 +512,7 @@ public final class MorningTask implements HistoricalHandler, LiveHandler, ApiCon
         clearFile(fxOutput);
         clearFile(positionOutput);
 
-        ApiController ap = new ApiController(new ApiController.IConnectionHandler.DefaultConnectionHandler(), new DefaultLogger(), new DefaultLogger());
+        ApiController ap = new ApiController(new DefaultConnectionHandler(), new DefaultLogger(), new DefaultLogger());
         staticController = ap;
         CountDownLatch l = new CountDownLatch(1);
         boolean connectionStatus = false;

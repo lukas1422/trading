@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89ead1a1-7ff5-4e91-9d68-12c25b28bac3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DevTrader/BreachTrader.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevTrader/BreachTrader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IBJts.iml" beforeDir="false" afterPath="$PROJECT_DIR$/IBJts.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$TopMktDataAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$TopMktDataAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,121 +30,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/EDecoder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29084">
-              <caret line="1337" column="19" selection-start-line="1337" selection-start-column="19" selection-end-line="1337" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/ApiController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/dataSources/1a2075f6-b4b6-4cf3-aeab-c915aa90f1a5.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="208" column="28" selection-start-line="208" selection-start-column="28" selection-end-line="208" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/EClientSocket.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1540">
-              <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-              <folding>
-                <element signature="e#2207#2208#0" expanded="true" />
-                <element signature="e#2254#2255#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DevTrader/BreachTrader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="232" column="77" selection-start-line="232" selection-start-column="77" selection-end-line="232" selection-end-column="77" />
+            <state relative-caret-position="219">
+              <caret line="639" column="75" selection-start-line="639" selection-start-column="75" selection-end-line="639" selection-end-column="75" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utility/TradingUtility.java">
+        <entry file="file://$PROJECT_DIR$/samples/dnhedge/DNHedgeOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="132">
+              <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestJavaClient/OrderDlg.java">
+        <entry file="file://$PROJECT_DIR$/utility/Utility.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11506">
-              <caret line="574" column="14" selection-start-line="574" selection-start-column="14" selection-end-line="574" selection-end-column="14" />
+            <state relative-caret-position="152">
+              <caret line="752" column="25" selection-start-line="752" selection-start-column="25" selection-end-line="752" selection-end-column="25" />
               <folding>
-                <element signature="e#26210#26211#0" expanded="true" />
-                <element signature="e#26267#26268#0" expanded="true" />
+                <element signature="e#33062#33063#0" expanded="true" />
+                <element signature="e#33116#33117#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/EClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16720">
-              <caret line="767" column="7" selection-start-line="767" selection-start-column="7" selection-end-line="767" selection-end-column="7" />
-              <folding>
-                <element signature="e#17945#17946#0" expanded="true" />
-                <element signature="e#17983#17984#0" expanded="true" />
-                <element signature="e#18027#18028#0" expanded="true" />
-                <element signature="e#18059#18060#0" expanded="true" />
-                <element signature="e#18092#18093#0" expanded="true" />
-                <element signature="e#18125#18126#0" expanded="true" />
-                <element signature="e#18247#18248#0" expanded="true" />
-                <element signature="e#18286#18287#0" expanded="true" />
-                <element signature="e#18338#18339#0" expanded="true" />
-                <element signature="e#18382#18383#0" expanded="true" />
-                <element signature="e#18437#18438#0" expanded="true" />
-                <element signature="e#18482#18483#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestJavaClient/SampleFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12738">
-              <caret line="623" column="93" selection-start-line="623" selection-start-column="93" selection-end-line="623" selection-end-column="93" />
-              <folding>
-                <element signature="e#64694#64695#0" expanded="true" />
-                <element signature="e#64736#64737#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/EWrapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -165,7 +65,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>historicalEnd</find>
       <find>historicEnd</find>
       <find>custom handling</find>
       <find>tostring</find>
@@ -177,7 +76,6 @@
       <find>end</find>
       <find>ytd open</find>
       <find>m</find>
-      <find>mnq</find>
       <find>handle price</find>
       <find>reqposition</find>
       <find>m_connec</find>
@@ -195,6 +93,8 @@
       <find>keepuptodate</find>
       <find>keepup</find>
       <find>ytdopen after</find>
+      <find>version</find>
+      <find>mnq</find>
     </findStrings>
     <replaceStrings>
       <replace>import client.*;</replace>
@@ -271,7 +171,12 @@
             <path>
               <item name="tradingMain2" type="b2602c69:ProjectViewProjectNode" />
               <item name="IBJts" type="462c0819:PsiDirectoryNode" />
-              <item name="DevTrader" type="462c0819:PsiDirectoryNode" />
+              <item name="AutoTraderOld" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tradingMain2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IBJts" type="462c0819:PsiDirectoryNode" />
+              <item name="samples" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -383,7 +288,7 @@
       <workItem from="1558514187738" duration="550000" />
       <workItem from="1558515066254" duration="4337000" />
       <workItem from="1558519656741" duration="1250000" />
-      <workItem from="1558520961400" duration="148000" />
+      <workItem from="1558520961400" duration="336000" />
     </task>
     <task id="LOCAL-00001" summary="522 tradingmain2 first commit">
       <created>1558519066706</created>
@@ -392,17 +297,24 @@
       <option name="project" value="LOCAL" />
       <updated>1558519066706</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="522">
+      <created>1558521142231</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1558521142231</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9668000" />
+    <option name="totallyTimeSpent" value="9856000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27712855" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27712855" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -410,7 +322,7 @@
       <window_info id="Persistence" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41546962" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41546962" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40331492" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -436,27 +348,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="522 tradingmain2 first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="522 tradingmain2 first commit" />
+    <MESSAGE value="522" />
+    <option name="LAST_COMMIT_MESSAGE" value="522" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/ChinaPosition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="172" column="91" lean-forward="true" selection-start-line="172" selection-start-column="91" selection-end-line="172" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DevTrader/GuaranteeDevHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="242" lean-forward="true" selection-start-line="242" selection-end-line="242" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/samples/dnhedge/SampleDNHedge.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -1123,13 +1022,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utility/Utility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="790" column="25" selection-start-line="790" selection-start-column="25" selection-end-line="790" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/USOvernightTrader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -1308,71 +1200,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/EClientSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1540">
-          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-          <folding>
-            <element signature="e#2207#2208#0" expanded="true" />
-            <element signature="e#2254#2255#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestJavaClient/OrderDlg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11506">
-          <caret line="574" column="14" selection-start-line="574" selection-start-column="14" selection-end-line="574" selection-end-column="14" />
-          <folding>
-            <element signature="e#26210#26211#0" expanded="true" />
-            <element signature="e#26267#26268#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/EClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16720">
-          <caret line="767" column="7" selection-start-line="767" selection-start-column="7" selection-end-line="767" selection-end-column="7" />
-          <folding>
-            <element signature="e#17945#17946#0" expanded="true" />
-            <element signature="e#17983#17984#0" expanded="true" />
-            <element signature="e#18027#18028#0" expanded="true" />
-            <element signature="e#18059#18060#0" expanded="true" />
-            <element signature="e#18092#18093#0" expanded="true" />
-            <element signature="e#18125#18126#0" expanded="true" />
-            <element signature="e#18247#18248#0" expanded="true" />
-            <element signature="e#18286#18287#0" expanded="true" />
-            <element signature="e#18338#18339#0" expanded="true" />
-            <element signature="e#18382#18383#0" expanded="true" />
-            <element signature="e#18437#18438#0" expanded="true" />
-            <element signature="e#18482#18483#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestJavaClient/SampleFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12738">
-          <caret line="623" column="93" selection-start-line="623" selection-start-column="93" selection-end-line="623" selection-end-column="93" />
-          <folding>
-            <element signature="e#64694#64695#0" expanded="true" />
-            <element signature="e#64736#64737#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/EWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utility/TradingUtility.java">
+    <entry file="file://$PROJECT_DIR$/API_VersionNum.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret lean-forward="true" />
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1393,10 +1224,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/EClientSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
+          <folding>
+            <element signature="e#2207#2208#0" expanded="true" />
+            <element signature="e#2254#2255#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utility/TradingUtility.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestJavaClient/OrderDlg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="574" column="14" selection-start-line="574" selection-start-column="14" selection-end-line="574" selection-end-column="14" />
+          <folding>
+            <element signature="e#26210#26211#0" expanded="true" />
+            <element signature="e#26267#26268#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/EClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="767" column="7" selection-start-line="767" selection-start-column="7" selection-end-line="767" selection-end-column="7" />
+          <folding>
+            <element signature="e#17945#17946#0" expanded="true" />
+            <element signature="e#17983#17984#0" expanded="true" />
+            <element signature="e#18027#18028#0" expanded="true" />
+            <element signature="e#18059#18060#0" expanded="true" />
+            <element signature="e#18092#18093#0" expanded="true" />
+            <element signature="e#18125#18126#0" expanded="true" />
+            <element signature="e#18247#18248#0" expanded="true" />
+            <element signature="e#18286#18287#0" expanded="true" />
+            <element signature="e#18338#18339#0" expanded="true" />
+            <element signature="e#18382#18383#0" expanded="true" />
+            <element signature="e#18437#18438#0" expanded="true" />
+            <element signature="e#18482#18483#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestJavaClient/SampleFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="623" column="93" selection-start-line="623" selection-start-column="93" selection-end-line="623" selection-end-column="93" />
+          <folding>
+            <element signature="e#64694#64695#0" expanded="true" />
+            <element signature="e#64736#64737#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/EWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/dnhedge/DNHedgeOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utility/Utility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="752" column="25" selection-start-line="752" selection-start-column="25" selection-end-line="752" selection-end-column="25" />
+          <folding>
+            <element signature="e#33062#33063#0" expanded="true" />
+            <element signature="e#33116#33117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DevTrader/BreachTrader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="232" column="77" selection-start-line="232" selection-start-column="77" selection-end-line="232" selection-end-column="77" />
+        <state relative-caret-position="219">
+          <caret line="639" column="75" selection-start-line="639" selection-start-column="75" selection-end-line="639" selection-end-column="75" />
         </state>
       </provider>
     </entry>

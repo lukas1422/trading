@@ -6,6 +6,7 @@ import client.TickType;
 import client.Types;
 import controller.ApiController;
 import graph.GraphBarGen;
+import handler.DefaultConnectionHandler;
 import handler.HistoricalHandler;
 import handler.LiveHandler;
 import utility.TradingUtility;
@@ -250,7 +251,7 @@ public class CNHHKDLive extends JComponent implements LiveHandler, HistoricalHan
     }
 
     private void getFromIB() {
-        ApiController ap = new ApiController(new ApiController.IConnectionHandler.DefaultConnectionHandler(),
+        ApiController ap = new ApiController(new DefaultConnectionHandler(),
                 new Utility.DefaultLogger(), new Utility.DefaultLogger());
 
         CountDownLatch l = new CountDownLatch(1);

@@ -8,6 +8,7 @@ import auxiliary.SimpleBar;
 import client.*;
 import controller.ApiController;
 import enums.Direction;
+import handler.DefaultConnectionHandler;
 import handler.LiveHandler;
 import utility.TradingUtility;
 import utility.Utility;
@@ -178,7 +179,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
     public void connectAndReqPos() {
         ApiController ap = new ApiController(
-                new ApiController.IConnectionHandler.DefaultConnectionHandler(),
+                new DefaultConnectionHandler(),
                 new DefaultLogger(), new DefaultLogger());
         apDev = ap;
         CountDownLatch l = new CountDownLatch(1);
@@ -637,7 +638,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
                     if (symbol.equalsIgnoreCase("MNQ")) {
                         pr("MNQ ", price, t, "ystart", yStart, "mstart", mStart,
-                                r10000(price / mStart - 1) * 100d + "%",
+                                Math.round(10000d * (price / mStart - 1)) / 100d + "%",
                                 "pos", symbolPosMap.getOrDefault("MNQ", 0.0));
                         overnightHedger(ct, price, t, mStart);
                     }

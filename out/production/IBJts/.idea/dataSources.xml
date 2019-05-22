@@ -7,5 +7,15 @@
       <jdbc-driver>org.apache.derby.jdbc.ClientDriver</jdbc-driver>
       <jdbc-url>jdbc:derby://localhost:1527/$USER_HOME$/DB/tradingDB</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="1a2075f6-b4b6-4cf3-aeab-c915aa90f1a5">
+      <driver-ref>derby.remote</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+/home/l/Downloads/IBJts/hibernate.cfg.xml</remarks>
+      <jdbc-driver>org.apache.derby.jdbc.ClientDriver</jdbc-driver>
+      <jdbc-url>jdbc:derby://localhost:1527/$USER_HOME$/DB/tradingDB</jdbc-url>
+    </data-source>
   </component>
 </project>
