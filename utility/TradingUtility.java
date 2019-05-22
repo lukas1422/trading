@@ -393,7 +393,7 @@ public class TradingUtility {
     public static void req1ContractLive(ApiController ap, Contract ct, LiveHandler h, boolean snapshot) {
         int reqId = ControllerCalls.getNextId();
         globalRequestMap.put(reqId, new Request(ct, h));
-        ap.client().reqMktData(reqId, ct, "", snapshot, false,
+        ap.client().reqMktData(reqId, ct, "", snapshot, regulatorySnapshot,
                 Collections.<TagValue>emptyList());
     }
 

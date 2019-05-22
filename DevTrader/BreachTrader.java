@@ -355,18 +355,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                 .filter(e -> e.getValue().includes(mOpen))
                 .count();
 
-
-//        if (numCrosses >= MAX_CROSS_PER_MONTH) {
-//            outputToSymbolFile(symbol, str(symbol, numCrosses, "exceeding numCrosses no trade "
-//                    , t.format(f1)), devOutput);
-//        }
-
         if (!added && !liquidated && pos == 0.0 && prevClose != 0.0 && numCrosses < MAX_CROSS_PER_MONTH) {
-
-//            pr(t.format(f1), "breach adder", symbol, "pos", pos, "prevC", prevClose,
-//                    "price", price, "yOpen", yOpen, "mOpen", mOpen, "devFromMaxOpen",
-//                    r10000(price / Math.max(yOpen, mOpen) - 1), "devFromMin",
-//                    r10000(price / Math.min(yOpen, mOpen) - 1));
 
             if (price > yOpen && price > mOpen && totalDelta < HI_LIMIT
                     && ((price / Math.max(yOpen, mOpen) - 1) < MAX_ENTRY_DEV)

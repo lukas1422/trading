@@ -49,7 +49,7 @@ public class ControllerCalls {
             String durationStr = 1 + " " + Types.DurationUnit.DAY.toString().charAt(0);
             ap.client().reqHistoricalData(reqId, ct, formatTime, durationStr,
                     Types.BarSize._1_min.toString(), Types.WhatToShow.TRADES.toString(),
-                    0, 2, keepUptoDate,Collections.<TagValue>emptyList());
+                    0, 2, keepUptoDate, Collections.<TagValue>emptyList());
         });
     }
 
@@ -96,7 +96,6 @@ public class ControllerCalls {
         getNextId();
         int reqIdFront = getNextId();
         int reqIdBack = getNextId();
-        //m_reqId.
 
         if (!TradingUtility.globalRequestMap.containsKey(reqIdFront) && !TradingUtility.globalRequestMap.containsKey(reqIdBack)) {
             TradingUtility.globalRequestMap.put(reqIdFront, new Request(frontCt, SGXFutureReceiver.getReceiver()));
@@ -118,10 +117,8 @@ public class ControllerCalls {
                 ap.client().reqMktData(reqIdBack, backCt, "", false,
                         regulatorySnapshot, Collections.<TagValue>emptyList());
             }
-            //pr(" req used " + reqIdFront + " " + globalRequestMap.get(reqIdFront).getContract());
             throw new IllegalArgumentException(" req ID used ");
         }
-//        pr("requesting XU data ends");
     }
 
     public static void reqHistoricalDataSimple(ApiController ap, int reqId, HistoricalHandler hh, Contract contract, String endDateTime, int duration,
@@ -131,7 +128,7 @@ public class ControllerCalls {
         String durationStr = duration + " " + durationUnit.toString().charAt(0);
         ap.client().reqHistoricalData(reqId, contract, endDateTime, durationStr,
                 barSize.toString(), whatToShow.toString(), rthOnly ? 1 : 0, 2,
-                keepUptoDate,Collections.<TagValue>emptyList());
+                keepUptoDate, Collections.<TagValue>emptyList());
     }
 
     public static void placeOrModifyOrderCheck(ApiController ap, Contract ct, final Order o, final ApiController.IOrderHandler handler) {

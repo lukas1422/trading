@@ -1254,7 +1254,7 @@ public class ApiController implements EWrapper {
         m_connected = true;
     }
 
-    protected boolean checkConnection() {
+    private boolean checkConnection() {
         if (!isConnected()) {
             error(EClientErrors.NO_VALID_ID, EClientErrors.NOT_CONNECTED.code(), EClientErrors.NOT_CONNECTED.msg());
             return false;
@@ -1602,7 +1602,8 @@ public class ApiController implements EWrapper {
         int tickerId = m_reqId.incrementAndGet();
 
         m_tickNewsHandlerMap.put(tickerId, handler);
-        m_client.reqMktData(tickerId, contract, "mdoff,292", false, false, Collections.emptyList());
+        m_client.reqMktData(tickerId, contract, "mdoff,292", false,
+                false, Collections.emptyList());
         sendEOM();
     }
 
