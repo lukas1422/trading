@@ -23,8 +23,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static utility.TradingUtility.getActiveA50Contract;
-import static utility.TradingUtility.getActiveBTCContract;
+import static utility.TradingUtility.*;
 import static utility.Utility.*;
 
 public class BreachMonitor implements LiveHandler, ApiController.IPositionHandler, ApiController.ITradeReportHandler {
@@ -102,6 +101,7 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
 
         registerContract(getActiveA50Contract());
         registerContract(getActiveBTCContract());
+        registerContract(getActiveMNQContract());
     }
 
     //test upload to github

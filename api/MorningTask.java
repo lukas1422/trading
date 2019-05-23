@@ -518,7 +518,8 @@ public final class MorningTask implements HistoricalHandler, LiveHandler, ApiCon
         boolean connectionStatus = false;
 
         try {
-            ap.connect("127.0.0.1", 7496, 11, "");
+            pr("using port 4001");
+            ap.connect("127.0.0.1", 4001, 11, "");
             connectionStatus = true;
             pr(" connection status is true ");
             l.countDown();
@@ -527,14 +528,15 @@ public final class MorningTask implements HistoricalHandler, LiveHandler, ApiCon
         }
 
         if (!connectionStatus) {
-            pr(" using port 4001 ");
-            ap.connect("127.0.0.1", 4001, 11, "");
+            pr(" using port 7496 ");
+            ap.connect("127.0.0.1", 7496, 11, "");
             l.countDown();
             pr(" Latch counted down " + LocalTime.now());
         }
 
         try {
             l.await();
+            ap.setConnected();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -548,7 +550,7 @@ public final class MorningTask implements HistoricalHandler, LiveHandler, ApiCon
 
         //breachUSNamesData();
 
-        AccountSummaryTag[] tags = {AccountSummaryTag.NetLiquidation};
+        AccountSummaryTag[] tags = {AccountSummaryTag.NetLiquidation, AccountSummaryTag.SettledCash};
         ap.reqAccountSummary("All", tags, this);
     }
 
@@ -1073,10 +1075,7 @@ public final class MorningTask implements HistoricalHandler, LiveHandler, ApiCon
     public void accountSummary(String account, AccountSummaryTag tag, String value, String currency) {
         String output = getStrCheckNull(LocalDateTime.now().truncatedTo(ChronoUnit.MINUTES)
                 , account, tag, value, currency);
-        if (LocalDateTime.now().toLocalTime().getSecond() < 20) {
-            pr("Account Pnl: ", output, "**********************");
-        }
-
+        pr("Account Pnl: ", output, "**********************");
     }
 
     @Override

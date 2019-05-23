@@ -61,7 +61,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
     private static final double HI_LIMIT = 4000000.0;
     private static final double LO_LIMIT = -4000000.0;
-    private static final double HEDGE_THRESHOLD = 300000;
+    private static final double HEDGE_THRESHOLD = 0;
     //private static final double ABS_LIMIT = 5000000.0;
 
     public static Map<Currency, Double> fx = new HashMap<>();
@@ -438,7 +438,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                 int id = devTradeID.incrementAndGet();
                 double offerPrice = Math.max(price, askMap.getOrDefault(symbol, price));
                 double size =
-                        Math.min(5, Math.floor((totalDelta / fx.get(Currency.USD)) / (multi.get("MNQ") * price)));
+                        Math.min(10, Math.floor((totalDelta / fx.get(Currency.USD)) / (multi.get("MNQ") * price)));
 
                 Order o = placeOfferLimitTIF(offerPrice, size, DAY);
                 devOrderMap.put(id, new OrderAugmented(ct, t, o, BREACH_ADDER));

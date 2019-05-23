@@ -131,7 +131,8 @@ public class ControllerCalls {
                 keepUptoDate, Collections.<TagValue>emptyList());
     }
 
-    public static void placeOrModifyOrderCheck(ApiController ap, Contract ct, final Order o, final ApiController.IOrderHandler handler) {
+    public static void placeOrModifyOrderCheck(ApiController ap, Contract ct, final Order o,
+                                               final ApiController.IOrderHandler handler) {
         if (o.totalQuantity() == 0.0 || o.lmtPrice() == 0.0) {
             outputToAll(str(" quantity/price problem ", ct.symbol(), o.action(),
                     o.lmtPrice(), o.totalQuantity()));
