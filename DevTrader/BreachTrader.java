@@ -35,6 +35,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     private static final double MAX_ENTRY_DEV = 0.02;
     private static final double MIN_ENTRY_DEV = 0.0015;
     private static final double ENTRY_CUSHION = 0.0;
+    private static final double PRICE_OFFSET_PERC = 0.002;
 
 
     static volatile NavigableMap<Integer, OrderAugmented> devOrderMap = new ConcurrentSkipListMap<>();
@@ -368,14 +369,16 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                 bidPrice = roundToMinVariation(symbol, Direction.Long, bidPrice);
 
                 Order o = placeBidLimitTIF(bidPrice, defaultS, DAY);
+//                double offset = computeStockOffset(price, PRICE_OFFSET_PERC);
+//                Order o = placeBidLimitTIFRel(defaultS, DAY, offset);
                 if (checkDeltaImpact(ct, o)) {
                     devOrderMap.put(id, new OrderAugmented(ct, t, o, BREACH_ADDER));
                     placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
                     outputToSymbolFile(symbol, str("********", t.format(f1)), devOutput);
                     outputToSymbolFile(symbol, str(o.orderId(), id, "ADDER BUY:",
                             devOrderMap.get(id), "yOpen:" + yOpen, "mOpen:" + mOpen,
-                            "prevClose", prevClose, "p/b/a", price, getBid(symbol), getAsk(symbol), "devFromMaxOpen",
-                            r10000(price / Math.max(yOpen, mOpen) - 1))
+                            "prevClose", prevClose, "p/b/a", price, getBid(symbol), getAsk(symbol)
+                            , "devFromMaxOpen", r10000(price / Math.max(yOpen, mOpen) - 1))
                             , devOutput);
                 }
             } else if (price < yOpen && price < mOpen && totalDelta > LO_LIMIT
@@ -402,6 +405,10 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                 }
             }
         }
+    }
+
+    private static double computeStockOffset(double price, double percent) {
+        return Math.max(0.1, Math.round(price * percent * 10d) / 10d);
     }
 
     private static void overnightHedger(Contract ct, double price, LocalDateTime t, double mOpen) {

@@ -1133,10 +1133,8 @@ public class ApiController implements EWrapper {
     @Override
     public void historicalData(int reqId, client.Bar bar) {
 
-        //pr("historical data ", reqId, bar);
         IBDataHandler.historicalData(reqId, bar.time(), bar.open(), bar.high(), bar.low(), bar.close(),
                 bar.volume(), bar.count(), bar.wap());
-        //IBDataHandler.historicalDataEnd(reqId);
 
         IHistoricalDataHandler handler = m_historicalDataMap.get(reqId);
         if (handler != null) {

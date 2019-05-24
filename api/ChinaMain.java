@@ -591,7 +591,7 @@ public final class ChinaMain implements IConnectionHandler {
 
     @Override
     public void error(Exception e) {
-        e.printStackTrace();
+        pr(e);
         show(e.toString());
     }
 

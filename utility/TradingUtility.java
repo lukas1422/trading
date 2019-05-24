@@ -149,6 +149,18 @@ public class TradingUtility {
         return o;
     }
 
+    public static Order placeBidLimitTIFRel(double quantity, Types.TimeInForce tif, double offset) {
+        if (quantity <= 0) throw new IllegalStateException(" cannot have 0 quantity ");
+        Order o = new Order();
+        o.action(Types.Action.BUY);
+        o.orderType(OrderType.PASSV_REL);
+        o.auxPrice(offset);
+        o.totalQuantity(quantity);
+        o.outsideRth(true);
+        o.tif(tif);
+        return o;
+    }
+
     public static Order buyAtOffer(double p, double quantity) {
         Order o = new Order();
         o.action(Types.Action.BUY);
