@@ -56,12 +56,12 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     private static File devOutput = new File(TradingConstants.GLOBALPATH + "breachMDev.txt");
     private static File startEndTime = new File(TradingConstants.GLOBALPATH + "startEndTime.txt");
 
-    static ScheduledExecutorService es = Executors.newScheduledThreadPool(10);
+    private static ScheduledExecutorService es = Executors.newScheduledThreadPool(10);
 
 
     private static final double HI_LIMIT = 4000000.0;
     private static final double LO_LIMIT = -4000000.0;
-    private static final double HEDGE_THRESHOLD = 0;
+    private static final double HEDGE_THRESHOLD = 100000;
     //private static final double ABS_LIMIT = 5000000.0;
 
     public static Map<Currency, Double> fx = new HashMap<>();
@@ -177,7 +177,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     }
 
 
-    public void connectAndReqPos() {
+    private void connectAndReqPos() {
         ApiController ap = new ApiController(
                 new DefaultConnectionHandler(),
                 new DefaultLogger(), new DefaultLogger());
@@ -210,7 +210,8 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         }
 
         pr(" Time after latch released " + LocalTime.now());
-        reqHoldings(ap);
+        Executors.newScheduledThreadPool(10).schedule(() -> reqHoldings(ap),
+                500, TimeUnit.MILLISECONDS);
     }
 
 
@@ -222,8 +223,6 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
     private static void ytdOpen(Contract c, String date, double open, double high, double low,
                                 double close, long volume) {
-
-//        pr("ytd open",c.symbol(), date, open, high, low, close);
 
         String symbol = utility.Utility.ibContractToSymbol(c);
         if (!date.startsWith("finished")) {
@@ -456,7 +455,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                 int id = devTradeID.incrementAndGet();
                 double bidPrice = Math.min(price, bidMap.getOrDefault(symbol, price));
                 double size =
-                        Math.min(5, Math.floor((-totalDelta / fx.get(Currency.USD)) / (multi.get("MNQ") * price)));
+                        Math.min(10, Math.floor((-totalDelta / fx.get(Currency.USD)) / (multi.get("MNQ") * price)));
                 Order o = placeBidLimitTIF(bidPrice, size, DAY);
                 devOrderMap.put(id, new OrderAugmented(ct, t, o, BREACH_ADDER));
                 placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));

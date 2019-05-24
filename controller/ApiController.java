@@ -10,6 +10,7 @@ import client.Types.*;
 import client.*;
 
 import java.io.IOException;
+import java.time.LocalTime;
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -149,6 +150,7 @@ public class ApiController implements EWrapper {
 
     @Override
     public void nextValidId(int orderId) {
+        pr("APIController: next valid id called ", LocalTime.now(), orderId);
         m_orderId.set(orderId);
         m_reqId.set(m_orderId.get() + 10000000); // let order id's not collide with other request id's
         m_connected = true;
@@ -287,7 +289,6 @@ public class ApiController implements EWrapper {
     }
 
     private boolean isConnected() {
-        //return m_connectionHandler.
         return m_connected;
     }
 
@@ -1259,7 +1260,6 @@ public class ApiController implements EWrapper {
             error(EClientErrors.NO_VALID_ID, EClientErrors.NOT_CONNECTED.code(), EClientErrors.NOT_CONNECTED.msg());
             return false;
         }
-
         return true;
     }
 

@@ -31,7 +31,7 @@ public class TradingUtility {
     public static final String A50_BACK_EXPIRY = getXINA50BackExpiry().format(TradingConstants.expPattern);
     public static volatile Map<Integer, Request> globalRequestMap = new ConcurrentHashMap<>();
     public static final boolean keepUptoDate = false;
-    public static final boolean regulatorySnapshot= false;
+    public static final boolean regulatorySnapshot = false;
 
     private TradingUtility() throws OperationNotSupportedException {
         throw new OperationNotSupportedException(" cannot instantiate utility class ");
@@ -113,7 +113,7 @@ public class TradingUtility {
 
     public static Order placeOfferLimitTIF(double p, double quantity, Types.TimeInForce tif) {
         if (quantity <= 0) throw new IllegalStateException(" cannot have negative or 0 quantity");
-        //System.out.println(" place offer limit " + p);
+
         Order o = new Order();
         o.action(Types.Action.SELL);
         o.lmtPrice(p);

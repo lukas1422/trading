@@ -140,13 +140,14 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
 
         try {
             l.await();
-            brMonController.setConnected();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         pr(" Time after latch released " + LocalTime.now());
-        ap.reqPositions(this);
+
+
+        Executors.newScheduledThreadPool(10).schedule(() -> ap.reqPositions(this)
+                , 500, TimeUnit.MILLISECONDS);
     }
 
     private void reqHoldings(ApiController ap) {

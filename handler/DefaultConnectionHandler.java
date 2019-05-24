@@ -2,6 +2,7 @@ package handler;
 
 import controller.ApiController;
 
+import java.time.LocalTime;
 import java.util.List;
 
 import static utility.Utility.pr;
@@ -30,10 +31,8 @@ public class DefaultConnectionHandler implements ApiController.IConnectionHandle
 
     @Override
     public void message(int id, int errorCode, String errorMsg) {
-//        if (errorCode != 2104 && errorCode != 2105 && errorCode != 2106 && errorCode != 2108 &&
-//                errorCode != 2119) {
-        pr(" DefaultConnHandler error ID " + id + " error code " + errorCode + " errormsg " + errorMsg);
-//        }
+        pr(LocalTime.now(),
+                " DefaultConnHandler error ID " + id + " error code " + errorCode + " errormsg " + errorMsg);
     }
 
     @Override
