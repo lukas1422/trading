@@ -4,10 +4,13 @@
     <list default="true" id="89ead1a1-7ff5-4e91-9d68-12c25b28bac3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DevTrader/BreachTrader.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevTrader/BreachTrader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ChinaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/ChinaMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utility/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/utility/Test1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utility/TradingUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/utility/TradingUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachMonitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachMonitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$TopMktDataAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController$TopMktDataAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/controller/ApiController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,11 +50,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DevTrader/BreachMonitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="300" lean-forward="true" selection-start-line="300" selection-end-line="300" />
+            <state relative-caret-position="247">
+              <caret line="134" column="35" selection-start-line="134" selection-start-column="35" selection-end-line="134" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/EClientSocket.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="235" column="13" lean-forward="true" selection-start-line="235" selection-start-column="13" selection-end-line="235" selection-end-column="13" />
+              <folding>
+                <element signature="e#801#802#0" expanded="true" />
+                <element signature="e#830#831#0" expanded="true" />
+                <element signature="e#2207#2208#0" expanded="true" />
+                <element signature="e#2254#2255#0" expanded="true" />
+                <element signature="e#6129#6130#0" expanded="true" />
+                <element signature="e#6200#6201#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/ApiController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="1550" column="19" lean-forward="true" selection-start-line="1550" selection-start-column="19" selection-end-line="1550" selection-end-column="19" />
+            <state relative-caret-position="148">
+              <caret line="374" column="23" selection-start-line="374" selection-start-column="23" selection-end-line="374" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#11202#11203#0" expanded="true" />
@@ -70,11 +90,33 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DevTrader/BreachTrader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="377" column="78" lean-forward="true" selection-start-line="377" selection-start-column="78" selection-end-line="377" selection-end-column="78" />
+            <state relative-caret-position="258">
+              <caret line="402" column="44" lean-forward="true" selection-start-line="402" selection-start-column="44" selection-end-line="402" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/handler/DefaultConnectionHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+              <folding>
+                <element signature="e#936#937#0" expanded="true" />
+                <element signature="e#980#981#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/EReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="78" column="37" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -83,7 +125,7 @@
         <entry file="file://$PROJECT_DIR$/utility/TestAPI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="214">
-              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+              <caret line="89" selection-start-line="89" selection-end-line="89" />
             </state>
           </provider>
         </entry>
@@ -98,43 +140,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utility/TradingUtility.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="155" column="9" lean-forward="true" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/OrderType.java">
+        <entry file="file://$PROJECT_DIR$/controller/ApiConnection.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="138">
-              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/handler/DefaultConnectionHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#936#937#0" expanded="true" />
-                <element signature="e#980#981#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/EWrapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+              <caret line="78" column="11" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -151,12 +160,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>status fill</find>
-      <find>in order status</find>
-      <find>status filled</find>
-      <find>orderstatus</find>
-      <find>accountsumm</find>
-      <find>netliqui</find>
       <find>account pnl:</find>
       <find>req</find>
       <find>HEDGE_THRESHOLD</find>
@@ -170,7 +173,6 @@
       <find>nextvalid</find>
       <find>connt</find>
       <find>reqpo</find>
-      <find>reqpos</find>
       <find>error()</find>
       <find>error</find>
       <find>error(</find>
@@ -181,6 +183,13 @@
       <find>reqmatching</find>
       <find>adder</find>
       <find>(rel)</find>
+      <find>reqpos</find>
+      <find>port</find>
+      <find>4001</find>
+      <find>apicontroller requ</find>
+      <find>abs_de</find>
+      <find>longdelta</find>
+      <find>totalDelta</find>
     </findStrings>
     <replaceStrings>
       <replace>import client.*;</replace>
@@ -226,11 +235,11 @@
         <option value="$PROJECT_DIR$/handler/HistDataConsumerNoVol.java" />
         <option value="$PROJECT_DIR$/handler/DefaultConnectionHandler.java" />
         <option value="$PROJECT_DIR$/api/ChinaMain.java" />
-        <option value="$PROJECT_DIR$/controller/ApiController.java" />
         <option value="$PROJECT_DIR$/utility/TradingUtility.java" />
         <option value="$PROJECT_DIR$/utility/Test1.java" />
-        <option value="$PROJECT_DIR$/DevTrader/BreachTrader.java" />
         <option value="$PROJECT_DIR$/DevTrader/BreachMonitor.java" />
+        <option value="$PROJECT_DIR$/controller/ApiController.java" />
+        <option value="$PROJECT_DIR$/DevTrader/BreachTrader.java" />
       </list>
     </option>
   </component>
@@ -252,7 +261,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -265,6 +273,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -368,9 +377,9 @@
       <list>
         <item itemvalue="Application.BreachMonitor" />
         <item itemvalue="Application.BreachTrader" />
-        <item itemvalue="Application.Test1" />
         <item itemvalue="Application.ChinaMain" />
         <item itemvalue="Application.MorningTask" />
+        <item itemvalue="Application.Test1" />
       </list>
     </recent_temporary>
   </component>
@@ -391,7 +400,8 @@
       <workItem from="1558519656741" duration="1250000" />
       <workItem from="1558520961400" duration="36579000" />
       <workItem from="1558701223889" duration="10000" />
-      <workItem from="1558701667290" duration="4272000" />
+      <workItem from="1558701667290" duration="12578000" />
+      <workItem from="1558912085437" duration="10527000" />
     </task>
     <task id="LOCAL-00001" summary="522 tradingmain2 first commit">
       <created>1558519066706</created>
@@ -449,16 +459,23 @@
       <option name="project" value="LOCAL" />
       <updated>1558698035771</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="524 tried rel orders - not allowed">
+      <created>1558706626284</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1558706626284</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50381000" />
+    <option name="totallyTimeSpent" value="69214000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08959377" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.090706736" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -466,8 +483,8 @@
       <window_info id="Persistence" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5005525" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5038674" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5005525" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.5038674" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -497,20 +514,14 @@
     <MESSAGE value="522 fixing autotraderxu" />
     <MESSAGE value="523" />
     <MESSAGE value="524 delay reqPos by 0.5s w8 4 nextValidId" />
-    <option name="LAST_COMMIT_MESSAGE" value="524 delay reqPos by 0.5s w8 4 nextValidId" />
+    <MESSAGE value="524 tried rel orders - not allowed" />
+    <option name="LAST_COMMIT_MESSAGE" value="524 tried rel orders - not allowed" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/TickType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/Bar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="968">
@@ -575,13 +586,6 @@
             <element signature="e#33062#33063#0" expanded="true" />
             <element signature="e#33116#33117#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/ApiConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -783,21 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/EClientSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-          <folding>
-            <element signature="e#801#802#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#2207#2208#0" expanded="true" />
-            <element signature="e#2254#2255#0" expanded="true" />
-            <element signature="e#6129#6130#0" expanded="true" />
-            <element signature="e#6200#6201#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TestJavaClient/SampleFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -837,16 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handler/DefaultConnectionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/EWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
@@ -871,6 +850,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/EClientSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="235" column="13" lean-forward="true" selection-start-line="235" selection-start-column="13" selection-end-line="235" selection-end-column="13" />
+          <folding>
+            <element signature="e#801#802#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#2207#2208#0" expanded="true" />
+            <element signature="e#2254#2255#0" expanded="true" />
+            <element signature="e#6129#6130#0" expanded="true" />
+            <element signature="e#6200#6201#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevTrader/BreachMonitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="134" column="35" selection-start-line="134" selection-start-column="35" selection-end-line="134" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/ChinaMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
@@ -878,6 +879,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/ApiConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="78" column="11" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -891,21 +899,32 @@
     <entry file="file://$PROJECT_DIR$/utility/TestAPI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
-          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DevTrader/BreachTrader.java">
+    <entry file="file://$PROJECT_DIR$/client/EReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="377" column="78" lean-forward="true" selection-start-line="377" selection-start-column="78" selection-end-line="377" selection-end-column="78" />
+        <state relative-caret-position="126">
+          <caret line="78" column="37" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handler/DefaultConnectionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="e#936#937#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/ApiController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="1550" column="19" lean-forward="true" selection-start-line="1550" selection-start-column="19" selection-end-line="1550" selection-end-column="19" />
+        <state relative-caret-position="148">
+          <caret line="374" column="23" selection-start-line="374" selection-start-column="23" selection-end-line="374" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#11202#11203#0" expanded="true" />
@@ -914,10 +933,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DevTrader/BreachMonitor.java">
+    <entry file="file://$PROJECT_DIR$/DevTrader/BreachTrader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="300" lean-forward="true" selection-start-line="300" selection-end-line="300" />
+        <state relative-caret-position="258">
+          <caret line="402" column="44" lean-forward="true" selection-start-line="402" selection-start-column="44" selection-end-line="402" selection-end-column="44" />
         </state>
       </provider>
     </entry>

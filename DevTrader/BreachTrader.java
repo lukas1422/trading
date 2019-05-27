@@ -48,6 +48,8 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
     private static double totalDelta = 0.0;
     private static double totalAbsDelta = 0.0;
+    private static double longDelta = 0.0;
+    private static double shortDelta = 0.0;
     private static ApiController apDev;
 
     private static final LocalDate LAST_MONTH_DAY = getLastMonthLastDay();
@@ -358,6 +360,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         if (!added && !liquidated && pos == 0.0 && prevClose != 0.0 && numCrosses < MAX_CROSS_PER_MONTH) {
 
             if (price > yOpen && price > mOpen && totalDelta < HI_LIMIT
+                    && longDelta < HI_LIMIT
                     && ((price / Math.max(yOpen, mOpen) - 1) < MAX_ENTRY_DEV)
                     && ((price / Math.max(yOpen, mOpen) - 1) > MIN_ENTRY_DEV)) {
 
@@ -382,6 +385,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                             , devOutput);
                 }
             } else if (price < yOpen && price < mOpen && totalDelta > LO_LIMIT
+                    && shortDelta > LO_LIMIT
                     && (price / Math.min(yOpen, mOpen) - 1) > -MAX_ENTRY_DEV
                     && (price / Math.min(yOpen, mOpen) - 1) < -MIN_ENTRY_DEV) {
 
@@ -689,12 +693,12 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                     .filter(e -> e.getValue() != 0.0)
                     .mapToDouble(e -> Math.abs(getDelta(e.getKey(), getLastPriceFromYtd(e.getKey()), e.getValue(),
                             fx.getOrDefault(Currency.get(e.getKey().currency()), 1.0)))).sum();
-            double longDelta = contractPosMap.entrySet().stream()
+            longDelta = contractPosMap.entrySet().stream()
                     .filter(e -> e.getValue() > 0.0)
                     .mapToDouble(e -> getDelta(e.getKey(), getLastPriceFromYtd(e.getKey()), e.getValue(),
                             fx.getOrDefault(Currency.get(e.getKey().currency()), 1.0))).sum();
 
-            double shortDelta = contractPosMap.entrySet().stream()
+            shortDelta = contractPosMap.entrySet().stream()
                     .filter(e -> e.getValue() < 0.0)
                     .mapToDouble(e -> getDelta(e.getKey(), getLastPriceFromYtd(e.getKey()), e.getValue(),
                             fx.getOrDefault(Currency.get(e.getKey().currency()), 1.0))).sum();
