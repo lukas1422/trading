@@ -248,8 +248,7 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
                         .count();
 
                 double last;
-                double secLast;
-                last = ytdDayData.get(symbol).lastEntry().getValue().getClose();
+                double secLast;last = ytdDayData.get(symbol).lastEntry().getValue().getClose();
                 secLast = ytdDayData.get(symbol).lowerEntry(ytdDayData.get(symbol)
                         .lastKey()).getValue().getClose();
 

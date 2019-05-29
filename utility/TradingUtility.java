@@ -39,16 +39,24 @@ public class TradingUtility {
 
 
     public static Contract getActiveA50Contract() {
-        long daysUntilFrontExp = ChronoUnit.DAYS.between(LocalDate.now(), getXINA50FrontExpiry());
-        //return frontFut;
-        pr(" **********  days until expiry **********", daysUntilFrontExp, getXINA50FrontExpiry());
-        if (daysUntilFrontExp <= 1) {
-            pr(" using back fut ");
-            return getBackFutContract();
-        } else {
-            pr(" using front fut ");
-            return getFrontFutContract();
-        }
+        Contract ct = new Contract();
+        ct.symbol("XINA50");
+        ct.exchange("SGX");
+        ct.secType(Types.SecType.FUT);
+        pr("A50 front expiry ", getXINA50FrontExpiry());
+        ct.lastTradeDateOrContractMonth(getXINA50FrontExpiry().format(futExpPattern));
+        ct.currency("USD");
+        return ct;
+
+//        long daysUntilFrontExp = ChronoUnit.DAYS.between(LocalDate.now(), getXINA50FrontExpiry());
+//        pr(" **********  days until expiry **********", daysUntilFrontExp, getXINA50FrontExpiry());
+//        if (daysUntilFrontExp <= 1) {
+//            pr(" using back fut ");
+//            return getBackFutContract();
+//        } else {
+//            pr(" using front fut ");
+//            return getFrontFutContract();
+//        }
     }
 
     public static Contract getActiveBTCContract() {
@@ -370,15 +378,6 @@ public class TradingUtility {
         } else {
             return getXINA50ExpiryDate(today);
         }
-    }
-
-    private static Contract getShanghaiConnectStock(String symb) {
-        Contract ct = new Contract();
-        ct.symbol(symb);
-        ct.exchange("SEHKNTL");
-        ct.currency("CNH");
-        ct.secType(Types.SecType.STK);
-        return ct;
     }
 
     public static LocalDate getPrevMonthDay(Contract ct, LocalDate defaultDate) {
