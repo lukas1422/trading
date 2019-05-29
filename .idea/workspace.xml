@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89ead1a1-7ff5-4e91-9d68-12c25b28bac3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevTrader/BreachMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevTrader/BreachMonitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utility/TradingUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/utility/TradingUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utility/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/utility/Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,14 +48,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utility/TradingUtility.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="373" lean-forward="true" selection-start-line="373" selection-end-line="373" />
+            <state relative-caret-position="59">
+              <caret line="94" column="50" lean-forward="true" selection-start-line="94" selection-start-column="50" selection-end-line="94" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/utility/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="59">
+              <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -187,6 +193,7 @@
         <option value="$PROJECT_DIR$/DevTrader/BreachTrader.java" />
         <option value="$PROJECT_DIR$/DevTrader/BreachMonitor.java" />
         <option value="$PROJECT_DIR$/utility/TradingUtility.java" />
+        <option value="$PROJECT_DIR$/utility/Test.java" />
       </list>
     </option>
   </component>
@@ -260,7 +267,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BreachMonitor">
+  <component name="RunManager" selected="Application.ChinaMain">
     <configuration name="BreachMonitor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DevTrader.BreachMonitor" />
       <module name="IBJts" />
@@ -313,8 +320,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="utility.Test1" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="utility.Test" />
       <module name="IBJts" />
       <extension name="coverage">
         <pattern>
@@ -328,11 +335,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BreachMonitor" />
-        <item itemvalue="Application.BreachTrader" />
         <item itemvalue="Application.ChinaMain" />
         <item itemvalue="Application.MorningTask" />
-        <item itemvalue="Application.Test1" />
+        <item itemvalue="Application.BreachMonitor" />
+        <item itemvalue="Application.BreachTrader" />
+        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -357,7 +364,7 @@
       <workItem from="1558912085437" duration="12721000" />
       <workItem from="1559046248132" duration="200000" />
       <workItem from="1559049789200" duration="6124000" />
-      <workItem from="1559079874829" duration="1419000" />
+      <workItem from="1559079874829" duration="11939000" />
     </task>
     <task id="LOCAL-00001" summary="522 tradingmain2 first commit">
       <created>1558519066706</created>
@@ -429,15 +436,21 @@
       <option name="project" value="LOCAL" />
       <updated>1558966676090</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="529 change defintion of sgxa50 active cont">
+      <created>1559088524328</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1559088524328</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79151000" />
+    <option name="totallyTimeSpent" value="89671000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09404563" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -448,7 +461,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.62099445" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4088398" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.7237569" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -480,20 +493,14 @@
     <MESSAGE value="524 delay reqPos by 0.5s w8 4 nextValidId" />
     <MESSAGE value="524 tried rel orders - not allowed" />
     <MESSAGE value="527" />
-    <option name="LAST_COMMIT_MESSAGE" value="527" />
+    <MESSAGE value="529 change defintion of sgxa50 active cont" />
+    <option name="LAST_COMMIT_MESSAGE" value="529 change defintion of sgxa50 active cont" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/Bar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="968">
-          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/handler/LiveHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -897,11 +904,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utility/TradingUtility.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="373" lean-forward="true" selection-start-line="373" selection-end-line="373" />
+        <state relative-caret-position="59">
+          <caret line="94" column="50" lean-forward="true" selection-start-line="94" selection-start-column="50" selection-end-line="94" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utility/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
         </state>
       </provider>
     </entry>

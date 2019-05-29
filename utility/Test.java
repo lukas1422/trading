@@ -26,7 +26,12 @@ public class Test {
     }
 
     public static void main(String[] args) {
-        pr(NYOpen(LocalDateTime.now()));
+        pr(LocalDateTime.now());
+        ZonedDateTime chinaZdt = ZonedDateTime.of(LocalDateTime.now(), chinaZone);
+        ZonedDateTime usZdt = chinaZdt.withZoneSameInstant(nyZone);
+        LocalTime usLt = usZdt.toLocalDateTime().toLocalTime();
+        pr(usZdt);
+
     }
 }
 
