@@ -34,8 +34,8 @@ public final class MorningTask implements HistoricalHandler, LiveHandler, ApiCon
         , ApiController.IAccountSummaryHandler {
 
     static final DateTimeFormatter f = DateTimeFormatter.ofPattern("M-d");
-    private static final LocalDate LAST_MONTH_DAY = getLastMonthLastDay();
-    private static final LocalDate LAST_YEAR_DAY = getLastYearLastDay();
+    private static final LocalDate LAST_MONTH_DAY = getPrevMonthLastDay();
+    private static final LocalDate LAST_YEAR_DAY = getPrevYearLastDay();
 
     private static volatile ConcurrentSkipListMap<String, ConcurrentSkipListMap<LocalDate, SimpleBar>>
             morningYtdData = new ConcurrentSkipListMap<>(String::compareTo);
@@ -80,7 +80,6 @@ public final class MorningTask implements HistoricalHandler, LiveHandler, ApiCon
     private static volatile double HKDCNH = 0.0;
     private static Set<LocalDate> holidaySet = new TreeSet<>();
 
-    //private Comparator<T>
 
     private MorningTask() {
         String line;

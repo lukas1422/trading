@@ -61,8 +61,8 @@ import static utility.Utility.*;
 
 public class ChinaPosition extends JPanel {
 
-    private static final LocalDate LAST_MONTH_LAST_DAY = getLastMonthLastDay();
-    private static final LocalDate LAST_YEAR_LAST_DAY = getLastYearLastDay();
+    private static final LocalDate LAST_MONTH_LAST_DAY = getPrevMonthLastDay();
+    private static final LocalDate LAST_YEAR_LAST_DAY = getPrevYearLastDay();
 
     private static volatile ConcurrentSkipListMap<String, ConcurrentSkipListMap<LocalDate, SimpleBar>>
             ytdDayData = new ConcurrentSkipListMap<>(String::compareTo);
@@ -1716,7 +1716,7 @@ public class ChinaPosition extends JPanel {
                                 .findFirst().map(Entry::getKey).orElse(LocalDate.MIN);
                         //.format(DateTimeFormatter.ofPattern("MM-dd"));
                     }
-                    return getLastMonthLastDay();
+                    return getPrevMonthLastDay();
                 case 27:
                     if (ytdData.containsKey(symbol) && ytdData.get(symbol).size() > 0
                             && ytdData.get(symbol).lastKey().isAfter(LAST_MONTH_LAST_DAY)) {

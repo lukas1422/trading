@@ -380,7 +380,7 @@ public class TradingUtility {
         }
     }
 
-    public static LocalDate getPrevMonthDay(Contract ct, LocalDate defaultDate) {
+    public static LocalDate getPrevMonthCutoff(Contract ct, LocalDate defaultDate) {
         if (ct.secType() == Types.SecType.FUT || ct.secType() == Types.SecType.CONTFUT) {
             if (ct.symbol().equalsIgnoreCase("GXBT")) {
                 return getPrevBTCExpiry();

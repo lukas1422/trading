@@ -68,7 +68,7 @@ public class ChinaOptionHelper {
                 return getOptionExpiryDate(secondMonth);
             default:
                 return getOptionExpiryDate(
-                        secondMonth.plusMonths((secondMonth.getMonthValue() % 3 == 0 ? 3 : 1) + (n - 3) * 3));
+                        secondMonth.plusMonths((3 - secondMonth.getMonthValue() % 3) + (n - 3) * 3));
         }
     }
 

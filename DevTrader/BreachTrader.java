@@ -52,8 +52,8 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     private static double shortDelta = 0.0;
     private static ApiController apDev;
 
-    private static final LocalDate LAST_MONTH_DAY = getLastMonthLastDay();
-    private static final LocalDate LAST_YEAR_DAY = getLastYearLastDay();
+    private static final LocalDate LAST_MONTH_DAY = getPrevMonthLastDay();
+    private static final LocalDate LAST_YEAR_DAY = getPrevYearLastDay();
 
     private static volatile AtomicInteger ibStockReqId = new AtomicInteger(60000);
     private static File devOutput = new File(TradingConstants.GLOBALPATH + "breachMDev.txt");
@@ -339,7 +339,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
     private static void breachAdder(Contract ct, double price, LocalDateTime t, double yOpen, double mOpen) {
         String symbol = ibContractToSymbol(ct);
-        LocalDate prevMonthDay = getPrevMonthDay(ct, LAST_MONTH_DAY);
+        LocalDate prevMonthDay = getPrevMonthCutoff(ct, LAST_MONTH_DAY);
         double pos = symbolPosMap.get(symbol);
         double defaultS;
         if (defaultSize.containsKey(symbol)) {
@@ -604,9 +604,11 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     @Override
     public void handlePrice(TickType tt, Contract ct, double price, LocalDateTime t) {
         String symbol = ibContractToSymbol(ct);
-        LocalDate prevMonthCutoff = getPrevMonthDay(ct, LAST_MONTH_DAY);
 
-//        pr("handle price ", tt, symbol, price, t);
+        ZonedDateTime chinaZdt = ZonedDateTime.of(t, chinaZone);
+        ZonedDateTime usZdt = chinaZdt.withZoneSameInstant(nyZone);
+
+        LocalDate prevMonthCutoff = getPrevMonthCutoff(ct, getPrevMonthLastDay(usZdt.toLocalDate()));
 
         switch (tt) {
             case LAST:

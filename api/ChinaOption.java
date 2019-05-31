@@ -143,6 +143,8 @@ public class ChinaOption extends JPanel implements Runnable {
         expiryList.add(thirdExpiry);
         expiryList.add(fourthExpiry);
 
+        pr("china option expiries ", frontExpiry, backExpiry, thirdExpiry, fourthExpiry);
+
         graphLapse.setGraphTitle("Fixed K Lapse");
         graphATMLapse.setGraphTitle(" ATM Lapse ");
         graphIntraday.setGraphTitle(" Intraday Vol ");

@@ -17,6 +17,7 @@ import java.io.InputStreamReader;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
@@ -30,8 +31,8 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
 
     private static final DateTimeFormatter f = DateTimeFormatter.ofPattern("M-d");
     private static final DateTimeFormatter f2 = DateTimeFormatter.ofPattern("M-d H:mm:ss");
-    private static final LocalDate LAST_MONTH_DAY = getLastMonthLastDay();
-    private static final LocalDate LAST_YEAR_DAY = getLastYearLastDay();
+    private static final LocalDate LAST_MONTH_DAY = getPrevMonthLastDay();
+    private static final LocalDate LAST_YEAR_DAY = getPrevYearLastDay();
     private static volatile ConcurrentSkipListMap<String, ConcurrentSkipListMap<LocalDate, SimpleBar>>
             ytdDayData = new ConcurrentSkipListMap<>(String::compareTo);
 
@@ -193,8 +194,9 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
 
         String symbol = utility.Utility.ibContractToSymbol(c);
 
-//        pr("breach mon ytdopen", symbol, date, open, high, low, close);
-        LocalDate prevMonthDay = TradingUtility.getPrevMonthDay(c, LAST_MONTH_DAY);
+        ZonedDateTime chinaZdt = ZonedDateTime.of(LocalDateTime.now(), chinaZone);
+        ZonedDateTime usZdt = chinaZdt.withZoneSameInstant(nyZone);
+        LocalDate prevMonthDay = TradingUtility.getPrevMonthCutoff(c, getPrevMonthLastDay(usZdt.toLocalDate()));
 
 
         if (!date.startsWith("finished")) {
@@ -248,7 +250,8 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
                         .count();
 
                 double last;
-                double secLast;last = ytdDayData.get(symbol).lastEntry().getValue().getClose();
+                double secLast;
+                last = ytdDayData.get(symbol).lastEntry().getValue().getClose();
                 secLast = ytdDayData.get(symbol).lowerEntry(ytdDayData.get(symbol)
                         .lastKey()).getValue().getClose();
 
@@ -323,7 +326,7 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
     @Override
     public void handlePrice(TickType tt, Contract ct, double price, LocalDateTime t) {
         String symbol = ibContractToSymbol(ct);
-        LocalDate prevMonthDate = TradingUtility.getPrevMonthDay(ct, LAST_MONTH_DAY);
+        LocalDate prevMonthDate = TradingUtility.getPrevMonthCutoff(ct, LAST_MONTH_DAY);
 
         //pr("last symbol ", tt, symbol, price, t.format(f2));
         switch (tt) {
