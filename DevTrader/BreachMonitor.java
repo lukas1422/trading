@@ -31,8 +31,8 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
 
     private static final DateTimeFormatter f = DateTimeFormatter.ofPattern("M-d");
     private static final DateTimeFormatter f2 = DateTimeFormatter.ofPattern("M-d H:mm:ss");
-    private static final LocalDate LAST_MONTH_DAY = getPrevMonthLastDay();
-    private static final LocalDate LAST_YEAR_DAY = getPrevYearLastDay();
+    private static final LocalDate LAST_MONTH_DAY = getMonthBeginMinus1Day();
+    private static final LocalDate LAST_YEAR_DAY = getYearBeginMinus1Day();
     private static volatile ConcurrentSkipListMap<String, ConcurrentSkipListMap<LocalDate, SimpleBar>>
             ytdDayData = new ConcurrentSkipListMap<>(String::compareTo);
 
@@ -196,7 +196,7 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
 
         ZonedDateTime chinaZdt = ZonedDateTime.of(LocalDateTime.now(), chinaZone);
         ZonedDateTime usZdt = chinaZdt.withZoneSameInstant(nyZone);
-        LocalDate prevMonthDay = TradingUtility.getPrevMonthCutoff(c, getPrevMonthLastDay(usZdt.toLocalDate()));
+        LocalDate prevMonthDay = TradingUtility.getPrevMonthCutoff(c, getMonthBeginMinus1Day(usZdt.toLocalDate()));
 
 
         if (!date.startsWith("finished")) {

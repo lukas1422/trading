@@ -52,8 +52,8 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     private static double shortDelta = 0.0;
     private static ApiController apDev;
 
-    private static final LocalDate LAST_MONTH_DAY = getPrevMonthLastDay();
-    private static final LocalDate LAST_YEAR_DAY = getPrevYearLastDay();
+    private static final LocalDate LAST_MONTH_DAY = getMonthBeginMinus1Day();
+    private static final LocalDate LAST_YEAR_DAY = getYearBeginMinus1Day();
 
     private static volatile AtomicInteger ibStockReqId = new AtomicInteger(60000);
     private static File devOutput = new File(TradingConstants.GLOBALPATH + "breachMDev.txt");
@@ -441,6 +441,8 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                     devOrderMap.get(id), "pos", pos, "mOpen:" + mOpen, "price", price), devOutput);
         }
 
+        //pr("ny overnight , added ", NYOvernight(t), added, totalDelta > HEDGE_THRESHOLD, price < mOpen);
+
         if (NYOvernight(t) && !added) {
             if (totalDelta > HEDGE_THRESHOLD && price < mOpen) {
                 addedMap.put(symbol, new AtomicBoolean(true));
@@ -608,7 +610,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         ZonedDateTime chinaZdt = ZonedDateTime.of(t, chinaZone);
         ZonedDateTime usZdt = chinaZdt.withZoneSameInstant(nyZone);
 
-        LocalDate prevMonthCutoff = getPrevMonthCutoff(ct, getPrevMonthLastDay(usZdt.toLocalDate()));
+        LocalDate prevMonthCutoff = getPrevMonthCutoff(ct, getMonthBeginMinus1Day(usZdt.toLocalDate()));
 
         switch (tt) {
             case LAST:
@@ -632,16 +634,17 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                         mStart = ytdDayData.get(symbol).ceilingEntry(prevMonthCutoff).getValue().getOpen();
                     }
 
-                    if (usStockOpen(ct, t)) {
-                        breachCutter(ct, price, t, yStart, mStart);
-                        breachAdder(ct, price, t, yStart, mStart);
-                    }
 
                     if (symbol.equalsIgnoreCase("MNQ")) {
                         pr("MNQ ", price, t, "ystart", yStart, "mstart", mStart,
                                 Math.round(10000d * (price / mStart - 1)) / 100d + "%",
                                 "pos", symbolPosMap.getOrDefault("MNQ", 0.0));
                         overnightHedger(ct, price, t, mStart);
+                    } else {
+                        if (usStockOpen(ct, t)) {
+                            breachCutter(ct, price, t, yStart, mStart);
+                            breachAdder(ct, price, t, yStart, mStart);
+                        }
                     }
                 }
 

@@ -1246,8 +1246,8 @@ public final class ChinaStock extends JPanel {
 
             if (indexData.get(index).size() > 0 && detailed5mData.get(index).size() > 0) {
                 double last = indexData.get(index).lastEntry().getValue().getClose();
-                double lastYrEnd = indexData.get(index).ceilingEntry(Utility.getPrevYearLastDay()).getValue().getClose();
-                double lastMoEnd = indexData.get(index).ceilingEntry(Utility.getPrevMonthLastDay()).getValue().getClose();
+                double lastYrEnd = indexData.get(index).ceilingEntry(Utility.getYearBeginMinus1Day()).getValue().getClose();
+                double lastMoEnd = indexData.get(index).ceilingEntry(Utility.getMonthBeginMinus1Day()).getValue().getClose();
                 double ydev = Math.round(1000d * ((last / lastYrEnd) - 1)) / 10d;
                 double mdev = Math.round(1000d * ((last / lastMoEnd) - 1)) / 10d;
 

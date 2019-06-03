@@ -842,22 +842,22 @@ public class Utility {
         System.out.println(str(os));
     }
 
-    public static LocalDate getPrevMonthLastDay() {
+    public static LocalDate getMonthBeginMinus1Day() {
         LocalDate now = LocalDate.now().withDayOfMonth(1);
         return now.minusDays(1L);
     }
 
-    public static LocalDate getPrevYearLastDay() {
+    public static LocalDate getYearBeginMinus1Day() {
         LocalDate now = LocalDate.now().withDayOfYear(1);
         return now.minusDays(1L);
     }
 
-    public static LocalDate getPrevMonthLastDay(LocalDate d) {
+    public static LocalDate getMonthBeginMinus1Day(LocalDate d) {
         LocalDate now = d.withDayOfMonth(1);
         return now.minusDays(1L);
     }
 
-    public static LocalDate getPrevYearLastDay(LocalDate d) {
+    public static LocalDate getYearBeginMinus1Day(LocalDate d) {
         LocalDate now = d.withDayOfYear(1);
         return now.minusDays(1L);
     }
