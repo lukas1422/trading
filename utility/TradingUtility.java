@@ -76,7 +76,17 @@ public class TradingUtility {
         ct.symbol("MNQ");
         ct.exchange("GLOBEX");
         ct.secType("FUT");
-        ct.lastTradeDateOrContractMonth(getActiveMNQExpiry().format(futExpPattern));
+        ct.lastTradeDateOrContractMonth(getActiveMSeriesExpiry().format(futExpPattern));
+        ct.currency("USD");
+        return ct;
+    }
+
+    public static Contract getActiveMESContract() {
+        Contract ct = new Contract();
+        ct.symbol("MES");
+        ct.exchange("GLOBEX");
+        ct.secType("FUT");
+        ct.lastTradeDateOrContractMonth(getActiveMSeriesExpiry().format(futExpPattern));
         ct.currency("USD");
         return ct;
     }
@@ -254,7 +264,7 @@ public class TradingUtility {
                 ? nextMonthExpiry : thisMonthExpiry;
     }
 
-    public static LocalDate getActiveMNQExpiry() {
+    private static LocalDate getActiveMSeriesExpiry() {
         LocalDateTime ldt = LocalDateTime.now();
 
         int monthsToAddToNextExpiry = (3 - ldt.getMonthValue() % 3) % 3;

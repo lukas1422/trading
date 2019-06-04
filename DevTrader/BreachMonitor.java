@@ -103,6 +103,8 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
         registerContract(getActiveA50Contract());
         registerContract(getActiveBTCContract());
         registerContract(getActiveMNQContract());
+        registerContract(getActiveMESContract());
+
     }
 
     //test upload to github
