@@ -35,7 +35,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     static final int MAX_ATTEMPTS = 100;
     private static final int MAX_CROSS_PER_MONTH = 10;
     private static final double MAX_ENTRY_DEV = 0.02;
-    private static final double MIN_ENTRY_DEV = 0.0015;
+    private static final double MIN_ENTRY_DEV = 0.002;
     private static final double ENTRY_CUSHION = 0.0;
     private static final double PRICE_OFFSET_PERC = 0.002;
 
@@ -426,7 +426,8 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
         assert symbol.equalsIgnoreCase(HEDGER_INDEX);
 
-        if (!liquidated && ((NYOpen(t) && pos != 0) || (pos > 0 && price < mOpen) || (pos < 0 && price > mOpen))) {
+        if (!liquidated && ((NYOpen(t) && pos != 0) || (pos > 0 && (price < mOpen || price < yOpen))
+                || (pos < 0 && (price > mOpen || price > yOpen)))) {
             liquidatedMap.put(symbol, new AtomicBoolean(true));
             int id = devTradeID.incrementAndGet();
             Order o = new Order();
@@ -444,7 +445,8 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                     devOrderMap.get(id), "pos", pos, "mOpen:" + mOpen, "price", price), devOutput);
         }
 
-        //pr("ny overnight , added ", NYOvernight(t), added, totalDelta > HEDGE_THRESHOLD, price < mOpen);
+//        pr("ny overnight , added ", NYOvernight(t), added, totalDelta > HEDGE_THRESHOLD, price < mOpen,
+//                price < yOpen);
 
         if (NYOvernight(t) && !added) {
             if (totalDelta > HEDGE_THRESHOLD && price < mOpen && price < yOpen) {

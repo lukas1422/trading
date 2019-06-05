@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89ead1a1-7ff5-4e91-9d68-12c25b28bac3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevTrader/BreachMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevTrader/BreachMonitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DevTrader/BreachTrader.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevTrader/BreachTrader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachMonitor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachMonitor$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachMonitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachMonitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/utility/TradingUtility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/utility/TradingUtility.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utility/TradingUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/utility/TradingUtility.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DevTrader/BreachTrader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="481" column="24" lean-forward="true" selection-start-line="481" selection-start-column="24" selection-end-line="481" selection-end-column="24" />
+            <state relative-caret-position="528">
+              <caret line="447" selection-start-line="447" selection-start-column="2" selection-end-line="448" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -88,7 +80,6 @@
       <find>connectand</find>
       <find>re</find>
       <find>reqmatching</find>
-      <find>adder</find>
       <find>(rel)</find>
       <find>reqpos</find>
       <find>port</find>
@@ -104,12 +95,13 @@
       <find>uslt</find>
       <find>hedg</find>
       <find>MNQ</find>
-      <find>hedger</find>
       <find>&quot;MES&quot;</find>
       <find>&quot;MNQ&quot;</find>
       <find>HEDG</find>
       <find>MES</find>
       <find>HEDGER</find>
+      <find>adder</find>
+      <find>hedger</find>
     </findStrings>
     <replaceStrings>
       <replace>import client.*;</replace>
@@ -162,8 +154,8 @@
         <option value="$PROJECT_DIR$/api/MorningTask.java" />
         <option value="$PROJECT_DIR$/utility/Utility.java" />
         <option value="$PROJECT_DIR$/utility/TradingUtility.java" />
-        <option value="$PROJECT_DIR$/DevTrader/BreachTrader.java" />
         <option value="$PROJECT_DIR$/DevTrader/BreachMonitor.java" />
+        <option value="$PROJECT_DIR$/DevTrader/BreachTrader.java" />
       </list>
     </option>
   </component>
@@ -237,7 +229,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MorningTask">
+  <component name="RunManager" selected="Application.BreachTrader">
     <configuration name="BreachMonitor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DevTrader.BreachMonitor" />
       <module name="IBJts" />
@@ -305,10 +297,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MorningTask" />
-        <item itemvalue="Application.BreachMonitor" />
         <item itemvalue="Application.BreachTrader" />
         <item itemvalue="Application.ChinaMain" />
+        <item itemvalue="Application.BreachMonitor" />
+        <item itemvalue="Application.MorningTask" />
         <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
@@ -338,7 +330,7 @@
       <workItem from="1559173183748" duration="4375000" />
       <workItem from="1559225708322" duration="2452000" />
       <workItem from="1559264744935" duration="13491000" />
-      <workItem from="1559529754484" duration="19237000" />
+      <workItem from="1559529754484" duration="25796000" />
     </task>
     <task id="LOCAL-00001" summary="522 tradingmain2 first commit">
       <created>1558519066706</created>
@@ -438,16 +430,24 @@
       <option name="project" value="LOCAL" />
       <updated>1559569424276</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="6 4">
+      <created>1559660859633</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1559660859633</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130509000" />
+    <option name="totallyTimeSpent" value="137068000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.098497495" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.098497495" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -456,7 +456,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.5403315" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.5955801" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.17790055" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -492,7 +492,8 @@
     <MESSAGE value="530" />
     <MESSAGE value="61 month cut off redef" />
     <MESSAGE value="6 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="6 3" />
+    <MESSAGE value="6 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="6 4" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -916,8 +917,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DevTrader/BreachTrader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="481" column="24" lean-forward="true" selection-start-line="481" selection-start-column="24" selection-end-line="481" selection-end-column="24" />
+        <state relative-caret-position="528">
+          <caret line="447" selection-start-line="447" selection-start-column="2" selection-end-line="448" selection-end-column="33" />
         </state>
       </provider>
     </entry>
