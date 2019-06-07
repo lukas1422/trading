@@ -371,7 +371,7 @@ public class ApiController implements EWrapper {
             return;
         }
 
-//        pr(" APIController requesting positions ");
+        pr(" APIController requesting positions ");
         m_positionHandlers.add(handler);
         m_client.reqPositions();
         sendEOM();

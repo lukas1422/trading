@@ -6,6 +6,7 @@ import client.Contract;
 import client.Types;
 import controller.ApiController;
 import handler.DefaultConnectionHandler;
+import net.bytebuddy.pool.TypePool;
 import utility.TradingUtility;
 import utility.Utility;
 
@@ -64,30 +65,34 @@ public class DevUSNamesAdder implements ApiController.IPositionHandler {
         boolean connectionStatus = false;
 
         try {
-            ap.connect("127.0.0.1", 4001, 2, "");
+            pr(" using port 4001");
+            ap.connect("127.0.0.1", 4001, 12, "");
             connectionStatus = true;
             l.countDown();
         } catch (IllegalStateException ex) {
             pr(" illegal state exception caught ", ex.getMessage());
         }
 
-        if (!connectionStatus) {
-            pr(" using port 7496 ");
-            ap.connect("127.0.0.1", 7496, 2, "");
-            l.countDown();
-        }
+//        if (!connectionStatus) {
+//            pr(" using port 7496 ");
+//            ap.connect("127.0.0.1", 7496, 2, "");
+//            l.countDown();
+//        }
 
         try {
             l.await();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        ap.reqPositions(this);
+        pr(" before req positions ");
+        Executors.newScheduledThreadPool(10).schedule(() -> ap.reqPositions(this)
+                , 500, TimeUnit.MILLISECONDS);
     }
 
     public static void main(String[] args) {
         DevUSNamesAdder adder = new DevUSNamesAdder();
         adder.getFromIB();
+
         ScheduledExecutorService es = Executors.newSingleThreadScheduledExecutor();
         es.schedule(() -> {
             pr("***Delay 20s*** output to breach, updateChinaAll ");
@@ -110,7 +115,6 @@ public class DevUSNamesAdder implements ApiController.IPositionHandler {
         for (Contract c : contractPosition.keySet()) {
             breachNameSet.add(ibContractToSymbol(c));
         }
-
 
         for (String k : breachNameSet) {
             Contract c = getUSStockContract(k);
@@ -135,6 +139,8 @@ public class DevUSNamesAdder implements ApiController.IPositionHandler {
 
         String symbol = utility.Utility.ibContractToSymbol(c);
 
+        pr("breach price handler ", symbol, date, open, close);
+
         if (!date.startsWith("finished")) {
             LocalDate ld = LocalDate.parse(date, DateTimeFormatter.ofPattern("yyyyMMdd"));
             symbolBarData.get(symbol).put(ld, new SimpleBar(open, high, low, close));
@@ -148,24 +154,29 @@ public class DevUSNamesAdder implements ApiController.IPositionHandler {
     }
 
     private static void outputToBreach() {
-        try (BufferedWriter out = new BufferedWriter(new FileWriter(breachUSNames, false))) {
-            symbolLotsize.forEach((k, v) -> {
-                if (v != 0) {
-                    try {
-                        out.append(getStrTabbed(k, v));
-                    } catch (IOException e) {
-                        e.printStackTrace();
+        if (symbolLotsize.size() != 0) {
+            try (BufferedWriter out = new BufferedWriter(new FileWriter(breachUSNames, false))) {
+                symbolLotsize.forEach((k, v) -> {
+                    if (v != 0) {
+                        try {
+                            out.append(getStrTabbed(k, v));
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        try {
+                            out.newLine();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     }
-                    try {
-                        out.newLine();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
-        } catch (IOException ex) {
-            ex.printStackTrace();
+                });
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        } else {
+            throw new IllegalStateException(" symbol size 0 , no output ");
         }
+
     }
 
     private static void updateChinaAll() {
