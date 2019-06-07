@@ -64,7 +64,7 @@ public class DevUSNamesAdder implements ApiController.IPositionHandler {
         boolean connectionStatus = false;
 
         try {
-            ap.connect("127.0.0.1", 7496, 2, "");
+            ap.connect("127.0.0.1", 4001, 2, "");
             connectionStatus = true;
             l.countDown();
         } catch (IllegalStateException ex) {
@@ -72,8 +72,8 @@ public class DevUSNamesAdder implements ApiController.IPositionHandler {
         }
 
         if (!connectionStatus) {
-            pr(" using port 4001 ");
-            ap.connect("127.0.0.1", 4001, 2, "");
+            pr(" using port 7496 ");
+            ap.connect("127.0.0.1", 7496, 2, "");
             l.countDown();
         }
 
