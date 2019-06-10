@@ -212,7 +212,6 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
 
         } else {
             semaphore.release();
-//            pr(" semaphore release: # permits ", semaphore.availablePermits());
 
             double pos = contractPosMap.getOrDefault(c, 0.0);
             if (ytdDayData.containsKey(symbol) && ytdDayData.get(symbol).size() > 0) {
@@ -302,7 +301,6 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
                                         .filter(e -> e.getValue().getClose() > mOpen).count() / mCount) + "%",
                         "mDev:" + mDev + "%" + "(" +
                                 mOpenDate.format(f) + " " + mOpen + ")");
-
 
                 if (pos != 0.0) {
                     pr(LocalTime.now().truncatedTo(ChronoUnit.MINUTES), pos != 0.0 ? "*" : ""

@@ -97,7 +97,7 @@ public class SimpleBar implements Serializable, Comparable<SimpleBar> {
     }
 
     public boolean strictIncludes(double p) {
-        return (!(open == close)) && ((p <= close && p >= open) || (p <= open && p >= close));
+        return open != close && ((p <= close && p >= open) || (p <= open && p >= close));
     }
 
     public double getClose() {
