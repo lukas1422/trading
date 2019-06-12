@@ -340,7 +340,8 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         throw new IllegalStateException(str(" cannot get delta for symbol type", ct.symbol(), ct.secType()));
     }
 
-    private static void breachAdder(Contract ct, double price, LocalDateTime t, double yOpen, double mOpen) {
+    private static void breachAdder(Contract ct, double price, LocalDateTime t, double yOpen, double mOpen, double
+            dOpen) {
         String symbol = ibContractToSymbol(ct);
         LocalDate prevMonthDay = getPrevMonthCutoff(ct, LAST_MONTH_DAY);
         double pos = symbolPosMap.get(symbol);
@@ -362,7 +363,8 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
         if (!added && !liquidated && pos == 0.0 && prevClose != 0.0 && numCrosses <= MAX_CROSS_PER_MONTH) {
 
-            if (price > yOpen && price > mOpen && totalDelta < HI_LIMIT
+            if (price > yOpen && price > mOpen && price > dOpen
+                    && totalDelta < HI_LIMIT
                     && longDelta < HI_LIMIT
                     && ((price / Math.max(yOpen, mOpen) - 1) < MAX_ENTRY_DEV)
                     && ((price / Math.max(yOpen, mOpen) - 1) > MIN_ENTRY_DEV)) {
@@ -387,7 +389,8 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                             , "devFromMaxOpen", r10000(price / Math.max(yOpen, mOpen) - 1))
                             , devOutput);
                 }
-            } else if (price < yOpen && price < mOpen && totalDelta > LO_LIMIT
+            } else if (price < yOpen && price < mOpen && price < dOpen
+                    && totalDelta > LO_LIMIT
                     && shortDelta > LO_LIMIT
                     && (price / Math.min(yOpen, mOpen) - 1) > -MAX_ENTRY_DEV
                     && (price / Math.min(yOpen, mOpen) - 1) < -MIN_ENTRY_DEV) {
@@ -615,6 +618,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         ZonedDateTime usZdt = chinaZdt.withZoneSameInstant(nyZone);
 
         LocalDate prevMonthCutoff = getPrevMonthCutoff(ct, getMonthBeginMinus1Day(usZdt.toLocalDate()));
+        LocalDateTime dayStartTime = LocalDateTime.of(usZdt.toLocalDate(), ltof(9, 30));
 
         switch (tt) {
             case LAST:
@@ -625,17 +629,24 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
                     double yStart;
                     double mStart;
+                    double dStart;
 
-                    if (ytdDayData.get(symbol).firstKey().isBefore(LAST_YEAR_DAY)) {
-                        yStart = ytdDayData.get(symbol).floorEntry(LAST_YEAR_DAY).getValue().getClose();
-                    } else {
+                    if (ytdDayData.get(symbol).firstKey().isAfter(LAST_YEAR_DAY)) {
                         yStart = ytdDayData.get(symbol).ceilingEntry(LAST_YEAR_DAY).getValue().getOpen();
+                    } else {
+                        yStart = ytdDayData.get(symbol).floorEntry(LAST_YEAR_DAY).getValue().getClose();
                     }
 
-                    if (ytdDayData.get(symbol).firstKey().isBefore(prevMonthCutoff)) {
-                        mStart = ytdDayData.get(symbol).floorEntry(prevMonthCutoff).getValue().getClose();
-                    } else {
+                    if (ytdDayData.get(symbol).firstKey().isAfter(prevMonthCutoff)) {
                         mStart = ytdDayData.get(symbol).ceilingEntry(prevMonthCutoff).getValue().getOpen();
+                    } else {
+                        mStart = ytdDayData.get(symbol).floorEntry(prevMonthCutoff).getValue().getClose();
+                    }
+
+                    if (liveData.get(symbol).firstKey().isAfter(dayStartTime)) {
+                        dStart = liveData.get(symbol).ceilingEntry(dayStartTime).getValue();
+                    } else {
+                        dStart = liveData.get(symbol).floorEntry(dayStartTime).getValue();
                     }
 
 
@@ -648,7 +659,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                     } else {
                         if (usStockOpen(ct, t)) {
                             breachCutter(ct, price, t, yStart, mStart);
-                            breachAdder(ct, price, t, yStart, mStart);
+                            breachAdder(ct, price, t, yStart, mStart, dStart);
                         }
                     }
                 }
@@ -667,6 +678,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                 askMap.put(symbol, price);
                 break;
         }
+
     }
 
     private static double getLastPriceFromYtd(Contract ct) {
