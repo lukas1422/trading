@@ -654,6 +654,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                         pr(HEDGER_INDEX, price, t, "ystart", yStart,
                                 Math.round(10000d * (price / yStart - 1)) / 100d + "%",
                                 "mstart", mStart, Math.round(10000d * (price / mStart - 1)) / 100d + "%",
+                                "dStart", dStart, Math.round(10000d * (price / dStart - 1)) / 100d + "%",
                                 "pos", symbolPosMap.getOrDefault(HEDGER_INDEX, 0.0));
                         overnightHedger(ct, price, t, yStart, mStart);
                     } else {

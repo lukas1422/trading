@@ -100,8 +100,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DevTrader/BreachTrader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="642" column="106" selection-start-line="642" selection-start-column="106" selection-end-line="642" selection-end-column="106" />
+            <state relative-caret-position="249">
+              <caret line="664" column="21" lean-forward="true" selection-start-line="664" selection-start-column="21" selection-end-line="664" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -152,7 +152,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>longDelta</find>
       <find>not contain sy</find>
       <find>not contain</find>
       <find>ytdDayData</find>
@@ -182,6 +181,7 @@
       <find>numcross</find>
       <find>viab</find>
       <find>breachadder</find>
+      <find>breachcutter</find>
     </findStrings>
     <replaceStrings>
       <replace>import client.*;</replace>
@@ -266,16 +266,6 @@
             <path>
               <item name="tradingMain2" type="b2602c69:ProjectViewProjectNode" />
               <item name="IBJts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tradingMain2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IBJts" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tradingMain2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IBJts" type="462c0819:PsiDirectoryNode" />
-              <item name="DevTrader" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -389,9 +379,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BreachTrader" />
-        <item itemvalue="Application.ChinaMain" />
         <item itemvalue="Application.MorningTask" />
         <item itemvalue="Application.BreachMonitor" />
+        <item itemvalue="Application.ChinaMain" />
         <item itemvalue="Application.DevUSNamesAdder" />
       </list>
     </recent_temporary>
@@ -424,7 +414,7 @@
       <workItem from="1559529754484" duration="53340000" />
       <workItem from="1559922575747" duration="4571000" />
       <workItem from="1560080727605" duration="1374000" />
-      <workItem from="1560135424552" duration="24310000" />
+      <workItem from="1560135424552" duration="27187000" />
     </task>
     <task id="LOCAL-00001" summary="522 tradingmain2 first commit">
       <created>1558519066706</created>
@@ -566,14 +556,21 @@
       <option name="project" value="LOCAL" />
       <updated>1560176981032</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="6 12 add daystart">
+      <created>1560331003638</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1560331003638</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194867000" />
+    <option name="totallyTimeSpent" value="197744000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10183639" />
@@ -585,7 +582,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.37458563" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.54254144" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.31049722" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -627,7 +624,8 @@
     <MESSAGE value="fix dev US names adder" />
     <MESSAGE value="6 10" />
     <MESSAGE value="6 10 max cross reset to 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="6 10 max cross reset to 4" />
+    <MESSAGE value="6 12 add daystart" />
+    <option name="LAST_COMMIT_MESSAGE" value="6 12 add daystart" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -990,17 +988,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auxiliary/SimpleBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="96" column="5" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
-          <folding>
-            <element signature="e#2119#2120#0" expanded="true" />
-            <element signature="e#2165#2166#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/EReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
@@ -1049,10 +1036,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/auxiliary/SimpleBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="96" column="5" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+          <folding>
+            <element signature="e#2119#2120#0" expanded="true" />
+            <element signature="e#2165#2166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DevTrader/BreachTrader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="642" column="106" selection-start-line="642" selection-start-column="106" selection-end-line="642" selection-end-column="106" />
+        <state relative-caret-position="249">
+          <caret line="664" column="21" lean-forward="true" selection-start-line="664" selection-start-column="21" selection-end-line="664" selection-end-column="21" />
         </state>
       </provider>
     </entry>
