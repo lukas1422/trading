@@ -441,6 +441,7 @@ public class TradingUtility {
     public static void reqHistDayData(ApiController ap, int reqId, Contract c,
                                       HistDataConsumer<Contract, String, Double, Long> dc,
                                       int duration, Types.BarSize bs) {
+        pr(" req hist data ", reqId, c.symbol());
         Types.DurationUnit durationUnit = Types.DurationUnit.DAY;
         String durationStr = duration + " " + durationUnit.toString().charAt(0);
         Types.WhatToShow whatToShow = Types.WhatToShow.TRADES;
