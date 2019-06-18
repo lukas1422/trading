@@ -63,10 +63,11 @@ public class TradingUtility {
         Contract ct = new Contract();
         ct.symbol("GXBT");
         ct.exchange("CFECRYPTO");
-        //ct.secType(Types.SecType.CONTFUT);
         ct.secType(Types.SecType.FUT);
         pr("BTC expiry ", getActiveBTCExpiry());
-        ct.lastTradeDateOrContractMonth(getActiveBTCExpiry().format(futExpPattern));
+        pr("BTC expiry pattern ", getActiveBTCExpiry().format(futExpPattern2));
+        ct.lastTradeDateOrContractMonth(getActiveBTCExpiry().format(futExpPattern2));
+//        ct.lastTradeDateOrContractMonth("20190");
         ct.currency("USD");
         return ct;
     }
@@ -441,7 +442,7 @@ public class TradingUtility {
     public static void reqHistDayData(ApiController ap, int reqId, Contract c,
                                       HistDataConsumer<Contract, String, Double, Long> dc,
                                       int duration, Types.BarSize bs) {
-        pr(" req hist data ", reqId, c.symbol());
+//        pr(" req hist data ", reqId, c.symbol());
         Types.DurationUnit durationUnit = Types.DurationUnit.DAY;
         String durationStr = duration + " " + durationUnit.toString().charAt(0);
         Types.WhatToShow whatToShow = Types.WhatToShow.TRADES;

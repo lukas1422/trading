@@ -130,7 +130,7 @@ public class TestAPI {
         boolean connectionStatus = false;
 
         try {
-            ap.connect("127.0.0.1", 7496, 101, "");
+            ap.connect("127.0.0.1", 4001, 101, "");
             connectionStatus = true;
             pr(" connection status is true ");
             l.countDown();
@@ -139,8 +139,8 @@ public class TestAPI {
         }
 
         if (!connectionStatus) {
-            pr(" using port 4001 ");
-            ap.connect("127.0.0.1", 4001, 101, "");
+            pr(" using port 7496");
+            ap.connect("127.0.0.1", 7496, 101, "");
             l.countDown();
             pr(" Latch counted down " + LocalTime.now());
         }
@@ -157,10 +157,10 @@ public class TestAPI {
 
         //Contract ct = getPrevBTC();
         //Contract ct = getActiveBTC();
-//        Contract ct = getContBTC();
+        Contract ct = getContBTC();
         //ct.secType(Types.SecType.CONTFUT);
 //        Contract ct = getUSStockContract("MRK");
-        Contract ct = getMYM();
+//        Contract ct = getMYM();
 
         TradingUtility.reqHistDayData(ap, 10002,
                 ct, (contract, date, open, high, low, close, vol) -> {

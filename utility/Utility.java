@@ -90,6 +90,7 @@ public class Utility {
     public static Map.Entry<LocalTime, SimpleBar> defaultEntry =
             new AbstractMap.SimpleEntry<>(LocalTime.MIN, new SimpleBar(0.0));
     public static DateTimeFormatter futExpPattern = DateTimeFormatter.ofPattern("yyyyMMdd");
+    public static DateTimeFormatter futExpPattern2 = DateTimeFormatter.ofPattern("yyyyMM");
 
 
     private static Predicate<LocalTime> tradingTimePred(LocalTime t1, LocalTime t2, LocalTime t3, LocalTime t4) {

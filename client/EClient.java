@@ -9,6 +9,8 @@ import java.util.List;
 
 import client.Types.SecType;
 
+import static utility.Utility.pr;
+
 public abstract class EClient {
 
     // Client version history
@@ -564,6 +566,7 @@ public abstract class EClient {
     public synchronized void reqMktData(int tickerId, Contract contract,
                                         String genericTickList, boolean snapshot,
                                         boolean regulatorySnapshot, List<TagValue> mktDataOptions) {
+        pr("req mkt data ", tickerId, contract.symbol());
         if (!isConnected()) {
             error(EClientErrors.NO_VALID_ID, EClientErrors.NOT_CONNECTED, "");
             return;
