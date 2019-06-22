@@ -139,7 +139,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         }
 
         registerContract(getActiveA50Contract());
-        registerContract(getActiveBTCContract());
+//        registerContract(getActiveBTCContract());
         registerContract(getActiveMNQContract());
         registerContract(getActiveMESContract());
 
@@ -521,6 +521,44 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     }
 
 
+    private static void futCutter(Contract ct, double price, LocalDateTime t) {
+        String symbol = ibContractToSymbol(ct);
+        double pos = symbolPosMap.get(symbol);
+        boolean added = addedMap.containsKey(symbol) && addedMap.get(symbol).get();
+        boolean liquidated = liquidatedMap.containsKey(symbol) && liquidatedMap.get(symbol).get();
+
+        if (!liquidated && pos != 0.0) {
+            if (pos < 0.0) {
+                checkIfAdderPending(symbol);
+                liquidatedMap.put(symbol, new AtomicBoolean(true));
+                int id = devTradeID.incrementAndGet();
+                double bidPrice = r(Math.min(price, bidMap.getOrDefault(symbol, price))
+                        - r(ENTRY_CUSHION * price));
+                bidPrice = roundToMinVariation(symbol, Direction.Long, bidPrice);
+                Order o = placeBidLimitTIF(bidPrice, Math.abs(pos), IOC);
+                devOrderMap.put(id, new OrderAugmented(ct, t, o, FUT_TEMP_CUTTER));
+                placeOrModifyOrderCheck(apDev, ct, o, new GuaranteeDevHandler(id, apDev));
+                outputToSymbolFile(symbol, str("********", t), devOutput);
+                outputToSymbolFile(symbol, str(o.orderId(), id, "Fut temp BUY:",
+                        "added?" + added, devOrderMap.get(id), "pos", pos, "price", price), devOutput);
+
+            } else if (pos > 0.0) {
+                checkIfAdderPending(symbol);
+                liquidatedMap.put(symbol, new AtomicBoolean(true));
+                int id = devTradeID.incrementAndGet();
+                double offerPrice = r(Math.max(price, askMap.getOrDefault(symbol, price))
+                        + r(ENTRY_CUSHION * price));
+                offerPrice = roundToMinVariation(symbol, Direction.Short, offerPrice);
+                Order o = placeOfferLimitTIF(offerPrice, pos, IOC);
+                devOrderMap.put(id, new OrderAugmented(ct, t, o, FUT_TEMP_CUTTER));
+                placeOrModifyOrderCheck(apDev, ct, o, new GuaranteeDevHandler(id, apDev));
+                outputToSymbolFile(symbol, str("********", t), devOutput);
+                outputToSymbolFile(symbol, str(o.orderId(), id, "Fut Temp SELL:",
+                        "added?" + added, devOrderMap.get(id), "pos", pos, "price", price), devOutput);
+            }
+        }
+    }
+
     private static void breachCutter(Contract ct, double price, LocalDateTime t, double yOpen, double mOpen) {
         String symbol = ibContractToSymbol(ct);
         double pos = symbolPosMap.get(symbol);
@@ -656,11 +694,18 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                                 "mstart", mStart, Math.round(10000d * (price / mStart - 1)) / 100d + "%",
                                 "dStart", dStart, Math.round(10000d * (price / dStart - 1)) / 100d + "%",
                                 "pos", symbolPosMap.getOrDefault(HEDGER_INDEX, 0.0));
-                        overnightHedger(ct, price, t, yStart, mStart);
+                        //temporarily disable overnight hedger
+                        //overnightHedger(ct, price, t, yStart, mStart);
                     } else {
-                        if (usStockOpen(ct, t)) {
-                            breachCutter(ct, price, t, yStart, mStart);
-                            breachAdder(ct, price, t, yStart, mStart, dStart);
+                        //temporarily not trading futures until transfer is complete
+
+                        if (ct.secType() == Types.SecType.FUT) {
+                            futCutter(ct, price, t);
+                        } else {
+                            if (usStockOpen(ct, t)) {
+                                breachCutter(ct, price, t, yStart, mStart);
+                                breachAdder(ct, price, t, yStart, mStart, dStart);
+                            }
                         }
                     }
                 }

@@ -169,6 +169,7 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
 
     @Override
     public void positionEnd() {
+        pr(" breach mon pos end ");
         for (Contract c : contractPosMap.keySet()) {
             String k = ibContractToSymbol(c);
 
