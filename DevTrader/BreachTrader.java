@@ -521,7 +521,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     }
 
 
-    private static void futCutter(Contract ct, double price, LocalDateTime t) {
+    private static void cutterAll(Contract ct, double price, LocalDateTime t) {
         String symbol = ibContractToSymbol(ct);
         double pos = symbolPosMap.get(symbol);
         boolean added = addedMap.containsKey(symbol) && addedMap.get(symbol).get();
@@ -539,7 +539,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                 devOrderMap.put(id, new OrderAugmented(ct, t, o, FUT_TEMP_CUTTER));
                 placeOrModifyOrderCheck(apDev, ct, o, new GuaranteeDevHandler(id, apDev));
                 outputToSymbolFile(symbol, str("********", t), devOutput);
-                outputToSymbolFile(symbol, str(o.orderId(), id, "Fut temp BUY:",
+                outputToSymbolFile(symbol, str(o.orderId(), id, "cutter All BUY:",
                         "added?" + added, devOrderMap.get(id), "pos", pos, "price", price), devOutput);
 
             } else if (pos > 0.0) {
@@ -553,11 +553,12 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                 devOrderMap.put(id, new OrderAugmented(ct, t, o, FUT_TEMP_CUTTER));
                 placeOrModifyOrderCheck(apDev, ct, o, new GuaranteeDevHandler(id, apDev));
                 outputToSymbolFile(symbol, str("********", t), devOutput);
-                outputToSymbolFile(symbol, str(o.orderId(), id, "Fut Temp SELL:",
+                outputToSymbolFile(symbol, str(o.orderId(), id, "cutter All SELL:",
                         "added?" + added, devOrderMap.get(id), "pos", pos, "price", price), devOutput);
             }
         }
     }
+
 
     private static void breachCutter(Contract ct, double price, LocalDateTime t, double yOpen, double mOpen) {
         String symbol = ibContractToSymbol(ct);
@@ -698,9 +699,8 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                         //overnightHedger(ct, price, t, yStart, mStart);
                     } else {
                         //temporarily not trading futures until transfer is complete
-
                         if (ct.secType() == Types.SecType.FUT) {
-                            futCutter(ct, price, t);
+                            cutterAll(ct, price, t);
                         } else {
                             if (usStockOpen(ct, t)) {
                                 breachCutter(ct, price, t, yStart, mStart);

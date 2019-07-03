@@ -101,7 +101,7 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
         }
 
         registerContract(getActiveA50Contract());
-        registerContract(getActiveBTCContract());
+        //registerContract(getActiveBTCContract());
         registerContract(getActiveMNQContract());
         registerContract(getActiveMESContract());
 
@@ -395,7 +395,7 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
                             yOpen, "yDev", yDev + "%",
                             "||mOpen ", ytdDayData.get(symbol).floorEntry(prevMonthDate).getKey().format(f), mOpen,
                             "mDev", mDev + "%", info);
-                    //pr("*", out, yBreachStatus, mBreachStatus);
+                    pr("*", out, yBreachStatus, mBreachStatus);
                 }
                 break;
         }
