@@ -64,9 +64,9 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     private static ScheduledExecutorService es = Executors.newScheduledThreadPool(10);
 
 
-    private static final double HI_LIMIT = 5000000.0;
-    private static final double LO_LIMIT = -5000000.0;
-    private static final double HEDGE_THRESHOLD = 1000000;
+    private static final double HI_LIMIT = 800000.0;
+    private static final double LO_LIMIT = -800000.0;
+    private static final double HEDGE_THRESHOLD = 100000.0;
     //private static final double ABS_LIMIT = 5000000.0;
 
     public static Map<Currency, Double> fx = new HashMap<>();
@@ -458,8 +458,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                 int id = devTradeID.incrementAndGet();
                 double offerPrice = Math.max(price, askMap.getOrDefault(symbol, price));
                 double size =
-                        Math.min(10, Math.floor(((totalDelta - HEDGE_THRESHOLD)
-                                / fx.get(Currency.USD)) / (multi.get(HEDGER_INDEX) * price)));
+                        Math.min(10, Math.floor(((totalDelta - HEDGE_THRESHOLD) / (multi.get(HEDGER_INDEX) * price))));
 
                 Order o = placeOfferLimitTIF(offerPrice, size, DAY);
                 devOrderMap.put(id, new OrderAugmented(ct, t, o, BREACH_ADDER));
@@ -477,8 +476,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                 int id = devTradeID.incrementAndGet();
                 double bidPrice = Math.min(price, bidMap.getOrDefault(symbol, price));
                 double size =
-                        Math.min(10, Math.floor(((-totalDelta - HEDGE_THRESHOLD) / fx.get(Currency.USD)) /
-                                (multi.get(HEDGER_INDEX) * price)));
+                        Math.min(10, Math.floor(((-totalDelta - HEDGE_THRESHOLD) / (multi.get(HEDGER_INDEX) * price))));
                 Order o = placeBidLimitTIF(bidPrice, size, DAY);
                 devOrderMap.put(id, new OrderAugmented(ct, t, o, BREACH_ADDER));
                 placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
@@ -702,7 +700,6 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                         }
                     }
                 }
-
 
                 if (ytdDayData.get(symbol).
 
