@@ -2608,7 +2608,8 @@ public final class AutoTraderXU extends JPanel implements HistoricalHandler, Api
     }
 
     @Override
-    public void handleHist(String name, String date, double open, double high, double low, double close) {
+    public void handleHist(Contract c, String date, double open, double high, double low, double close) {
+        String name = ibContractToSymbol(c);
         //pr("handle hist ", name, date, open, close);
         LocalDate currDate = LocalDate.now();
         if (!date.startsWith("finished")) {
@@ -2652,7 +2653,9 @@ public final class AutoTraderXU extends JPanel implements HistoricalHandler, Api
     }
 
     @Override
-    public void actionUponFinish(String name) {
+    public void actionUponFinish(Contract c) {
+        String name = ibContractToSymbol(c);
+
         pr(" printing fut data " + name + " " + futData.get(FutType.get(name)).lastEntry());
     }
 

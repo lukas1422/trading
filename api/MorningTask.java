@@ -76,8 +76,11 @@ public final class MorningTask implements HistoricalHandler, LiveHandler, ApiCon
     private static Proxy proxy = Proxy.NO_PROXY;
     private static Map<String, NavigableMap<LocalDateTime, Double>> usAfterClose = new HashMap<>();
     private static volatile AtomicInteger ibStockReqId = new AtomicInteger(60000);
-    private static volatile double USDCNY = 0.0;
-    private static volatile double HKDCNH = 0.0;
+    private static volatile double CNHUSD = 0.0;
+    private static volatile double HKDUSD = 0.0;
+    private static volatile double CADUSD = 0.0;
+
+
     private static Set<LocalDate> holidaySet = new TreeSet<>();
 
 
@@ -575,7 +578,7 @@ public final class MorningTask implements HistoricalHandler, LiveHandler, ApiCon
 
     private void getHKDDetailed(ApiController ap) {
         Contract c = new Contract();
-        c.symbol("CNH");
+        c.symbol("USD");
         c.secType(Types.SecType.CASH);
         c.exchange("IDEALPRO");
         c.currency("HKD");
@@ -734,9 +737,10 @@ public final class MorningTask implements HistoricalHandler, LiveHandler, ApiCon
     }
 
     @Override
-    public void handleHist(String name, String date, double open, double high, double low, double close) {
-        if (name.equals("USD")) {
-            USDCNY = close;
+    public void handleHist(Contract c, String date, double open, double high, double low, double close) {
+        String symbol = ibContractToSymbol(c);
+        if (symbol.equalsIgnoreCase("USD") && c.currency().equalsIgnoreCase("CNH")) {
+            CNHUSD = 1 / close;
             if (!date.startsWith("finished")) {
 
                 Date dt = new Date(Long.parseLong(date) * 1000);
@@ -772,7 +776,7 @@ public final class MorningTask implements HistoricalHandler, LiveHandler, ApiCon
                         break;
                 }
             }
-        } else if (name.equals("CNH")) {
+        } else if (symbol.equals("USD") && c.currency().equalsIgnoreCase("HKD")) {
 //            Date dt = new Date(Long.parseLong(date) * 1000);
 //            ZoneId chinaZone = ZoneId.of("Asia/Shanghai");
 //            ZoneId nyZone = ZoneId.of("America/New_York");
@@ -787,24 +791,24 @@ public final class MorningTask implements HistoricalHandler, LiveHandler, ApiCon
                 ZoneId nyZone = ZoneId.of("America/New_York");
                 LocalDateTime ldt = LocalDateTime.ofInstant(dt.toInstant(), chinaZone);
                 ZonedDateTime zdt = ZonedDateTime.of(ldt, chinaZone);
-                HKDCNH = 1 / close;
+                HKDUSD = 1 / close;
 
                 //pr("*", name, ldt, open, close);
                 //Utility.simpleWriteToFile("USD" + "\t" + close, true, fxOutput);
 
             }
-        } else {
+        } else if (symbol.equals("USD") && c.currency().equalsIgnoreCase("CAD")) {
             Date dt = new Date(Long.parseLong(date) * 1000);
             ZoneId chinaZone = ZoneId.of("Asia/Shanghai");
             ZoneId nyZone = ZoneId.of("America/New_York");
             LocalDateTime nyTime = LocalDateTime.ofInstant(dt.toInstant(), nyZone);
             LocalDateTime chinadt = LocalDateTime.ofInstant(dt.toInstant(), chinaZone);
 
-            if (!usAfterClose.containsKey(name)) {
-                usAfterClose.put(name, new ConcurrentSkipListMap<>());
+            if (!usAfterClose.containsKey(symbol)) {
+                usAfterClose.put(symbol, new ConcurrentSkipListMap<>());
             }
 
-            usAfterClose.get(name).put(nyTime, close);
+            usAfterClose.get(symbol).put(nyTime, close);
             if (nyTime.toLocalTime().equals(LocalTime.of(15, 55))) {
                 //pr(str(" US data 15 55 ", name, nyTime, chinadt, open, high, low, close));
             }
@@ -812,13 +816,17 @@ public final class MorningTask implements HistoricalHandler, LiveHandler, ApiCon
     }
 
     @Override
-    public void actionUponFinish(String name) {
-        if (name.equals("USD")) {
-            Utility.simpleWriteToFile("USD" + "\t" + USDCNY, true, fxOutput);
-        } else if (name.equals("CNH")) {
+    public void actionUponFinish(Contract c) {
+        String name = ibContractToSymbol(c);
+        if (name.equals("USD") && c.currency().equalsIgnoreCase("CNH")) {
+            Utility.simpleWriteToFile("CNH" + "\t" + CNHUSD, true, fxOutput);
+        } else if (name.equals("USD") && c.currency().equalsIgnoreCase("HKD")) {
             Utility.simpleWriteToFile("HKD" + "\t" +
-                    Math.round(1000000d * HKDCNH) / 1000000d, true, fxOutput);
-        } else if (!name.equals("USD")) {
+                    Math.round(1000000d * HKDUSD) / 1000000d, true, fxOutput);
+        } else if (name.equals("USD") && c.currency().equalsIgnoreCase("CAD")) {
+            Utility.simpleWriteToFile("CAD" + "\t" +
+                    Math.round(1000000d * CADUSD) / 1000000d, true, fxOutput);
+
             //pr(str(name, "is finished "));
             //usAfterClose.forEach((key, value) -> pr(str(key, value.lastEntry())));
         }

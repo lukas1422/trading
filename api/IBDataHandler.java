@@ -1,5 +1,6 @@
 package api;
 
+import client.Contract;
 import client.TickType;
 import controller.ApiController;
 import handler.HistoricalHandler;
@@ -57,17 +58,18 @@ public class IBDataHandler {
                 r.getDataConsumer().apply(r.getContract(), date, open, high, low, close, volume);
             } else {
                 HistoricalHandler hh = (HistoricalHandler) r.getHandler();
+                Contract c = r.getContract();
                 if (!date.startsWith("finished")) {
                     try {
-                        hh.handleHist(symb, date, open, high, low, close);
+                        hh.handleHist(c, date, open, high, low, close);
                     } catch (Exception ex) {
                         ex.printStackTrace();
                     }
                 } else if (date.toUpperCase().startsWith("ERROR")) {
-                    hh.actionUponFinish(symb);
+                    hh.actionUponFinish(c);
                     throw new IllegalStateException(" error found ");
                 } else {
-                    hh.actionUponFinish(symb);
+                    hh.actionUponFinish(c);
                 }
             }
         }
@@ -76,12 +78,13 @@ public class IBDataHandler {
     public static void historicalDataEnd(int reqId) {
         if (TradingUtility.globalRequestMap.containsKey(reqId)) {
             Request r = TradingUtility.globalRequestMap.get(reqId);
+            Contract c = r.getContract();
             String symb = ibContractToSymbol(r.getContract());
             if (r.getCustomFunctionNeeded()) {
                 pr("historical Data End: custom handling needed ");
             } else {
                 HistoricalHandler hh = (HistoricalHandler) r.getHandler();
-                hh.actionUponFinish(symb);
+                hh.actionUponFinish(c);
             }
         }
     }

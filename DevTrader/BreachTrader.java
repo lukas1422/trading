@@ -695,22 +695,18 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                                 "mstart", mStart, Math.round(10000d * (price / mStart - 1)) / 100d + "%",
                                 "dStart", dStart, Math.round(10000d * (price / dStart - 1)) / 100d + "%",
                                 "pos", symbolPosMap.getOrDefault(HEDGER_INDEX, 0.0));
-                        //temporarily disable overnight hedger
-                        //overnightHedger(ct, price, t, yStart, mStart);
                     } else {
-                        //temporarily not trading futures until transfer is complete
-                        if (ct.secType() == Types.SecType.FUT) {
-                            cutterAll(ct, price, t);
-                        } else {
-                            if (usStockOpen(ct, t)) {
-                                breachCutter(ct, price, t, yStart, mStart);
-                                breachAdder(ct, price, t, yStart, mStart, dStart);
-                            }
+                        if (usStockOpen(ct, t)) {
+                            breachCutter(ct, price, t, yStart, mStart);
+                            breachAdder(ct, price, t, yStart, mStart, dStart);
                         }
                     }
                 }
 
-                if (ytdDayData.get(symbol).containsKey(t.toLocalDate())) {
+
+                if (ytdDayData.get(symbol).
+
+                        containsKey(t.toLocalDate())) {
                     ytdDayData.get(symbol).get(t.toLocalDate()).add(price);
                 } else {
                     ytdDayData.get(symbol).put(t.toLocalDate(), new SimpleBar(price));

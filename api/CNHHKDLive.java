@@ -226,7 +226,7 @@ public class CNHHKDLive extends JComponent implements LiveHandler, HistoricalHan
         pr(" format time " + formatTime);
 
         pr(" requesting live contract for CNHKKD ");
-        TradingUtility.req1ContractLive(ap,c, this, false);
+        TradingUtility.req1ContractLive(ap, c, this, false);
     }
 
     private void getFXLast(ApiController ap) {
@@ -237,7 +237,7 @@ public class CNHHKDLive extends JComponent implements LiveHandler, HistoricalHan
 
         Contract c = getCNHHKDContract();
 
-        ControllerCalls.reqHistoricalDataSimple(ap,2, this, c, formatTime, 7, Types.DurationUnit.DAY,
+        ControllerCalls.reqHistoricalDataSimple(ap, 2, this, c, formatTime, 7, Types.DurationUnit.DAY,
                 Types.BarSize._1_hour, Types.WhatToShow.MIDPOINT, false);
     }
 
@@ -347,7 +347,9 @@ public class CNHHKDLive extends JComponent implements LiveHandler, HistoricalHan
     }
 
     @Override
-    public void handleHist(String name, String date, double open, double high, double low, double close) {
+    public void handleHist(Contract c, String date, double open, double high, double low, double close) {
+        String name = ibContractToSymbol(c);
+
         if (!date.startsWith("finished")) {
             Date dt = new Date(Long.parseLong(date) * 1000);
 
@@ -372,7 +374,8 @@ public class CNHHKDLive extends JComponent implements LiveHandler, HistoricalHan
     }
 
     @Override
-    public void actionUponFinish(String name) {
+    public void actionUponFinish(Contract c) {
+        String name = ibContractToSymbol(c);
 
         pr(" finished printing price history ", offshorePriceHist);
         g1.setNavigableMap(offshorePriceHist);

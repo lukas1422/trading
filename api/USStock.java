@@ -95,7 +95,9 @@ public class USStock extends JPanel implements LiveHandler, HistoricalHandler {
 
 
     @Override
-    public void handleHist(String name, String date, double open, double high, double low, double close) {
+    public void handleHist(Contract c, String date, double open, double high, double low, double close) {
+        String name = ibContractToSymbol(c);
+
         pr("US hist ", name, date, open, close);
 
         LocalDate currDate = LocalDate.now();
@@ -122,7 +124,9 @@ public class USStock extends JPanel implements LiveHandler, HistoricalHandler {
     }
 
     @Override
-    public void actionUponFinish(String name) {
+    public void actionUponFinish(Contract c) {
+        String name = ibContractToSymbol(c);
+
         g.setNavigableMap(vixMap);
         pr(" finish ", name);
 
