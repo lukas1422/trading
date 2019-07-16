@@ -67,6 +67,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     private static final double HI_LIMIT = 800000.0;
     private static final double LO_LIMIT = -800000.0;
     private static final double HEDGE_THRESHOLD = 100000.0;
+    private static final double MAX_DELTA_PER_TRADE = 50000;
     //private static final double ABS_LIMIT = 5000000.0;
 
     public static Map<Currency, Double> fx = new HashMap<>();
@@ -491,22 +492,22 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     }
 
 
-    private static boolean usStockOpen(Contract ct, LocalDateTime chinaTime) {
+    private static boolean usStockOpen(Contract ct, LocalDateTime nyTime) {
         if (ct.currency().equalsIgnoreCase("USD") && ct.secType() == Types.SecType.STK) {
-            ZonedDateTime chinaZdt = ZonedDateTime.of(chinaTime, chinaZone);
-            ZonedDateTime usZdt = chinaZdt.withZoneSameInstant(nyZone);
+            //ZonedDateTime chinaZdt = ZonedDateTime.of(nyTime, chinaZone);
+            ZonedDateTime usZdt = ZonedDateTime.of(nyTime, nyZone);
             LocalTime usLt = usZdt.toLocalDateTime().toLocalTime();
 
             return ltBtwn(usLt, 9, 30, 0, 16, 0, 0);
         } else if (ct.currency().equalsIgnoreCase("HKD") && ct.secType() == Types.SecType.STK) {
-            return ltBtwn(chinaTime.toLocalTime(), 9, 30, 0, 16, 0, 0);
+            return ltBtwn(nyTime.toLocalTime(), 9, 30, 0, 16, 0, 0);
         }
         return true;
     }
 
-    private static boolean NYOpen(LocalDateTime chinaTime) {
-        ZonedDateTime chinaZdt = ZonedDateTime.of(chinaTime, chinaZone);
-        ZonedDateTime usZdt = chinaZdt.withZoneSameInstant(nyZone);
+    private static boolean NYOpen(LocalDateTime nyTime) {
+        //ZonedDateTime chinaZdt = ZonedDateTime.of(chinaTime, chinaZone);
+        ZonedDateTime usZdt = ZonedDateTime.of(nyTime, nyZone);
         LocalTime usLt = usZdt.toLocalDateTime().toLocalTime();
         return ltBtwn(usLt, 9, 30, 0, 16, 0, 0);
     }
@@ -631,11 +632,12 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     private static boolean checkDeltaImpact(Contract ct, Order o) {
         double totalQ = o.totalQuantity();
         double lmtPrice = o.lmtPrice();
-        double xxxCny = fx.getOrDefault(Currency.get(ct.currency()), 1.0);
+        double xxxUSD = fx.getOrDefault(Currency.get(ct.currency()), 1.0);
         String symbol = ibContractToSymbol(ct);
 
-        double impact = getDelta(ct, lmtPrice, totalQ, xxxCny);
-        if (Math.abs(impact) > 300000) {
+        double impact = getDelta(ct, lmtPrice, totalQ, xxxUSD);
+
+        if (Math.abs(impact) > MAX_DELTA_PER_TRADE) {
             TradingUtility.outputToError(str("IMPACT TOO BIG", impact, ct.symbol(), o.action(),
                     o.lmtPrice(), o.totalQuantity()));
             outputToSymbolFile(symbol, str("IMPACT TOO BIG ", impact), devOutput);
@@ -693,6 +695,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                                 "mstart", mStart, Math.round(10000d * (price / mStart - 1)) / 100d + "%",
                                 "dStart", dStart, Math.round(10000d * (price / dStart - 1)) / 100d + "%",
                                 "pos", symbolPosMap.getOrDefault(HEDGER_INDEX, 0.0));
+                        overnightHedger(ct, price, t, yStart, mStart);
                     } else {
                         if (usStockOpen(ct, t)) {
                             breachCutter(ct, price, t, yStart, mStart);

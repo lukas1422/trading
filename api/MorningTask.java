@@ -28,7 +28,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static utility.Utility.*;
-import static utility.Utility.getUSStockContract;
+import static utility.Utility.chinaZone;
 
 public final class MorningTask implements HistoricalHandler, LiveHandler, ApiController.IPositionHandler
         , ApiController.IAccountSummaryHandler {
@@ -544,8 +544,9 @@ public final class MorningTask implements HistoricalHandler, LiveHandler, ApiCon
         }
         pr(" Time after latch released " + LocalTime.now());
 
-        getUSDDetailed(ap);
+        getCNHDetailed(ap);
         getHKDDetailed(ap);
+        getCADDetailed(ap);
         getUSPricesAfterMarket(ap);
         //ap.reqPositions(this);
         getXINA50Index(ap);
@@ -556,7 +557,7 @@ public final class MorningTask implements HistoricalHandler, LiveHandler, ApiCon
         ap.reqAccountSummary("All", tags, this);
     }
 
-    private void getUSDDetailed(ApiController ap) {
+    private void getCNHDetailed(ApiController ap) {
         Contract c = new Contract();
         c.symbol("USD");
         c.secType(Types.SecType.CASH);
@@ -591,6 +592,23 @@ public final class MorningTask implements HistoricalHandler, LiveHandler, ApiCon
         String formatTime = lt.format(dtf);
 
         pr(" format time " + formatTime);
+
+        ControllerCalls.reqHistoricalDataSimple(ap, generateReqId(c), this, c, formatTime, 2, Types.DurationUnit.DAY,
+                Types.BarSize._1_hour, Types.WhatToShow.MIDPOINT, false);
+    }
+
+    private void getCADDetailed(ApiController ap) {
+        Contract c = new Contract();
+        c.symbol("USD");
+        c.secType(Types.SecType.CASH);
+        c.exchange("IDEALPRO");
+        c.currency("CAD");
+        c.strike(0.0);
+        c.right(Types.Right.None);
+        c.secIdType(Types.SecIdType.None);
+        LocalDateTime lt = LocalDateTime.now().truncatedTo(ChronoUnit.MINUTES);
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMdd HH:mm:ss");
+        String formatTime = lt.format(dtf);
 
         ControllerCalls.reqHistoricalDataSimple(ap, generateReqId(c), this, c, formatTime, 2, Types.DurationUnit.DAY,
                 Types.BarSize._1_hour, Types.WhatToShow.MIDPOINT, false);
@@ -739,6 +757,7 @@ public final class MorningTask implements HistoricalHandler, LiveHandler, ApiCon
     @Override
     public void handleHist(Contract c, String date, double open, double high, double low, double close) {
         String symbol = ibContractToSymbol(c);
+        pr("morning task ", symbol, c.currency(), open, close);
         if (symbol.equalsIgnoreCase("USD") && c.currency().equalsIgnoreCase("CNH")) {
             CNHUSD = 1 / close;
             if (!date.startsWith("finished")) {
@@ -798,19 +817,14 @@ public final class MorningTask implements HistoricalHandler, LiveHandler, ApiCon
 
             }
         } else if (symbol.equals("USD") && c.currency().equalsIgnoreCase("CAD")) {
-            Date dt = new Date(Long.parseLong(date) * 1000);
-            ZoneId chinaZone = ZoneId.of("Asia/Shanghai");
-            ZoneId nyZone = ZoneId.of("America/New_York");
-            LocalDateTime nyTime = LocalDateTime.ofInstant(dt.toInstant(), nyZone);
-            LocalDateTime chinadt = LocalDateTime.ofInstant(dt.toInstant(), chinaZone);
 
-            if (!usAfterClose.containsKey(symbol)) {
-                usAfterClose.put(symbol, new ConcurrentSkipListMap<>());
-            }
-
-            usAfterClose.get(symbol).put(nyTime, close);
-            if (nyTime.toLocalTime().equals(LocalTime.of(15, 55))) {
-                //pr(str(" US data 15 55 ", name, nyTime, chinadt, open, high, low, close));
+            if (!date.startsWith("finished")) {
+                Date dt = new Date(Long.parseLong(date) * 1000);
+                ZoneId chinaZone = ZoneId.of("Asia/Shanghai");
+                ZoneId nyZone = ZoneId.of("America/New_York");
+                LocalDateTime nyTime = LocalDateTime.ofInstant(dt.toInstant(), nyZone);
+                LocalDateTime chinadt = LocalDateTime.ofInstant(dt.toInstant(), chinaZone);
+                CADUSD = 1 / close;
             }
         }
     }

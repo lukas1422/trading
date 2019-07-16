@@ -4,7 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum Currency {
-    USD("USD"), CNY("CNY"), HKD("HKD"), CNH("CNH");
+    USD("USD"), CNY("CNY"), HKD("HKD"), CNH("CNH"), CAD("CAD");
+
     String currName;
 
     Currency(String curr) {
