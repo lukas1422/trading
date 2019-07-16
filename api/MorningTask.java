@@ -757,7 +757,7 @@ public final class MorningTask implements HistoricalHandler, LiveHandler, ApiCon
     @Override
     public void handleHist(Contract c, String date, double open, double high, double low, double close) {
         String symbol = ibContractToSymbol(c);
-        pr("morning task ", symbol, c.currency(), open, close);
+//        pr("morning task ", symbol, c.currency(), open, close);
         if (symbol.equalsIgnoreCase("USD") && c.currency().equalsIgnoreCase("CNH")) {
             CNHUSD = 1 / close;
             if (!date.startsWith("finished")) {
