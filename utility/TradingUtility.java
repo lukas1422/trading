@@ -78,6 +78,7 @@ public class TradingUtility {
         ct.exchange("GLOBEX");
         ct.secType("FUT");
         ct.lastTradeDateOrContractMonth(getActiveMSeriesExpiry().format(futExpPattern));
+//        ct.lastTradeDateOrContractMonth("201909");
         ct.currency("USD");
         return ct;
     }
@@ -272,11 +273,11 @@ public class TradingUtility {
         LocalDate thisMonthExpiry = getSecLastFriday(ldt.toLocalDate().plusMonths(monthsToAddToNextExpiry));
         LocalDate nextMonthExpiry = getSecLastFriday(ldt.toLocalDate().plusMonths(monthsToAddToNextExpiry + 3));
 
-        ZonedDateTime chinaZdt = ZonedDateTime.of(ldt, chinaZone);
-        ZonedDateTime usZdt = chinaZdt.withZoneSameInstant(nyZone);
-        LocalDateTime usLdt = usZdt.toLocalDateTime();
+        //ZonedDateTime chinaZdt = ZonedDateTime.of(ldt, chinaZone);
+        //ZonedDateTime usZdt = ldt.(nyZone);
+        //LocalDateTime usLdt = usZdt.toLocalDateTime();
 
-        return usLdt.isAfter(LocalDateTime.of(thisMonthExpiry, ltof(9, 30)))
+        return ldt.isAfter(LocalDateTime.of(thisMonthExpiry, ltof(9, 30)))
                 ? nextMonthExpiry : thisMonthExpiry;
     }
 

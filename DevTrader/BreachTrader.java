@@ -697,7 +697,10 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                                 "pos", symbolPosMap.getOrDefault(HEDGER_INDEX, 0.0));
                         overnightHedger(ct, price, t, yStart, mStart);
                     } else {
-                        if (usStockOpen(ct, t)) {
+                        //do stk for now Jul 18th, (mnq order problem: Commodity segment does not exist
+                        //check expiry)
+
+                        if (usStockOpen(ct, t) && ct.secType() == Types.SecType.STK) {
                             breachCutter(ct, price, t, yStart, mStart);
                             breachAdder(ct, price, t, yStart, mStart, dStart);
                         }
