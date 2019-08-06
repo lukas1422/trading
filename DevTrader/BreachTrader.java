@@ -495,10 +495,10 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     private static boolean usStockOpen(Contract ct, LocalDateTime nyTime) {
         if (ct.currency().equalsIgnoreCase("USD") && ct.secType() == Types.SecType.STK) {
             //ZonedDateTime chinaZdt = ZonedDateTime.of(nyTime, chinaZone);
-            ZonedDateTime usZdt = ZonedDateTime.of(nyTime, nyZone);
-            LocalTime usLt = usZdt.toLocalDateTime().toLocalTime();
+            //ZonedDateTime usZdt = ZonedDateTime.of(nyTime, nyZone);
+            //LocalTime usLt = usZdt.toLocalDateTime().toLocalTime();
 
-            return ltBtwn(usLt, 9, 30, 0, 16, 0, 0);
+            return ltBtwn(nyTime.toLocalTime(), 9, 30, 0, 16, 0, 0);
         } else if (ct.currency().equalsIgnoreCase("HKD") && ct.secType() == Types.SecType.STK) {
             return ltBtwn(nyTime.toLocalTime(), 9, 30, 0, 16, 0, 0);
         }
@@ -507,16 +507,16 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
     private static boolean NYOpen(LocalDateTime nyTime) {
         //ZonedDateTime chinaZdt = ZonedDateTime.of(chinaTime, chinaZone);
-        ZonedDateTime usZdt = ZonedDateTime.of(nyTime, nyZone);
-        LocalTime usLt = usZdt.toLocalDateTime().toLocalTime();
-        return ltBtwn(usLt, 9, 30, 0, 16, 0, 0);
+        //ZonedDateTime usZdt = ZonedDateTime.of(nyTime, nyZone);
+        //LocalTime usLt = usZdt.toLocalDateTime().toLocalTime();
+        return ltBtwn(nyTime.toLocalTime(), 9, 30, 0, 16, 0, 0);
     }
 
-    private static boolean NYOvernight(LocalDateTime chinaTime) {
-        ZonedDateTime chinaZdt = ZonedDateTime.of(chinaTime, chinaZone);
-        ZonedDateTime usZdt = chinaZdt.withZoneSameInstant(nyZone);
-        LocalTime usLt = usZdt.toLocalDateTime().toLocalTime();
-        return !ltBtwn(usLt, 9, 30, 0, 16, 0, 0);
+    private static boolean NYOvernight(LocalDateTime nyTime) {
+//        ZonedDateTime chinaZdt = ZonedDateTime.of(chinaTime, chinaZone);
+//        ZonedDateTime usZdt = chinaZdt.withZoneSameInstant(nyZone);
+//        LocalTime usLt = usZdt.toLocalDateTime().toLocalTime();
+        return !ltBtwn(nyTime.toLocalTime(), 9, 30, 0, 16, 0, 0);
     }
 
 
@@ -653,11 +653,11 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     public void handlePrice(TickType tt, Contract ct, double price, LocalDateTime t) {
         String symbol = ibContractToSymbol(ct);
 
-        ZonedDateTime chinaZdt = ZonedDateTime.of(t, chinaZone);
-        ZonedDateTime usZdt = chinaZdt.withZoneSameInstant(nyZone);
+        //ZonedDateTime chinaZdt = ZonedDateTime.of(t, chinaZone);
+        //ZonedDateTime usZdt = chinaZdt.withZoneSameInstant(nyZone);
 
-        LocalDate prevMonthCutoff = getPrevMonthCutoff(ct, getMonthBeginMinus1Day(usZdt.toLocalDate()));
-        LocalDateTime dayStartTime = LocalDateTime.of(usZdt.toLocalDate(), ltof(9, 30));
+        LocalDate prevMonthCutoff = getPrevMonthCutoff(ct, getMonthBeginMinus1Day(t.toLocalDate()));
+        LocalDateTime dayStartTime = LocalDateTime.of(t.toLocalDate(), ltof(9, 30));
 
         switch (tt) {
             case LAST:
@@ -685,6 +685,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                     if (liveData.get(symbol).firstKey().isAfter(dayStartTime)) {
                         dStart = liveData.get(symbol).ceilingEntry(dayStartTime).getValue();
                     } else {
+                        //dStart = liveData.get(symbol).firstEntry().getValue();
                         dStart = liveData.get(symbol).floorEntry(dayStartTime).getValue();
                     }
 

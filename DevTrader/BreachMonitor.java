@@ -17,7 +17,6 @@ import java.io.InputStreamReader;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
@@ -187,9 +186,9 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
 
         String symbol = utility.Utility.ibContractToSymbol(c);
 
-        ZonedDateTime chinaZdt = ZonedDateTime.of(LocalDateTime.now(), chinaZone);
-        ZonedDateTime usZdt = chinaZdt.withZoneSameInstant(nyZone);
-        LocalDate prevMonthDay = TradingUtility.getPrevMonthCutoff(c, getMonthBeginMinus1Day(usZdt.toLocalDate()));
+        //ZonedDateTime chinaZdt = ZonedDateTime.of(LocalDateTime.now(), chinaZone);
+        //ZonedDateTime usZdt = chinaZdt.withZoneSameInstant(nyZone);
+        LocalDate prevMonthDay = TradingUtility.getPrevMonthCutoff(c, getMonthBeginMinus1Day(LocalDate.now()));
 
 
         if (!date.startsWith("finished")) {
