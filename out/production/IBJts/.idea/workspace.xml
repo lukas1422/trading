@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="89ead1a1-7ff5-4e91-9d68-12c25b28bac3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevTrader/BreachMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevTrader/BreachMonitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevTrader/BreachTrader.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevTrader/BreachTrader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachMonitor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachMonitor$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachMonitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachMonitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DevTrader/BreachTrader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="690" selection-start-line="690" selection-end-line="690" />
+            <state relative-caret-position="58">
+              <caret line="745" column="4" selection-start-line="745" selection-start-column="4" selection-end-line="745" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -260,8 +255,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -273,6 +266,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -383,8 +378,8 @@
         <item itemvalue="Application.BreachTrader" />
         <item itemvalue="Application.MorningTask" />
         <item itemvalue="Application.BreachMonitor" />
-        <item itemvalue="Application.DevUSNamesAdder" />
         <item itemvalue="Application.ChinaMain" />
+        <item itemvalue="Application.DevUSNamesAdder" />
       </list>
     </recent_temporary>
   </component>
@@ -447,7 +442,16 @@
       <workItem from="1564658015060" duration="6345000" />
       <workItem from="1564742926211" duration="612000" />
       <workItem from="1564999027631" duration="4245000" />
-      <workItem from="1565091280753" duration="668000" />
+      <workItem from="1565091280753" duration="3385000" />
+      <workItem from="1565177692769" duration="3857000" />
+      <workItem from="1565262030239" duration="3695000" />
+      <workItem from="1565354862320" duration="5203000" />
+      <workItem from="1565610044419" duration="5496000" />
+      <workItem from="1565697660738" duration="7306000" />
+      <workItem from="1565781101603" duration="6718000" />
+      <workItem from="1565832332501" duration="68000" />
+      <workItem from="1565864435624" duration="7171000" />
+      <workItem from="1565955570984" duration="2918000" />
     </task>
     <task id="LOCAL-00001" summary="522 tradingmain2 first commit">
       <created>1558519066706</created>
@@ -666,11 +670,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564403890127</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="8 6">
+      <created>1565094403122</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1565094403122</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="418194000" />
+    <option name="totallyTimeSpent" value="463343000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -682,10 +693,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15303284" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17306623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -694,12 +704,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.69392264" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.49060774" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.7259669" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32928178" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32928178" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
@@ -718,7 +728,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="523" />
     <MESSAGE value="524 delay reqPos by 0.5s w8 4 nextValidId" />
     <MESSAGE value="524 tried rel orders - not allowed" />
     <MESSAGE value="527" />
@@ -743,7 +752,8 @@
     <MESSAGE value="716" />
     <MESSAGE value="723" />
     <MESSAGE value="729" />
-    <option name="LAST_COMMIT_MESSAGE" value="729" />
+    <MESSAGE value="8 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="8 6" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1082,8 +1092,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DevTrader/BreachTrader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="690" selection-start-line="690" selection-end-line="690" />
+        <state relative-caret-position="58">
+          <caret line="745" column="4" selection-start-line="745" selection-start-column="4" selection-end-line="745" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -123,9 +123,10 @@ public class DevUSNamesAdder implements ApiController.IPositionHandler {
             CompletableFuture.runAsync(() -> {
                 try {
                     semaphore.acquire();
-                    TradingUtility.reqHistDayData(staticController, ibStockReqId.addAndGet(5),
+                    int curr = ibStockReqId.addAndGet(5);
+                    TradingUtility.reqHistDayData(staticController, curr,
                             c, DevUSNamesAdder::breachPriceHandler, 5, Types.BarSize._1_day);
-                    pr("dev us names ", ibContractToSymbol(c), ibStockReqId.get());
+                    pr("dev us names ", ibContractToSymbol(c), curr);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
