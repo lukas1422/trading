@@ -31,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DevTrader/BreachTrader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="745" column="4" selection-start-line="745" selection-start-column="4" selection-end-line="745" selection-end-column="4" />
+            <state relative-caret-position="16016">
+              <caret line="762" column="95" selection-start-line="762" selection-start-column="95" selection-end-line="762" selection-end-column="95" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DevTrader/DevUSNamesAdder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3366">
-              <caret line="171" column="21" selection-start-line="171" selection-start-column="21" selection-end-line="171" selection-end-column="21" />
+            <state relative-caret-position="282">
+              <caret line="194" column="17" selection-start-line="194" selection-start-column="17" selection-end-line="194" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -142,12 +142,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>adder</find>
-      <find>handle</find>
-      <find>handlehi</find>
-      <find>handlehist</find>
-      <find>fx</find>
-      <find>USD</find>
       <find>CADUSD</find>
       <find>CAD</find>
       <find>cutter</find>
@@ -172,6 +166,12 @@
       <find>zon</find>
       <find>zoneddatetime</find>
       <find>dstart</find>
+      <find>BRk-B</find>
+      <find>60040</find>
+      <find>BRK</find>
+      <find>dev us names</find>
+      <find>60200</find>
+      <find>MRK</find>
     </findStrings>
     <replaceStrings>
       <replace>import client.*;</replace>
@@ -231,9 +231,9 @@
         <option value="$PROJECT_DIR$/enums/Currency.java" />
         <option value="$PROJECT_DIR$/api/MorningTask.java" />
         <option value="$PROJECT_DIR$/utility/TradingUtility.java" />
-        <option value="$PROJECT_DIR$/DevTrader/DevUSNamesAdder.java" />
         <option value="$PROJECT_DIR$/DevTrader/BreachMonitor.java" />
         <option value="$PROJECT_DIR$/DevTrader/BreachTrader.java" />
+        <option value="$PROJECT_DIR$/DevTrader/DevUSNamesAdder.java" />
       </list>
     </option>
   </component>
@@ -255,6 +255,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -266,8 +268,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -378,8 +378,8 @@
         <item itemvalue="Application.BreachTrader" />
         <item itemvalue="Application.MorningTask" />
         <item itemvalue="Application.BreachMonitor" />
-        <item itemvalue="Application.ChinaMain" />
         <item itemvalue="Application.DevUSNamesAdder" />
+        <item itemvalue="Application.ChinaMain" />
       </list>
     </recent_temporary>
   </component>
@@ -452,6 +452,9 @@
       <workItem from="1565832332501" duration="68000" />
       <workItem from="1565864435624" duration="7171000" />
       <workItem from="1565955570984" duration="2918000" />
+      <workItem from="1566213624867" duration="8030000" />
+      <workItem from="1566305064921" duration="797000" />
+      <workItem from="1566386805520" duration="5139000" />
     </task>
     <task id="LOCAL-00001" summary="522 tradingmain2 first commit">
       <created>1558519066706</created>
@@ -677,11 +680,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565094403122</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="8 19">
+      <created>1566222711831</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1566222711831</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="463343000" />
+    <option name="totallyTimeSpent" value="477309000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -693,9 +703,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="7" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17306623" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17974402" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -703,8 +713,8 @@
       <window_info id="Persistence" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.69392264" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.7259669" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.73038673" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.7259669" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32928178" />
@@ -728,7 +738,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="524 delay reqPos by 0.5s w8 4 nextValidId" />
     <MESSAGE value="524 tried rel orders - not allowed" />
     <MESSAGE value="527" />
     <MESSAGE value="529 change defintion of sgxa50 active cont" />
@@ -753,7 +762,8 @@
     <MESSAGE value="723" />
     <MESSAGE value="729" />
     <MESSAGE value="8 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="8 6" />
+    <MESSAGE value="8 19" />
+    <option name="LAST_COMMIT_MESSAGE" value="8 19" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1092,8 +1102,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DevTrader/BreachTrader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="745" column="4" selection-start-line="745" selection-start-column="4" selection-end-line="745" selection-end-column="4" />
+        <state relative-caret-position="16016">
+          <caret line="762" column="95" selection-start-line="762" selection-start-column="95" selection-end-line="762" selection-end-column="95" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1114,13 +1124,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DevTrader/DevUSNamesAdder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3366">
-          <caret line="171" column="21" selection-start-line="171" selection-start-column="21" selection-end-line="171" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1166,6 +1169,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevTrader/DevUSNamesAdder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="194" column="17" selection-start-line="194" selection-start-column="17" selection-end-line="194" selection-end-column="17" />
         </state>
       </provider>
     </entry>
