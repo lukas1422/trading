@@ -708,9 +708,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                     }
                 }
 
-                if (ytdDayData.get(symbol).
-
-                        containsKey(t.toLocalDate())) {
+                if (ytdDayData.get(symbol).containsKey(t.toLocalDate())) {
                     ytdDayData.get(symbol).get(t.toLocalDate()).add(price);
                 } else {
                     ytdDayData.get(symbol).put(t.toLocalDate(), new SimpleBar(price));

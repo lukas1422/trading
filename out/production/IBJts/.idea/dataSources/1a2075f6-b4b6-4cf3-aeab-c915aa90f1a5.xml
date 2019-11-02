@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="hibernate.cfg.xml/Hibernate">
-  <database-model serializer="dbm" dbms="DERBY" family-id="DERBY" format-version="4.15">
+  <database-model serializer="dbm" dbms="DERBY" family-id="DERBY" format-version="4.16">
     <root id="1">
       <ServerVersion>10.14.2.0</ServerVersion>
     </root>
     <schema id="2" parent="1" name="APP">
       <Current>1</Current>
-      <Visible>1</Visible>
     </schema>
     <schema id="3" parent="1" name="NULLID"/>
     <schema id="4" parent="1" name="SQLJ"/>

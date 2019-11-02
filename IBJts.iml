@@ -19,8 +19,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="derby" level="project" />
+    <orderEntry type="library" name="antlr-2.7.71" level="project" />
     <orderEntry type="library" name="commons-math3-3.6.1-javadoc" level="project" />
-    <orderEntry type="library" name="antlr-2.7.7" level="project" />
   </component>
 </module>

@@ -14,7 +14,7 @@ import graph.DisplayGranularity;
 import graph.GraphXuTrader;
 import handler.HistoricalHandler;
 import handler.XUOvernightTradeExecHandler;
-import sound.EmbeddedSoundPlayer;
+//import sound.EmbeddedSoundPlayer;
 import enums.AutoOrderType;
 import utility.TradingUtility;
 import utility.Utility;
@@ -157,7 +157,7 @@ public final class AutoTraderXU extends JPanel implements HistoricalHandler, Api
     private static volatile int longMAPeriod = 80;
 
     //music
-    private static EmbeddedSoundPlayer soundPlayer = new EmbeddedSoundPlayer();
+//    private static EmbeddedSoundPlayer soundPlayer = new EmbeddedSoundPlayer();
 
     //detailed UNCON_MA
     static AtomicBoolean detailedPrint = new AtomicBoolean(true);
@@ -317,7 +317,7 @@ public final class AutoTraderXU extends JPanel implements HistoricalHandler, Api
         });
 
         JButton toggleMusicButton = new JButton("停乐");
-        toggleMusicButton.addActionListener(l -> soundPlayer.stopIfPlaying());
+//        toggleMusicButton.addActionListener(l -> soundPlayer.stopIfPlaying());
 
         JButton detailedButton = new JButton("Detailed:" + detailedPrint.get());
         detailedButton.addActionListener(l -> {
