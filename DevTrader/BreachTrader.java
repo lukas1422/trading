@@ -39,6 +39,8 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     private static final double ENTRY_CUSHION = 0.0;
     private static final double PRICE_OFFSET_PERC = 0.002;
 
+    private static volatile AtomicBoolean INDEX_BULL_YEAR = new AtomicBoolean(true);
+
 
     static volatile NavigableMap<Integer, OrderAugmented> devOrderMap = new ConcurrentSkipListMap<>();
     static volatile AtomicInteger devTradeID = new AtomicInteger(100);
@@ -364,11 +366,12 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
         if (!added && !liquidated && pos == 0.0 && prevClose != 0.0 && numCrosses <= MAX_CROSS_PER_MONTH) {
 
-            if (price > yOpen && price > mOpen && price > dOpen
+            if (price > yOpen && price > mOpen
                     && totalDelta < HI_LIMIT
                     && longDelta < HI_LIMIT
                     && ((price / Math.max(yOpen, mOpen) - 1) < MAX_ENTRY_DEV)
-                    && ((price / Math.max(yOpen, mOpen) - 1) > MIN_ENTRY_DEV)) {
+                    && ((price / Math.max(yOpen, mOpen) - 1) > MIN_ENTRY_DEV)
+                    && INDEX_BULL_YEAR.get()) {
 
                 addedMap.put(symbol, new AtomicBoolean(true));
                 int id = devTradeID.incrementAndGet();
@@ -390,11 +393,12 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                             , "devFromMaxOpen", r10000(price / Math.max(yOpen, mOpen) - 1))
                             , devOutput);
                 }
-            } else if (price < yOpen && price < mOpen && price < dOpen
+            } else if (price < yOpen && price < mOpen
                     && totalDelta > LO_LIMIT
                     && shortDelta > LO_LIMIT
                     && (price / Math.min(yOpen, mOpen) - 1) > -MAX_ENTRY_DEV
-                    && (price / Math.min(yOpen, mOpen) - 1) < -MIN_ENTRY_DEV) {
+                    && (price / Math.min(yOpen, mOpen) - 1) < -MIN_ENTRY_DEV
+                    && !INDEX_BULL_YEAR.get()) {
 
                 addedMap.put(symbol, new AtomicBoolean(true));
                 int id = devTradeID.incrementAndGet();
@@ -697,6 +701,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                                 "dStart", dStart, Math.round(10000d * (price / dStart - 1)) / 100d + "%",
                                 "pos", symbolPosMap.getOrDefault(HEDGER_INDEX, 0.0));
                         overnightHedger(ct, price, t, yStart, mStart);
+                        INDEX_BULL_YEAR.set(price > yStart);
                     } else {
                         //do stk for now Jul 18th, (mnq order problem: Commodity segment does not exist
                         //check expiry)
