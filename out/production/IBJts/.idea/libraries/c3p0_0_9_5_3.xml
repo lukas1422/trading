@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="c3p0-0.9.5.3">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/hibernate-release-5.4.8.Final/lib/optional/c3p0/c3p0-0.9.5.3.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/hibernate-release-5.4.8.Final/lib/optional/c3p0/hibernate-c3p0-5.4.8.Final.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/hibernate-release-5.4.8.Final/lib/optional/c3p0/mchange-commons-java-0.2.15.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

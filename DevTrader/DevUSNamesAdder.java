@@ -149,7 +149,8 @@ public class DevUSNamesAdder implements ApiController.IPositionHandler {
             semaphore.release();
             double last = symbolBarData.get(symbol).lastEntry().getValue().getClose();
             // 7.27, change from 12500 to 17500, reflecting asset 57-> 87
-            int defaultSize = close > 300.0 ? 0 : (int) (Math.round(15000.0 / last / 100.0)) * 100;
+            //int defaultSize = close > 300.0 ? 0 : (int) (Math.round(15000.0 / last / 100.0)) * 100;
+            int defaultSize =  (int) (Math.round(90000.0 / last / 100.0)) * 100;
             pr("Breach handler", symbol, last, defaultSize);
             symbolLotsize.put(symbol, defaultSize);
         }

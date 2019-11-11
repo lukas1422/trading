@@ -34,10 +34,10 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
     static final int MAX_ATTEMPTS = 100;
     private static final int MAX_CROSS_PER_MONTH = 4;
-    private static final double MAX_ENTRY_DEV = 0.02;
-    private static final double MIN_ENTRY_DEV = 0.002;
+    private static final double MAX_ENTRY_DEV = 0.005; //was 0.02 pre 19/11/11
+    private static final double MIN_ENTRY_DEV = 0.001; //was 0.002 pre 19/11/11
     private static final double ENTRY_CUSHION = 0.0;
-    private static final double PRICE_OFFSET_PERC = 0.002;
+//    private static final double PRICE_OFFSET_PERC = 0.002;
 
     private static volatile AtomicBoolean INDEX_BULL_YEAR = new AtomicBoolean(true);
 
@@ -69,7 +69,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     private static final double HI_LIMIT = 800000.0;
     private static final double LO_LIMIT = -800000.0;
     private static final double HEDGE_THRESHOLD = 100000.0;
-    private static final double MAX_DELTA_PER_TRADE = 50000;
+    private static final double MAX_DELTA_PER_TRADE = 200000;
     //private static final double ABS_LIMIT = 5000000.0;
 
     public static Map<Currency, Double> fx = new HashMap<>();
@@ -700,12 +700,9 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                                 "mstart", mStart, Math.round(10000d * (price / mStart - 1)) / 100d + "%",
                                 "dStart", dStart, Math.round(10000d * (price / dStart - 1)) / 100d + "%",
                                 "pos", symbolPosMap.getOrDefault(HEDGER_INDEX, 0.0));
-                        overnightHedger(ct, price, t, yStart, mStart);
+                        //overnightHedger(ct, price, t, yStart, mStart);
                         INDEX_BULL_YEAR.set(price > yStart);
                     } else {
-                        //do stk for now Jul 18th, (mnq order problem: Commodity segment does not exist
-                        //check expiry)
-
                         if (usStockOpen(ct, t) && ct.secType() == Types.SecType.STK) {
                             breachCutter(ct, price, t, yStart, mStart);
                             breachAdder(ct, price, t, yStart, mStart, dStart);

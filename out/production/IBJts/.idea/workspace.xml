@@ -2,23 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89ead1a1-7ff5-4e91-9d68-12c25b28bac3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/antlr_2_7_71.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1a2075f6-b4b6-4cf3-aeab-c915aa90f1a5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1a2075f6-b4b6-4cf3-aeab-c915aa90f1a5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b0bc7169-d387-4615-992d-9a77249867e9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b0bc7169-d387-4615-992d-9a77249867e9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/antlr_2_7_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_math3_3_6_1_javadoc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/commons_math3_3_6_1_javadoc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/derby.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/c3p0_0_9_5_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/antlr_2_7_71.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/antlr_2_7_7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DevTrader/BreachTrader.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevTrader/BreachTrader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DevTrader/DevUSNamesAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevTrader/DevUSNamesAdder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IBJts.iml" beforeDir="false" afterPath="$PROJECT_DIR$/IBJts.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/.idea/dataSources/1a2075f6-b4b6-4cf3-aeab-c915aa90f1a5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/dataSources/1a2075f6-b4b6-4cf3-aeab-c915aa90f1a5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/.idea/dataSources/b0bc7169-d387-4615-992d-9a77249867e9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/dataSources/b0bc7169-d387-4615-992d-9a77249867e9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/.idea/libraries/antlr_2_7_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/.idea/libraries/commons_math3_3_6_1_javadoc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/libraries/commons_math3_3_6_1_javadoc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/.idea/libraries/derby.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/.idea/libraries/antlr_2_7_71.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/AutoTraderOld/AutoOrderDefaultHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/AutoTraderOld/AutoOrderDefaultHandler.class" afterDir="false" />
@@ -270,7 +261,6 @@
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/api/XU$BarModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/api/XU$BarModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/api/XU.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/api/XU.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/api/YQM.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/api/YQM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel$MarginModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel$MarginModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel$MarginRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel$MarginRow.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel$MarginRowKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel$MarginRowKey.class" afterDir="false" />
@@ -279,7 +269,6 @@
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel$PortfolioModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel$PortfolioModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel$Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel$Table.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountInfoPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$AccountUpdateKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$AccountUpdateKey.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$AccountUpdateRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$AccountUpdateRow.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$AccountUpdatesMultiPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/apidemo/AccountPositionsMultiPanel$AccountUpdatesMultiPanel$1.class" afterDir="false" />
@@ -647,7 +636,6 @@
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/client/EClientErrors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/client/EClientErrors.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/client/EClientMsgSink.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/client/EClientMsgSink.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/client/EClientSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/client/EClientSocket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/client/EClientSocketSSL$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/client/EClientSocketSSL$DefaultTrustManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/client/EClientSocketSSL$DefaultTrustManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/client/EClientSocketSSL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/client/EClientSocketSSL.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/client/EDecoder$IMessageReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/client/EDecoder$IMessageReader.class" afterDir="false" />
@@ -892,9 +880,6 @@
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/saving/MainBoardSaveDay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/saving/MainBoardSaveDay.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/saving/StudentScore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/saving/StudentScore.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/saving/XuSave.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/saving/XuSave.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/sound/EmbeddedSoundPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/sound/EmbeddedSoundPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/sound/SoundPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/sound/SoundPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/sound/SoundPlayer2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/sound/SoundPlayer2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/util/HtmlButton$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/util/HtmlButton$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/util/HtmlButton$B.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/util/HtmlButton$B.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/util/HtmlButton$HtmlRadioButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/util/HtmlButton$HtmlRadioButton.class" afterDir="false" />
@@ -973,12 +958,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="293" />
-    <option name="y" value="53" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
-  </component>
   <component name="ProjectId" id="1T2X2ml9dqPZ64jEVTXH8viqYOz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -986,7 +965,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/commons-math3-3.6.1/commons-math3-3.6.1.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/hibernate-release-5.4.8.Final/lib/optional/c3p0/mchange-commons-java-0.2.15.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -994,7 +973,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveMembersDialog.RECENTS_KEY">
@@ -1005,6 +984,7 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="BreachMonitor" />
+      <command value="BreachTrader" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -1019,7 +999,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BreachTrader">
+  <component name="RunManager" selected="Application.DevUSNamesAdder">
     <configuration name="BreachMonitor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DevTrader.BreachMonitor" />
       <module name="IBJts" />
@@ -1087,10 +1067,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BreachTrader" />
-        <item itemvalue="Application.MorningTask" />
-        <item itemvalue="Application.BreachMonitor" />
         <item itemvalue="Application.DevUSNamesAdder" />
+        <item itemvalue="Application.MorningTask" />
+        <item itemvalue="Application.BreachTrader" />
+        <item itemvalue="Application.BreachMonitor" />
         <item itemvalue="Application.ChinaMain" />
       </list>
     </recent_temporary>
@@ -1174,7 +1154,15 @@
       <workItem from="1572660230826" duration="408000" />
       <workItem from="1572660661748" duration="135000" />
       <workItem from="1572660806860" duration="178000" />
-      <workItem from="1572661124407" duration="449000" />
+      <workItem from="1572661124407" duration="1482000" />
+      <workItem from="1572696895455" duration="1911000" />
+      <workItem from="1572922420516" duration="800000" />
+      <workItem from="1572923681245" duration="16000" />
+      <workItem from="1572953582682" duration="3768000" />
+      <workItem from="1573037703755" duration="3056000" />
+      <workItem from="1573121421857" duration="3702000" />
+      <workItem from="1573212965676" duration="6415000" />
+      <workItem from="1573468866096" duration="806000" />
     </task>
     <task id="LOCAL-00001" summary="522 tradingmain2 first commit">
       <created>1558519066706</created>
@@ -1407,7 +1395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566222711831</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="11 1 clean up">
+      <created>1572662469672</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1572662469672</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1436,7 +1431,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="524 tried rel orders - not allowed" />
     <MESSAGE value="527" />
     <MESSAGE value="529 change defintion of sgxa50 active cont" />
     <MESSAGE value="530" />
@@ -1461,7 +1455,8 @@
     <MESSAGE value="729" />
     <MESSAGE value="8 6" />
     <MESSAGE value="8 19" />
-    <option name="LAST_COMMIT_MESSAGE" value="8 19" />
+    <MESSAGE value="11 1 clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="11 1 clean up" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
