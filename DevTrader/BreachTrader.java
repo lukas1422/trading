@@ -10,6 +10,7 @@ import controller.ApiController;
 import enums.Direction;
 import handler.DefaultConnectionHandler;
 import handler.LiveHandler;
+import net.bytebuddy.pool.TypePool;
 import utility.TradingUtility;
 import utility.Utility;
 
@@ -34,7 +35,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
     static final int MAX_ATTEMPTS = 100;
     private static final int MAX_CROSS_PER_MONTH = 4;
-    private static final double MAX_ENTRY_DEV = 0.2; //was 0.02 pre 19/11/11
+    private static final double MAX_ENTRY_DEV = 0.02; //was 0.02 pre 19/11/11
     private static final double MIN_ENTRY_DEV = 0.002; //was 0.002 pre 19/11/11
     private static final double ENTRY_CUSHION = 0.0;
 //    private static final double PRICE_OFFSET_PERC = 0.002;
@@ -325,9 +326,9 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     }
 
     static double getDefaultSize(Contract ct, double last, LocalDate t) {
-
         if (last != 0.0) {
-            if (ct.secType() == Types.SecType.FUT && ct.currency().equalsIgnoreCase("USD")) {
+            if ((ct.secType() == Types.SecType.FUT || ct.secType() == Types.SecType.CONTFUT)
+                    && ct.currency().equalsIgnoreCase("USD")) {
                 double delta = 90000.0 * Math.pow(0.8, t.getDayOfMonth() - 1);
                 double multiplier = multi.get(ibContractToSymbol(ct));
                 return Math.max(1, Math.min(10, (int) (delta / last / multiplier)));
@@ -335,6 +336,28 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                 double delta = 90000.0 * Math.pow(0.8, t.getDayOfMonth() - 1);
                 return Math.max(100, (int) (Math.round(delta / last / 100.0)) * 100);
                 //return 100.0;
+            } else {
+                throw new IllegalStateException(str("unknown contract ", ct.symbol(),
+                        ct.secType(), ct.currency(), last, t));
+            }
+        }
+        throw new IllegalStateException(str(ibContractToSymbol(ct), " no default size "));
+    }
+
+    static double getDefaultSize(Contract ct, double last, LocalDate t, Map<String, Double> multiMap) {
+        if (last != 0.0) {
+            if ((ct.secType() == Types.SecType.FUT || ct.secType() == Types.SecType.CONTFUT)
+                    && ct.currency().equalsIgnoreCase("USD")) {
+                double delta = 90000.0 * Math.pow(0.8, t.getDayOfMonth() - 1);
+                double multiplier = multiMap.get(ibContractToSymbol(ct));
+                return Math.max(1, Math.min(10, (int) (delta / last / multiplier)));
+            } else if (ct.secType() == Types.SecType.STK && ct.currency().equalsIgnoreCase("USD")) {
+                double delta = 90000.0 * Math.pow(0.8, t.getDayOfMonth() - 1);
+                return Math.max(100, (int) (Math.round(delta / last / 100.0)) * 100);
+                //return 100.0;
+            } else {
+                throw new IllegalStateException(str("unknown contract ", ct.symbol(),
+                        ct.secType(), ct.currency(), last, t));
             }
         }
         throw new IllegalStateException(str(ibContractToSymbol(ct), " no default size "));
@@ -404,7 +427,8 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                     outputToSymbolFile(symbol, str("********", t.format(f1)), devOutput);
                     outputToSymbolFile(symbol, str(o.orderId(), id, "ADDER BUY:",
                             devOrderMap.get(id), "yOpen:" + yOpen, "mOpen:" + mOpen,
-                            "prevClose", prevClose, "p/b/a", price, getBid(symbol), getAsk(symbol)
+                            "prevClose", prevClose, "p/b/a", price, getBid(symbol), getAsk(symbol),
+                            "MAX Entry Dev:", getMaxEntryDev(LocalDate.now(), MAX_ENTRY_DEV)
                             , "devFromMaxOpen", r10000(price / Math.max(yOpen, mOpen) - 1))
                             , devOutput);
                 }
@@ -430,8 +454,9 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                     outputToSymbolFile(symbol, str("********", t.format(f1)), devOutput);
                     outputToSymbolFile(symbol, str(o.orderId(), id, "ADDER SELL:",
                             devOrderMap.get(id), "yOpen:" + yOpen, "mOpen:" + mOpen,
-                            "prevClose", prevClose, "p/b/a", price, getBid(symbol), getAsk(symbol), "devFromMinOpen",
-                            r10000(price / Math.min(mOpen, yOpen) - 1)), devOutput);
+                            "prevClose", prevClose, "p/b/a", price, getBid(symbol), getAsk(symbol),
+                            "MAX Entry Dev:", getMaxEntryDev(LocalDate.now(), MAX_ENTRY_DEV),
+                            "devFromMinOpen", r10000(price / Math.min(mOpen, yOpen) - 1)), devOutput);
                 }
             }
         }

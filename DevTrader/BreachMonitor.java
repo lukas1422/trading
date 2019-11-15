@@ -53,6 +53,9 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
 
     private static Semaphore semaphore = new Semaphore(40);
 
+    //private static Map<String, Double> multi = new HashMap<>();
+
+
     //static ScheduledExecutorService es = Executors.newSingleThreadScheduledExecutor();
 
 
@@ -292,10 +295,11 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
                         "mDev:" + mDev + "%" + "(" +
                                 mOpenDate.format(f) + " " + mOpen + ")");
 
-                if (pos != 0.0) {
-                    pr(LocalTime.now().truncatedTo(ChronoUnit.MINUTES), pos != 0.0 ? "*" : ""
-                            , out, Math.round(delta / 1000d) + "k");
-                }
+//                if (pos != 0.0) {
+                pr(LocalTime.now().truncatedTo(ChronoUnit.MINUTES), pos != 0.0 ? "*" : ""
+                        , out, Math.round(delta / 1000d) + "k", "defaultSize",
+                        BreachTrader.getDefaultSize(c, last, LocalDate.now(), multiplierMap));
+//                }
             }
         }
 

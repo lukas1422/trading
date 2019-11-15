@@ -5,12 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DevTrader/BreachMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevTrader/BreachMonitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DevTrader/BreachTrader.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevTrader/BreachTrader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevTrader/GuaranteeDevHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevTrader/GuaranteeDevHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachMonitor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachMonitor$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachMonitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachMonitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utility/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/utility/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utility/TradingUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/utility/TradingUtility.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +85,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BreachTrader">
+  <component name="RunManager" selected="Application.BreachMonitor">
     <configuration name="BreachMonitor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DevTrader.BreachMonitor" />
       <module name="IBJts" />
@@ -155,10 +153,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BreachMonitor" />
         <item itemvalue="Application.BreachTrader" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.MorningTask" />
-        <item itemvalue="Application.BreachMonitor" />
         <item itemvalue="Application.DevUSNamesAdder" />
       </list>
     </recent_temporary>
@@ -254,7 +252,7 @@
       <workItem from="1573557958967" duration="5397000" />
       <workItem from="1573646575324" duration="3861000" />
       <workItem from="1573730213065" duration="2698000" />
-      <workItem from="1573817077286" duration="6012000" />
+      <workItem from="1573817077286" duration="7484000" />
     </task>
     <task id="LOCAL-00001" summary="522 tradingmain2 first commit">
       <created>1558519066706</created>
@@ -501,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573473716915</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="11 15 exponential decay of size and max dev">
+      <created>1573842892317</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1573842892317</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TodoView">
@@ -530,7 +535,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="529 change defintion of sgxa50 active cont" />
     <MESSAGE value="530" />
     <MESSAGE value="61 month cut off redef" />
     <MESSAGE value="6 3" />
@@ -555,7 +559,8 @@
     <MESSAGE value="8 19" />
     <MESSAGE value="11 1 clean up" />
     <MESSAGE value="11 11 increase delta per stock to 90k" />
-    <option name="LAST_COMMIT_MESSAGE" value="11 11 increase delta per stock to 90k" />
+    <MESSAGE value="11 15 exponential decay of size and max dev" />
+    <option name="LAST_COMMIT_MESSAGE" value="11 15 exponential decay of size and max dev" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
