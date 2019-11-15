@@ -380,8 +380,16 @@ public class TradingUtility {
     }
 
     public static LocalDate getXINA50FrontExpiry() {
-        LocalDate today = LocalDate.now();
-        LocalTime time = LocalTime.now();
+
+
+        LocalDateTime ldt = LocalDateTime.now();
+        ZonedDateTime nyZdt = ZonedDateTime.of(ldt, nyZone);
+        ZonedDateTime chinaZdt = nyZdt.withZoneSameInstant(chinaZone);
+        LocalDateTime chinaLdt = chinaZdt.toLocalDateTime();
+
+        LocalDate today = chinaLdt.toLocalDate();
+        LocalTime time = chinaLdt.toLocalTime();
+//        pr("today time ", today, time);
         LocalDate thisMonthExpiryDate = getXINA50ExpiryDate(today);
 
         if (today.isAfter(thisMonthExpiryDate) ||

@@ -7,6 +7,7 @@ import controller.ApiController;
 import enums.AutoOrderType;
 
 import java.io.File;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.Set;
@@ -68,7 +69,10 @@ public class GuaranteeDevHandler implements ApiController.IOrderHandler {
         AutoOrderType aot = devOrderMap.get(currentID).getOrderType();
         int lastOrderID = devOrderMap.get(currentID).getOrder().orderId();
         double livePos = getLivePos(symbol);
-        double defaultSize = getDefaultSize(symbol);
+//        double defaultSize = getDefaultSize(symbol);
+//        Contract ct = devOrderMap.get(currentID).getContract();
+//        double defaultSize = getDefaultSize(ct,)
+        //double defaultSize = 0.0;
 
         if (aot == AutoOrderType.BREACH_CUTTER) {
             if (lastQ != Math.abs(livePos)) {
@@ -109,6 +113,7 @@ public class GuaranteeDevHandler implements ApiController.IOrderHandler {
                 double lastPrice = BreachTrader.getLast(symbol);
                 double bid = BreachTrader.getBid(symbol);
                 double ask = BreachTrader.getAsk(symbol);
+                double defaultSize = getDefaultSize(ct, lastPrice, LocalDate.now());
 
                 Order prevOrder = devOrderMap.get(currentID).getOrder();
                 Order o = new Order();
@@ -159,6 +164,7 @@ public class GuaranteeDevHandler implements ApiController.IOrderHandler {
                 double lastPrice = BreachTrader.getLast(symbol);
                 double bid = BreachTrader.getBid(symbol);
                 double ask = BreachTrader.getAsk(symbol);
+                double defaultSize = getDefaultSize(ct, lastPrice, LocalDate.now());
 
                 Order prevOrder = devOrderMap.get(currentID).getOrder();
                 Order o = new Order();

@@ -453,7 +453,7 @@ public class BreachMonitor implements LiveHandler, ApiController.IPositionHandle
         es.scheduleAtFixedRate(() -> {
             pr("**********************************************");
             pr("running @ ", LocalTime.now());
-            bm.reqHoldings(brMonController);
+//            bm.reqHoldings(brMonController);
         }, 1, 1, TimeUnit.MINUTES);
 
 

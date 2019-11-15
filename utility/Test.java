@@ -26,11 +26,22 @@ public class Test {
     }
 
     public static void main(String[] args) {
-        pr(LocalDateTime.now());
-        ZonedDateTime chinaZdt = ZonedDateTime.of(LocalDateTime.now(), chinaZone);
-        ZonedDateTime usZdt = chinaZdt.withZoneSameInstant(nyZone);
-        LocalTime usLt = usZdt.toLocalDateTime().toLocalTime();
-        pr(usZdt);
+//        pr(TradingUtility.getActiveMESContract().lastTradeDateOrContractMonth());
+//        pr(TradingUtility.getXINA50FrontExpiry());
+//        pr(LocalDateTime.now());
+        LocalDate t = LocalDate.now();
+
+        double delta = 90000.0 * Math.pow(0.8, 1 - 1);
+        double multiplier = 5;
+        pr(Math.min(10, (int) (delta / 3010 / multiplier)));
+
+
+//        pr(Math.max(0.005,0.02 * Math.pow(0.8, (LocalDate.now().getDayOfMonth() - 1))));
+//        pr(LocalDate.now().getDayOfMonth());
+//        ZonedDateTime chinaZdt = ZonedDateTime.of(LocalDateTime.now(), chinaZone);
+//        ZonedDateTime usZdt = chinaZdt.withZoneSameInstant(nyZone);
+//        LocalTime usLt = usZdt.toLocalDateTime().toLocalTime();
+//        pr(usZdt);
 
     }
 }

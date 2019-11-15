@@ -34,8 +34,8 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
     static final int MAX_ATTEMPTS = 100;
     private static final int MAX_CROSS_PER_MONTH = 4;
-    private static final double MAX_ENTRY_DEV = 0.005; //was 0.02 pre 19/11/11
-    private static final double MIN_ENTRY_DEV = 0.001; //was 0.002 pre 19/11/11
+    private static final double MAX_ENTRY_DEV = 0.2; //was 0.02 pre 19/11/11
+    private static final double MIN_ENTRY_DEV = 0.002; //was 0.002 pre 19/11/11
     private static final double ENTRY_CUSHION = 0.0;
 //    private static final double PRICE_OFFSET_PERC = 0.002;
 
@@ -74,7 +74,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
     public static Map<Currency, Double> fx = new HashMap<>();
     private static Map<String, Double> multi = new HashMap<>();
-    private static Map<String, Double> defaultSize = new HashMap<>();
+    //private static Map<String, Double> defaultSize = new HashMap<>();
 
     private static volatile ConcurrentSkipListMap<String, ConcurrentSkipListMap<LocalDate, SimpleBar>>
             ytdDayData = new ConcurrentSkipListMap<>(String::compareTo);
@@ -95,6 +95,10 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
     static double getLast(String symb) {
         return lastMap.getOrDefault(symb, 0.0);
+    }
+
+    private static double getMaxEntryDev(LocalDate today, double maxEntryDev) {
+        return Math.max(0.005, maxEntryDev * Math.pow(0.8, (today.getDayOfMonth() - 1)));
     }
 
     static double getBid(String symb) {
@@ -131,15 +135,15 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
             x.printStackTrace();
         }
 
-        try (BufferedReader reader1 = new BufferedReader(new InputStreamReader(
-                new FileInputStream(TradingConstants.GLOBALPATH + "defaultNonUSSize.txt")))) {
-            while ((line = reader1.readLine()) != null) {
-                List<String> al1 = Arrays.asList(line.split("\t"));
-                defaultSize.put(al1.get(0), Double.parseDouble(al1.get(1)));
-            }
-        } catch (IOException x) {
-            x.printStackTrace();
-        }
+//        try (BufferedReader reader1 = new BufferedReader(new InputStreamReader(
+//                new FileInputStream(TradingConstants.GLOBALPATH + "defaultNonUSSize.txt")))) {
+//            while ((line = reader1.readLine()) != null) {
+//                List<String> al1 = Arrays.asList(line.split("\t"));
+//                defaultSize.put(al1.get(0), Double.parseDouble(al1.get(1)));
+//            }
+//        } catch (IOException x) {
+//            x.printStackTrace();
+//        }
 
         registerContract(getActiveA50Contract());
 //        registerContract(getActiveBTCContract());
@@ -152,20 +156,24 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
             while ((line = reader1.readLine()) != null) {
                 List<String> al1 = Arrays.asList(line.split("\t"));
                 registerContract(getUSStockContract(al1.get(0)));
-                defaultSize.put(al1.get(0), Double.parseDouble(al1.get(1)));
+                //defaultSize.put(al1.get(0), Double.parseDouble(al1.get(1)));
             }
         } catch (IOException x) {
             x.printStackTrace();
         }
     }
 
-    static double getDefaultSize(String symb) {
-        if (defaultSize.containsKey(symb)) {
-            return defaultSize.get(symb);
-        }
-        outputToSpecial(str(LocalDateTime.now(), symb, "no default size "));
-        return 0.0;
-    }
+//    static double getDefaultSize(String symb) {
+//        if (lastMap.getOrDefault(symb, 0.0) != 0.0) {
+//            double last = lastMap.get(symb);
+//            return (int) (Math.round(90000.0 / last / 100.0)) * 100;
+//        }
+////        if (defaultSize.containsKey(symb)) {
+////            return defaultSize.get(symb);
+////        }
+////        outputToSpecial(str(LocalDateTime.now(), symb, "no default size "));
+//        return 0.0;
+//    }
 
     private static void registerContract(Contract ct) {
         contractPosMap.put(ct, 0.0);
@@ -316,11 +324,18 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         return (int) ChronoUnit.DAYS.between(LAST_YEAR_DAY, LocalDate.now());
     }
 
-    private static double getDefaultSize(Contract ct) {
-        if (ct.secType() == Types.SecType.FUT) {
-            return 1;
-        } else if (ct.secType() == Types.SecType.STK && ct.currency().equalsIgnoreCase("USD")) {
-            return 100.0;
+    static double getDefaultSize(Contract ct, double last, LocalDate t) {
+
+        if (last != 0.0) {
+            if (ct.secType() == Types.SecType.FUT && ct.currency().equalsIgnoreCase("USD")) {
+                double delta = 90000.0 * Math.pow(0.8, t.getDayOfMonth() - 1);
+                double multiplier = multi.get(ibContractToSymbol(ct));
+                return Math.max(1, Math.min(10, (int) (delta / last / multiplier)));
+            } else if (ct.secType() == Types.SecType.STK && ct.currency().equalsIgnoreCase("USD")) {
+                double delta = 90000.0 * Math.pow(0.8, t.getDayOfMonth() - 1);
+                return Math.max(100, (int) (Math.round(delta / last / 100.0)) * 100);
+                //return 100.0;
+            }
         }
         throw new IllegalStateException(str(ibContractToSymbol(ct), " no default size "));
     }
@@ -343,17 +358,19 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         throw new IllegalStateException(str(" cannot get delta for symbol type", ct.symbol(), ct.secType()));
     }
 
-    private static void breachAdder(Contract ct, double price, LocalDateTime t, double yOpen, double mOpen, double
-            dOpen) {
+    private static void breachAdder(Contract ct, double price, LocalDateTime t, double yOpen, double mOpen) {
         String symbol = ibContractToSymbol(ct);
         LocalDate prevMonthDay = getPrevMonthCutoff(ct, LAST_MONTH_DAY);
         double pos = symbolPosMap.get(symbol);
-        double defaultS;
-        if (defaultSize.containsKey(symbol)) {
-            defaultS = defaultSize.get(symbol);
-        } else {
-            defaultS = getDefaultSize(ct);
-        }
+//        double defaultS;
+//        if (defaultSize.containsKey(symbol)) {
+//            defaultS = defaultSize.get(symbol);
+//        } else {
+//            defaultS = getDefaultSize(ct);
+//        }
+
+        double defaultS = getDefaultSize(ct, price, t.toLocalDate());
+
         double prevClose = getLastPriceFromYtd(ct);
 
         boolean added = addedMap.containsKey(symbol) && addedMap.get(symbol).get();
@@ -369,7 +386,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
             if (price > yOpen && price > mOpen
                     && totalDelta < HI_LIMIT
                     && longDelta < HI_LIMIT
-                    && ((price / Math.max(yOpen, mOpen) - 1) < MAX_ENTRY_DEV)
+                    && ((price / Math.max(yOpen, mOpen) - 1) < getMaxEntryDev(LocalDate.now(), MAX_ENTRY_DEV))
                     && ((price / Math.max(yOpen, mOpen) - 1) > MIN_ENTRY_DEV)
                     && INDEX_BULL_YEAR.get()) {
 
@@ -381,8 +398,6 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                 bidPrice = roundToMinVariation(symbol, Direction.Long, bidPrice);
 
                 Order o = placeBidLimitTIF(bidPrice, defaultS, DAY);
-//                double offset = computeStockOffset(price, PRICE_OFFSET_PERC);
-//                Order o = placeBidLimitTIFRel(defaultS, DAY, offset);
                 if (checkDeltaImpact(ct, o)) {
                     devOrderMap.put(id, new OrderAugmented(ct, t, o, BREACH_ADDER));
                     placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
@@ -396,7 +411,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
             } else if (price < yOpen && price < mOpen
                     && totalDelta > LO_LIMIT
                     && shortDelta > LO_LIMIT
-                    && (price / Math.min(yOpen, mOpen) - 1) > -MAX_ENTRY_DEV
+                    && (price / Math.min(yOpen, mOpen) - 1) > -getMaxEntryDev(LocalDate.now(), MAX_ENTRY_DEV)
                     && (price / Math.min(yOpen, mOpen) - 1) < -MIN_ENTRY_DEV
                     && !INDEX_BULL_YEAR.get()) {
 
@@ -694,6 +709,10 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                     }
 
 
+                    if (symbol.equalsIgnoreCase("XINA50")) {
+                        pr("xina50", yStart);
+                    }
+
                     if (symbol.equalsIgnoreCase(HEDGER_INDEX)) {
                         pr(HEDGER_INDEX, price, t, "ystart", yStart,
                                 Math.round(10000d * (price / yStart - 1)) / 100d + "%",
@@ -703,9 +722,10 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                         //overnightHedger(ct, price, t, yStart, mStart);
                         INDEX_BULL_YEAR.set(price > yStart);
                     } else {
-                        if (usStockOpen(ct, t) && ct.secType() == Types.SecType.STK) {
+                        if ((usStockOpen(ct, t) && ct.secType() == Types.SecType.STK) ||
+                                ct.secType() == Types.SecType.FUT) {
                             breachCutter(ct, price, t, yStart, mStart);
-                            breachAdder(ct, price, t, yStart, mStart, dStart);
+                            breachAdder(ct, price, t, yStart, mStart);
                         }
                     }
                 }
