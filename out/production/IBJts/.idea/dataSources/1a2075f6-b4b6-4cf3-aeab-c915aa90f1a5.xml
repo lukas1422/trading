@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="hibernate.cfg.xml/Hibernate">
-  <database-model serializer="dbm" dbms="DERBY" family-id="DERBY" format-version="4.16">
+  <database-model serializer="dbm" dbms="DERBY" family-id="DERBY" format-version="4.17">
     <root id="1">
       <ServerVersion>10.14.2.0</ServerVersion>
     </root>

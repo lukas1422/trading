@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89ead1a1-7ff5-4e91-9d68-12c25b28bac3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1a2075f6-b4b6-4cf3-aeab-c915aa90f1a5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1a2075f6-b4b6-4cf3-aeab-c915aa90f1a5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b0bc7169-d387-4615-992d-9a77249867e9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b0bc7169-d387-4615-992d-9a77249867e9.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DevTrader/BreachMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevTrader/BreachMonitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DevTrader/BreachTrader.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevTrader/BreachTrader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/.idea/dataSources/1a2075f6-b4b6-4cf3-aeab-c915aa90f1a5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/dataSources/1a2075f6-b4b6-4cf3-aeab-c915aa90f1a5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/.idea/dataSources/b0bc7169-d387-4615-992d-9a77249867e9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/dataSources/b0bc7169-d387-4615-992d-9a77249867e9.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachMonitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachMonitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IBJts/utility/TradingUtility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/utility/TradingUtility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utility/TradingUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/utility/TradingUtility.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +51,11 @@
   </component>
   <component name="ProjectId" id="1T2X2ml9dqPZ64jEVTXH8viqYOz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="derby" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -70,21 +81,10 @@
     <option name="myCommands">
       <command value="BreachMonitor" />
       <command value="BreachTrader" />
+      <command value="MorningTask" />
     </option>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.BreachTrader">
     <configuration name="BreachMonitor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DevTrader.BreachMonitor" />
       <module name="IBJts" />
@@ -152,13 +152,25 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.MorningTask" />
         <item itemvalue="Application.BreachTrader" />
+        <item itemvalue="Application.MorningTask" />
         <item itemvalue="Application.BreachMonitor" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.DevUSNamesAdder" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -251,7 +263,23 @@
       <workItem from="1573557958967" duration="5397000" />
       <workItem from="1573646575324" duration="3861000" />
       <workItem from="1573730213065" duration="2698000" />
-      <workItem from="1573817077286" duration="340000" />
+      <workItem from="1573817077286" duration="8982000" />
+      <workItem from="1573902639045" duration="1799000" />
+      <workItem from="1574077144999" duration="3825000" />
+      <workItem from="1574160492133" duration="5782000" />
+      <workItem from="1574251004699" duration="3686000" />
+      <workItem from="1574335452559" duration="3323000" />
+      <workItem from="1574421572811" duration="2849000" />
+      <workItem from="1574600087003" duration="1953000" />
+      <workItem from="1574648874687" duration="599000" />
+      <workItem from="1574683031005" duration="1905000" />
+      <workItem from="1574771181225" duration="3364000" />
+      <workItem from="1574857530293" duration="3563000" />
+      <workItem from="1574945539358" duration="2645000" />
+      <workItem from="1575028459553" duration="3375000" />
+      <workItem from="1575288463484" duration="57000" />
+      <workItem from="1575288545386" duration="5525000" />
+      <workItem from="1575376632905" duration="4650000" />
     </task>
     <task id="LOCAL-00001" summary="522 tradingmain2 first commit">
       <created>1558519066706</created>
@@ -498,7 +526,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573473716915</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="11 15 exponential decay of size and max dev">
+      <created>1573842892317</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1573842892317</updated>
+    </task>
+    <task id="LOCAL-00037" summary="1115 exponential decay of delta and maxDevEntry">
+      <created>1573844391984</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1573844391984</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView">
@@ -527,8 +569,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="529 change defintion of sgxa50 active cont" />
-    <MESSAGE value="530" />
     <MESSAGE value="61 month cut off redef" />
     <MESSAGE value="6 3" />
     <MESSAGE value="6 4" />
@@ -552,7 +592,51 @@
     <MESSAGE value="8 19" />
     <MESSAGE value="11 1 clean up" />
     <MESSAGE value="11 11 increase delta per stock to 90k" />
-    <option name="LAST_COMMIT_MESSAGE" value="11 11 increase delta per stock to 90k" />
+    <MESSAGE value="11 15 exponential decay of size and max dev" />
+    <MESSAGE value="1115 exponential decay of delta and maxDevEntry" />
+    <option name="LAST_COMMIT_MESSAGE" value="1115 exponential decay of delta and maxDevEntry" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1799" height="431" key="GridCell.Tab.0.bottom" timestamp="1575425217943">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1799" height="431" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1575425217943" />
+    <state width="1799" height="431" key="GridCell.Tab.0.center" timestamp="1575425217942">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1799" height="431" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1575425217942" />
+    <state width="1799" height="431" key="GridCell.Tab.0.left" timestamp="1575425217942">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1799" height="431" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1575425217942" />
+    <state width="1799" height="431" key="GridCell.Tab.0.right" timestamp="1575425217943">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1799" height="431" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1575425217943" />
+    <state width="1799" height="431" key="GridCell.Tab.1.bottom" timestamp="1575425217943">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1799" height="431" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1575425217943" />
+    <state width="1799" height="431" key="GridCell.Tab.1.center" timestamp="1575425217943">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1799" height="431" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1575425217943" />
+    <state width="1799" height="431" key="GridCell.Tab.1.left" timestamp="1575425217943">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1799" height="431" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1575425217943" />
+    <state width="1799" height="431" key="GridCell.Tab.1.right" timestamp="1575425217943">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1799" height="431" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1575425217943" />
+    <state x="580" y="92" width="827" height="921" key="find.popup" timestamp="1575460325901">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="580" y="92" width="827" height="921" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1575460325901" />
+    <state x="636" y="257" width="712" height="678" key="search.everywhere.popup" timestamp="1575460349218">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="636" y="257" width="712" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1575460349218" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
