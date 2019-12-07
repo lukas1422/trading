@@ -858,6 +858,20 @@ public class Utility {
         return now.minusDays(1L);
     }
 
+    public static LocalDate getQuarterBeginMinus1Day(LocalDate d) {
+        //LocalDate now = d.withDayOfMonth(1);
+        int monthV = d.getMonthValue();
+        LocalDate now = d.withMonth(monthV - ((monthV - 1) % 3)).withDayOfMonth(1);
+        return now.minusDays(1L);
+    }
+
+    public static LocalDate getHalfYearBeginMinus1Day(LocalDate d) {
+        //LocalDate now = d.withDayOfMonth(1);
+        int monthV = d.getMonthValue();
+        LocalDate now = d.withMonth(monthV - ((monthV - 1) % 6)).withDayOfMonth(1);
+        return now.minusDays(1L);
+    }
+
     public static LocalDate getYearBeginMinus1Day(LocalDate d) {
         LocalDate now = d.withDayOfYear(1);
         return now.minusDays(1L);

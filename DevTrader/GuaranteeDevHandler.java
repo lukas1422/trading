@@ -105,7 +105,7 @@ public class GuaranteeDevHandler implements ApiController.IOrderHandler {
                 outputDetailedGen(str(devOrderMap.get(currentID).getSymbol(), now.format(f2),
                         devOrderMap.get(currentID)), fillsOutput);
 
-            } else if (attempts.get() > MAX_ATTEMPTS && !pastOrderSet.contains(lastOrderID)) {
+            } else if (attempts.get() > MAX_LIQ_ATTEMPTS && !pastOrderSet.contains(lastOrderID)) {
 
                 pastOrderSet.add(lastOrderID);
 

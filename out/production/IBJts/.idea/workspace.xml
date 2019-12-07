@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="89ead1a1-7ff5-4e91-9d68-12c25b28bac3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utility/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/utility/Utility.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +73,7 @@
       <command value="MorningTask" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.BreachTrader">
+  <component name="RunManager" selected="Application.Test">
     <configuration name="BreachMonitor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DevTrader.BreachMonitor" />
       <module name="IBJts" />
@@ -141,10 +141,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BreachTrader" />
-        <item itemvalue="Application.BreachMonitor" />
-        <item itemvalue="Application.MorningTask" />
         <item itemvalue="Application.Test" />
+        <item itemvalue="Application.MorningTask" />
+        <item itemvalue="Application.BreachMonitor" />
+        <item itemvalue="Application.BreachTrader" />
         <item itemvalue="Application.DevUSNamesAdder" />
       </list>
     </recent_temporary>
@@ -271,6 +271,8 @@
       <workItem from="1575376632905" duration="4650000" />
       <workItem from="1575460299152" duration="2033000" />
       <workItem from="1575550831078" duration="3805000" />
+      <workItem from="1575638264220" duration="5122000" />
+      <workItem from="1575718463104" duration="999000" />
     </task>
     <task id="LOCAL-00001" summary="522 tradingmain2 first commit">
       <created>1558519066706</created>
@@ -538,7 +540,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575550936085</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="1207 before moving to qDev">
+      <created>1575718707040</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1575718707040</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView">
@@ -567,7 +576,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="6 3" />
     <MESSAGE value="6 4" />
     <MESSAGE value="6 5 add year on/offside to hedger cutter" />
     <MESSAGE value="6 7" />
@@ -592,57 +600,58 @@
     <MESSAGE value="11 15 exponential decay of size and max dev" />
     <MESSAGE value="1115 exponential decay of delta and maxDevEntry" />
     <MESSAGE value="20191205" />
-    <option name="LAST_COMMIT_MESSAGE" value="20191205" />
+    <MESSAGE value="1207 before moving to qDev" />
+    <option name="LAST_COMMIT_MESSAGE" value="1207 before moving to qDev" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="350" y="135" width="1277" height="835" key="CommitChangelistDialog2" timestamp="1575550935908">
+    <state x="350" y="135" width="1277" height="835" key="CommitChangelistDialog2" timestamp="1575718706918">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="350" y="135" width="1277" height="835" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1575550935908" />
-    <state width="1799" height="431" key="GridCell.Tab.0.bottom" timestamp="1575599186550">
+    <state x="350" y="135" width="1277" height="835" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1575718706918" />
+    <state width="1799" height="431" key="GridCell.Tab.0.bottom" timestamp="1575685882526">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1799" height="431" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1575599186550" />
-    <state width="1799" height="431" key="GridCell.Tab.0.center" timestamp="1575599186550">
+    <state width="1799" height="431" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1575685882526" />
+    <state width="1799" height="431" key="GridCell.Tab.0.center" timestamp="1575685882526">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1799" height="431" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1575599186550" />
-    <state width="1799" height="431" key="GridCell.Tab.0.left" timestamp="1575599186550">
+    <state width="1799" height="431" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1575685882526" />
+    <state width="1799" height="431" key="GridCell.Tab.0.left" timestamp="1575685882525">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1799" height="431" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1575599186550" />
-    <state width="1799" height="431" key="GridCell.Tab.0.right" timestamp="1575599186550">
+    <state width="1799" height="431" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1575685882525" />
+    <state width="1799" height="431" key="GridCell.Tab.0.right" timestamp="1575685882526">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1799" height="431" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1575599186550" />
-    <state width="1799" height="431" key="GridCell.Tab.1.bottom" timestamp="1575599186551">
+    <state width="1799" height="431" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1575685882526" />
+    <state width="1799" height="431" key="GridCell.Tab.1.bottom" timestamp="1575685882526">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1799" height="431" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1575599186551" />
-    <state width="1799" height="431" key="GridCell.Tab.1.center" timestamp="1575599186550">
+    <state width="1799" height="431" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1575685882526" />
+    <state width="1799" height="431" key="GridCell.Tab.1.center" timestamp="1575685882526">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1799" height="431" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1575599186550" />
-    <state width="1799" height="431" key="GridCell.Tab.1.left" timestamp="1575599186550">
+    <state width="1799" height="431" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1575685882526" />
+    <state width="1799" height="431" key="GridCell.Tab.1.left" timestamp="1575685882526">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1799" height="431" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1575599186550" />
-    <state width="1799" height="431" key="GridCell.Tab.1.right" timestamp="1575599186550">
+    <state width="1799" height="431" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1575685882526" />
+    <state width="1799" height="431" key="GridCell.Tab.1.right" timestamp="1575685882526">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1799" height="431" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1575599186550" />
-    <state x="588" y="287" width="800" height="531" key="Vcs.Push.Dialog.v2" timestamp="1575550985148">
+    <state width="1799" height="431" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1575685882526" />
+    <state x="588" y="287" width="800" height="531" key="Vcs.Push.Dialog.v2" timestamp="1575718716521">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="287" width="800" height="531" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1575550985148" />
+    <state x="588" y="287" width="800" height="531" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1575718716521" />
     <state x="580" y="92" width="827" height="921" key="find.popup" timestamp="1575460325901">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="580" y="92" width="827" height="921" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1575460325901" />
-    <state x="636" y="257" width="712" height="678" key="search.everywhere.popup" timestamp="1575638317516">
+    <state x="636" y="257" width="712" height="678" key="search.everywhere.popup" timestamp="1575722080554">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="636" y="257" width="712" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1575638317516" />
+    <state x="636" y="257" width="712" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1575722080554" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
