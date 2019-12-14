@@ -113,7 +113,7 @@ public class GuaranteeDevHandler implements ApiController.IOrderHandler {
                 double lastPrice = BreachTrader.getLast(symbol);
                 double bid = BreachTrader.getBid(symbol);
                 double ask = BreachTrader.getAsk(symbol);
-                double defaultSize = getDefaultSize(ct, lastPrice, LocalDate.now());
+                double defaultSize = getDefaultSize(ct, lastPrice);
 
                 Order prevOrder = devOrderMap.get(currentID).getOrder();
                 Order o = new Order();
@@ -164,7 +164,7 @@ public class GuaranteeDevHandler implements ApiController.IOrderHandler {
                 double lastPrice = BreachTrader.getLast(symbol);
                 double bid = BreachTrader.getBid(symbol);
                 double ask = BreachTrader.getAsk(symbol);
-                double defaultSize = getDefaultSize(ct, lastPrice, LocalDate.now());
+                double defaultSize = getDefaultSize(ct, lastPrice);
 
                 Order prevOrder = devOrderMap.get(currentID).getOrder();
                 Order o = new Order();
@@ -217,7 +217,6 @@ public class GuaranteeDevHandler implements ApiController.IOrderHandler {
             }
             idStatusMap.put(currentID, orderState.status());
         }
-
     }
 
 

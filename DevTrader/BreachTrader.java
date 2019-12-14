@@ -33,10 +33,10 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     private static final String HEDGER_INDEX = "MES";
 
     static final int MAX_LIQ_ATTEMPTS = 100;
-    private static final int MAX_CROSS_PER_YEAR = 5;
     private static final double MAX_ENTRY_DEV = 0.05; //was 0.02 pre 19/11/11
-    private static final double MIN_ENTRY_DEV = 0.002; //was 0.002 pre 19/11/11
     private static final double ENTRY_CUSHION = 0.0;
+    private static final double MAX_DRAWDOWN = -0.05;
+
 
     static volatile NavigableMap<Integer, OrderAugmented> devOrderMap = new ConcurrentSkipListMap<>();
     static volatile AtomicInteger devTradeID = new AtomicInteger(100);
@@ -286,7 +286,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     }
 
     static double getDefaultSize(Contract ct, double last) {
-        double delta = 90000;
+        double delta = PTF_NAV / 8;
         String symb = ibContractToSymbol(ct);
 
         if (symb.equalsIgnoreCase("QQQ") || symb.equalsIgnoreCase("SPY")) {
@@ -309,7 +309,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     }
 
     static double getDefaultSize(Contract ct, double last, LocalDate t, Map<String, Double> multiMap) {
-        double delta = 90000;
+        double delta = PTF_NAV / 8;
         String symb = ibContractToSymbol(ct);
 
         if (symb.equalsIgnoreCase("QQQ") || symb.equalsIgnoreCase("SPY")) {
@@ -359,20 +359,12 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         boolean added = addedMap.containsKey(symbol) && addedMap.get(symbol).get();
         boolean liquidated = liquidatedMap.containsKey(symbol) && liquidatedMap.get(symbol).get();
 
-        long numCrosses = ytdDayData.get(symbol).entrySet().stream()
-                .filter(e -> e.getKey().isAfter(LAST_YEAR_DAY))
-                .filter(e -> e.getValue().includes(yOpen))
-                .count();
-
-        if (!added && !liquidated && pos == 0.0 && prevClose != 0.0 && numCrosses <= MAX_CROSS_PER_YEAR) {
-            if (price > yOpen && totalDelta < PTF_NAV
-                    && ((price / yOpen - 1) < MAX_ENTRY_DEV)
-                    && ((price / yOpen - 1) > MIN_ENTRY_DEV)) {
+        if (!added && !liquidated && pos == 0.0 && prevClose != 0.0) {
+            if (price > yOpen && totalDelta < PTF_NAV && ((price / yOpen - 1) < MAX_ENTRY_DEV)) {
 
                 addedMap.put(symbol, new AtomicBoolean(true));
                 int id = devTradeID.incrementAndGet();
-                double bidPrice = r(Math.min(price, bidMap.getOrDefault(symbol, price)) -
-                        r(ENTRY_CUSHION * price));
+                double bidPrice = r(Math.min(price, bidMap.getOrDefault(symbol, price)));
 
                 bidPrice = roundToMinVariation(symbol, Direction.Long, bidPrice);
 
@@ -382,7 +374,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                     placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
                     outputToSymbolFile(symbol, str("********", t.format(f1)), devOutput);
                     outputToSymbolFile(symbol, str(o.orderId(), id, "ADDER BUY:",
-                            devOrderMap.get(id), "yOpen:" + yOpen, "numCross", numCrosses,
+                            devOrderMap.get(id), "yOpen:" + yOpen,
                             "prevClose", prevClose, "p/b/a", price, getBid(symbol), getAsk(symbol)
                             , "devFromMaxOpen", r10000(price / yOpen - 1))
                             , devOutput);
@@ -407,7 +399,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         boolean liquidated = liquidatedMap.containsKey(symbol) && liquidatedMap.get(symbol).get();
 
         if (!liquidated && pos != 0.0) {
-            if (pos < 0.0 && price > yOpen) {
+            if (pos < 0.0 && ((price / yOpen - 1) > -MAX_DRAWDOWN)) {
                 checkIfAdderPending(symbol);
                 liquidatedMap.put(symbol, new AtomicBoolean(true));
                 int id = devTradeID.incrementAndGet();
@@ -425,7 +417,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                         "added?" + added, devOrderMap.get(id), "pos", pos, "yOpen:" + yOpen,
                         "price", price), devOutput);
 
-            } else if (pos > 0.0 && price < yOpen) {
+            } else if (pos > 0.0 && ((price / yOpen - 1) < MAX_DRAWDOWN)) {
                 checkIfAdderPending(symbol);
                 liquidatedMap.put(symbol, new AtomicBoolean(true));
                 int id = devTradeID.incrementAndGet();
@@ -509,17 +501,34 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                     double qStart;
                     double mStart;
                     double dStart;
+                    double ytdLow;
+                    double maxYtdDev = 0.0;
+                    double mtdLow;
+                    double maxMtdDev = 0.0;
+
 
                     if (ytdDayData.get(symbol).firstKey().isAfter(LAST_YEAR_DAY)) {
                         yStart = ytdDayData.get(symbol).ceilingEntry(LAST_YEAR_DAY).getValue().getOpen();
+                        ytdLow = ytdDayData.get(symbol).entrySet().stream()
+                                .filter(e -> e.getKey().isAfter(LAST_YEAR_DAY))
+                                .min(BAR_LOW).map(Map.Entry::getValue).map(SimpleBar::getLow)
+                                .orElse(yStart);
+                        maxYtdDev = ytdLow / yStart - 1;
                     } else {
                         yStart = ytdDayData.get(symbol).floorEntry(LAST_YEAR_DAY).getValue().getClose();
+                        ytdLow = yStart;
                     }
 
                     if (ytdDayData.get(symbol).firstKey().isAfter(prevMonthCutoff)) {
                         mStart = ytdDayData.get(symbol).ceilingEntry(prevMonthCutoff).getValue().getOpen();
+                        mtdLow = ytdDayData.get(symbol).entrySet().stream()
+                                .filter(e -> e.getKey().isAfter(prevMonthCutoff))
+                                .min(BAR_LOW).map(Map.Entry::getValue).map(SimpleBar::getLow)
+                                .orElse(mStart);
+                        maxMtdDev = mtdLow / mStart - 1;
                     } else {
                         mStart = ytdDayData.get(symbol).floorEntry(prevMonthCutoff).getValue().getClose();
+                        mtdLow = mStart;
                     }
 
                     if (ytdDayData.get(symbol).firstKey().isAfter(previousQuarterCutoff)) {
@@ -542,10 +551,15 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                                 "dStart", dStart, Math.round(10000d * (price / dStart - 1)) / 100d + "%",
                                 "pos", symbolPosMap.getOrDefault(HEDGER_INDEX, 0.0));
                     } else {
-                        if ((usStockOpen(ct, t) && ct.secType() == Types.SecType.STK) ||
-                                ct.secType() == Types.SecType.FUT) {
+                        if (usStockOpen(ct, t) && ct.secType() == Types.SecType.STK) {
+
                             breachCutter(ct, price, t, yStart);
-                            breachAdder(ct, price, t, yStart);
+
+                            if (maxMtdDev > MAX_DRAWDOWN) {
+                                breachAdder(ct, price, t, yStart);
+                            } else {
+                                pr(symbol, " exceeding max drawdown ", maxYtdDev);
+                            }
                         }
                     }
                 }

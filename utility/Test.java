@@ -42,14 +42,8 @@ public class Test {
     }
 
     public static void main(String[] args) {
-//        pr(TradingUtility.getActiveMESContract().lastTradeDateOrContractMonth());
-//        pr(TradingUtility.getXINA50FrontExpiry());
-//        pr(LocalDateTime.now());
-        pr(getHalfYearBeginMinus1Day(LocalDate.now()));
-        for (int i = 1; i <= 12; i++) {
 
-            pr(getHalfYearBeginMinus1Day(LocalDate.of(2019, i, 1 + new Random().nextInt(27))));
-        }
+        pr(LocalDateTime.now());
 
 
 //        pr(Math.max(0.005,0.02 * Math.pow(0.8, (LocalDate.now().getDayOfMonth() - 1))));
