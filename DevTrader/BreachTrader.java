@@ -350,6 +350,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
     /**
      * add ETFs for long term holding
+     *
      * @param ct
      * @param price
      * @param t
@@ -361,22 +362,20 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         double desiredPos = Math.max(100, (int) (Math.round(PTF_NAV / 4.0 / price / 100.0)) * 100);
         double posToAdd = desiredPos - pos;
 
-        if (symbol.equalsIgnoreCase("SPY") || symbol.equalsIgnoreCase("QQQ")) {
-            if (!added && pos == 0.0 && posToAdd >= 100) {
-                addedMap.put(symbol, new AtomicBoolean(true));
-                int id = devTradeID.incrementAndGet();
-                double bidPrice = r(Math.min(price, bidMap.getOrDefault(symbol, price)));
+        if (!added && pos == 0.0 && posToAdd >= 100) {
+            addedMap.put(symbol, new AtomicBoolean(true));
+            int id = devTradeID.incrementAndGet();
+            double bidPrice = r(Math.min(price, bidMap.getOrDefault(symbol, price)));
 
-                bidPrice = roundToMinVariation(symbol, Direction.Long, bidPrice);
+            bidPrice = roundToMinVariation(symbol, Direction.Long, bidPrice);
 
-                Order o = placeBidLimitTIF(bidPrice, posToAdd, DAY);
-                if (checkDeltaImpact(ct, o)) {
-                    devOrderMap.put(id, new OrderAugmented(ct, t, o, BASE_ADDER));
-                    placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
-                    outputToSymbolFile(symbol, str("********", t.format(f1)), devOutput);
-                    outputToSymbolFile(symbol, str(o.orderId(), id, "BASE BUY:",
-                            devOrderMap.get(id), "p/b/a", price, getBid(symbol), getAsk(symbol)), devOutput);
-                }
+            Order o = placeBidLimitTIF(bidPrice, posToAdd, DAY);
+            if (checkDeltaImpact(ct, o)) {
+                devOrderMap.put(id, new OrderAugmented(ct, t, o, BASE_ADDER));
+                placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
+                outputToSymbolFile(symbol, str("********", t.format(f1)), devOutput);
+                outputToSymbolFile(symbol, str(o.orderId(), id, "BASE BUY:",
+                        devOrderMap.get(id), "p/b/a", price, getBid(symbol), getAsk(symbol)), devOutput);
             }
         }
     }
@@ -406,9 +405,8 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                     placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
                     outputToSymbolFile(symbol, str("********", t.format(f1)), devOutput);
                     outputToSymbolFile(symbol, str(o.orderId(), id, "ADDER BUY:",
-                            devOrderMap.get(id), "yOpen:" + yOpen,
-                            "prevClose", prevClose, "p/b/a", price, getBid(symbol), getAsk(symbol)
-                            , "devFromMaxOpen", r10000(price / yOpen - 1))
+                            devOrderMap.get(id), "yOpen:" + yOpen, "prevClose", prevClose, "p/b/a", price,
+                            getBid(symbol), getAsk(symbol), "devFromMaxOpen", r10000(price / yOpen - 1))
                             , devOutput);
                 }
             }
@@ -580,11 +578,13 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                     } else {
                         if (usStockOpen(ct, t) && ct.secType() == Types.SecType.STK) {
                             breachCutter(ct, price, t, yStart);
-                            longTermAdder(ct, price, t);
-                            if (maxYtdDev > MAX_YTD_DRAWDOWN) {
-                                breachAdder(ct, price, t, yStart);
+
+                            if (symbol.equalsIgnoreCase("QQQ") || symbol.equalsIgnoreCase("SPY")) {
+                                longTermAdder(ct, price, t);
                             } else {
-                                pr(symbol, " exceeding max drawdown: ytd", maxYtdDev, "mtd", maxMtdDev);
+                                if (maxYtdDev > MAX_YTD_DRAWDOWN) {
+                                    breachAdder(ct, price, t, yStart);
+                                }
                             }
                         }
                     }
