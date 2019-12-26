@@ -155,9 +155,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
 
     private void connectAndReqPos() {
-        ApiController ap = new ApiController(
-                new DefaultConnectionHandler(),
-                new DefaultLogger(), new DefaultLogger());
+        ApiController ap = new ApiController(new DefaultConnectionHandler(), new DefaultLogger(), new DefaultLogger());
         apDev = ap;
         CountDownLatch l = new CountDownLatch(1);
         boolean connectionStatus = false;
@@ -187,8 +185,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         }
 
         pr(" Time after latch released " + LocalTime.now());
-        Executors.newScheduledThreadPool(10).schedule(() -> reqHoldings(ap),
-                500, TimeUnit.MILLISECONDS);
+        Executors.newScheduledThreadPool(10).schedule(() -> reqHoldings(ap), 500, TimeUnit.MILLISECONDS);
     }
 
 
@@ -242,9 +239,8 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                 try {
                     histSemaphore.acquire();
 
-                    reqHistDayData(apDev, ibStockReqId.addAndGet(5),
-                            histCompatibleCt(c), BreachTrader::ytdOpen,
-                            getCalendarYtdDays() + 10, Types.BarSize._1_day);
+                    reqHistDayData(apDev, ibStockReqId.addAndGet(5), histCompatibleCt(c), BreachTrader::ytdOpen,
+                            Math.min(364, getCalendarYtdDays() + 10), Types.BarSize._1_day);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -267,7 +263,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                         histSemaphore.acquire();
                         reqHistDayData(apDev, ibStockReqId.addAndGet(5),
                                 histCompatibleCt(c), BreachTrader::ytdOpen,
-                                getCalendarYtdDays() + 10, Types.BarSize._1_day);
+                                Math.min(365, getCalendarYtdDays() + 10), Types.BarSize._1_day);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -355,7 +351,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
      * @param price
      * @param t
      */
-    private static void longTermAdder(Contract ct, double price, LocalDateTime t) {
+    private static void indexETFAdder(Contract ct, double price, LocalDateTime t) {
         String symbol = ibContractToSymbol(ct);
         double pos = symbolPosMap.get(symbol);
         boolean added = addedMap.containsKey(symbol) && addedMap.get(symbol).get();
@@ -374,7 +370,39 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                 devOrderMap.put(id, new OrderAugmented(ct, t, o, BASE_ADDER));
                 placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
                 outputToSymbolFile(symbol, str("********", t.format(f1)), devOutput);
-                outputToSymbolFile(symbol, str(o.orderId(), id, "BASE BUY:",
+                outputToSymbolFile(symbol, str(o.orderId(), id, "INDEX ETF BUY:",
+                        devOrderMap.get(id), "p/b/a", price, getBid(symbol), getAsk(symbol)), devOutput);
+            }
+        }
+    }
+
+    /**
+     * add singles
+     *
+     * @param ct
+     * @param price
+     * @param t
+     */
+    private static void customAdder(Contract ct, double price, LocalDateTime t) {
+        String symbol = ibContractToSymbol(ct);
+        double pos = symbolPosMap.get(symbol);
+        boolean added = addedMap.containsKey(symbol) && addedMap.get(symbol).get();
+        double desiredPos = Math.max(100, (int) (Math.round(PTF_NAV / 3.0 / price / 100.0)) * 100);
+        double posToAdd = desiredPos - pos;
+
+        if (!added && pos == 0.0 && posToAdd >= 100) {
+            addedMap.put(symbol, new AtomicBoolean(true));
+            int id = devTradeID.incrementAndGet();
+            double bidPrice = r(Math.min(price, bidMap.getOrDefault(symbol, price)));
+
+            bidPrice = roundToMinVariation(symbol, Direction.Long, bidPrice);
+
+            Order o = placeBidLimitTIF(bidPrice, posToAdd, DAY);
+            if (checkDeltaImpact(ct, o)) {
+                devOrderMap.put(id, new OrderAugmented(ct, t, o, BASE_ADDER));
+                placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
+                outputToSymbolFile(symbol, str("********", t.format(f1)), devOutput);
+                outputToSymbolFile(symbol, str(o.orderId(), id, "CUSTOM ADDER BUY:",
                         devOrderMap.get(id), "p/b/a", price, getBid(symbol), getAsk(symbol)), devOutput);
             }
         }
@@ -580,7 +608,9 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                             breachCutter(ct, price, t, yStart);
 
                             if (symbol.equalsIgnoreCase("QQQ") || symbol.equalsIgnoreCase("SPY")) {
-                                longTermAdder(ct, price, t);
+                                indexETFAdder(ct, price, t);
+                            } else if (symbol.equalsIgnoreCase("GOOG")) {
+                                customAdder(ct, price, t);
                             } else {
                                 if (maxYtdDev > MAX_YTD_DRAWDOWN) {
                                     breachAdder(ct, price, t, yStart);
