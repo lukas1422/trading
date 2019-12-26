@@ -41,9 +41,11 @@ public class Test {
         return now;
     }
 
+
     public static void main(String[] args) {
 
-        pr(LocalDateTime.now());
+
+        pr(Math.max(100, (int) (Math.ceil(850000 / 4.0 / 1400 / 100.0)) * 100));
 
 
 //        pr(Math.max(0.005,0.02 * Math.pow(0.8, (LocalDate.now().getDayOfMonth() - 1))));

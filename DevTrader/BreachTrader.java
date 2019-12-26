@@ -58,7 +58,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
     private static ScheduledExecutorService es = Executors.newScheduledThreadPool(10);
 
-    private static final double PTF_NAV = 800000.0;
+    private static final double PTF_NAV = 850000.0;
     private static final double MAX_DELTA_PER_TRADE = 500000;
 
     public static Map<Currency, Double> fx = new HashMap<>();
@@ -282,11 +282,6 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
     static double getDefaultSize(Contract ct, double last) {
         double delta = PTF_NAV / 8;
-        String symb = ibContractToSymbol(ct);
-
-        if (symb.equalsIgnoreCase("QQQ") || symb.equalsIgnoreCase("SPY")) {
-            delta = PTF_NAV / 3;
-        }
 
         if (last != 0.0) {
             if ((ct.secType() == Types.SecType.FUT || ct.secType() == Types.SecType.CONTFUT)
@@ -355,10 +350,10 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         String symbol = ibContractToSymbol(ct);
         double pos = symbolPosMap.get(symbol);
         boolean added = addedMap.containsKey(symbol) && addedMap.get(symbol).get();
-        double desiredPos = Math.max(100, (int) (Math.round(PTF_NAV / 4.0 / price / 100.0)) * 100);
+        double desiredPos = Math.max(100, (int) (Math.ceil(PTF_NAV / 4.0 / price / 100.0)) * 100);
         double posToAdd = desiredPos - pos;
 
-        if (!added && pos == 0.0 && posToAdd >= 100) {
+        if (!added && posToAdd >= 100 && totalDelta < PTF_NAV) {
             addedMap.put(symbol, new AtomicBoolean(true));
             int id = devTradeID.incrementAndGet();
             double bidPrice = r(Math.min(price, bidMap.getOrDefault(symbol, price)));
@@ -387,10 +382,10 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         String symbol = ibContractToSymbol(ct);
         double pos = symbolPosMap.get(symbol);
         boolean added = addedMap.containsKey(symbol) && addedMap.get(symbol).get();
-        double desiredPos = Math.max(100, (int) (Math.round(PTF_NAV / 3.0 / price / 100.0)) * 100);
+        double desiredPos = Math.max(100, (int) (Math.ceil(PTF_NAV / 4.0 / price / 100.0)) * 100);
         double posToAdd = desiredPos - pos;
 
-        if (!added && pos == 0.0 && posToAdd >= 100) {
+        if (!added && posToAdd >= 100 && totalDelta < PTF_NAV) {
             addedMap.put(symbol, new AtomicBoolean(true));
             int id = devTradeID.incrementAndGet();
             double bidPrice = r(Math.min(price, bidMap.getOrDefault(symbol, price)));
@@ -399,7 +394,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
             Order o = placeBidLimitTIF(bidPrice, posToAdd, DAY);
             if (checkDeltaImpact(ct, o)) {
-                devOrderMap.put(id, new OrderAugmented(ct, t, o, BASE_ADDER));
+                devOrderMap.put(id, new OrderAugmented(ct, t, o, CUSTOM_ADDER));
                 placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
                 outputToSymbolFile(symbol, str("********", t.format(f1)), devOutput);
                 outputToSymbolFile(symbol, str(o.orderId(), id, "CUSTOM ADDER BUY:",
@@ -420,7 +415,6 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
         if (!added && !liquidated && pos == 0.0 && prevClose != 0.0) {
             if (price > yOpen && totalDelta < PTF_NAV && ((price / yOpen - 1) < MAX_ENTRY_DEV)) {
-
                 addedMap.put(symbol, new AtomicBoolean(true));
                 int id = devTradeID.incrementAndGet();
                 double bidPrice = r(Math.min(price, bidMap.getOrDefault(symbol, price)));
@@ -605,13 +599,13 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                                 "pos", symbolPosMap.getOrDefault(HEDGER_INDEX, 0.0));
                     } else {
                         if (usStockOpen(ct, t) && ct.secType() == Types.SecType.STK) {
-                            breachCutter(ct, price, t, yStart);
 
                             if (symbol.equalsIgnoreCase("QQQ") || symbol.equalsIgnoreCase("SPY")) {
                                 indexETFAdder(ct, price, t);
                             } else if (symbol.equalsIgnoreCase("GOOG")) {
                                 customAdder(ct, price, t);
                             } else {
+                                breachCutter(ct, price, t, yStart);
                                 if (maxYtdDev > MAX_YTD_DRAWDOWN) {
                                     breachAdder(ct, price, t, yStart);
                                 }

@@ -224,6 +224,7 @@ public enum AutoOrderType {
     HK_POST_PMCUTOFF_LIQ,
 
     BASE_ADDER,
+    CUSTOM_ADDER,
     BREACH_ADDER,
     BREACH_CUTTER,
     FUT_TEMP_CUTTER,
