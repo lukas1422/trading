@@ -853,6 +853,7 @@ public class Utility {
         return now.minusDays(1L);
     }
 
+
     public static LocalDate getMonthBeginMinus1Day(LocalDate d) {
         LocalDate now = d.withDayOfMonth(1);
         return now.minusDays(1L);
@@ -866,7 +867,6 @@ public class Utility {
     }
 
     public static LocalDate getHalfYearBeginMinus1Day(LocalDate d) {
-        //LocalDate now = d.withDayOfMonth(1);
         int monthV = d.getMonthValue();
         LocalDate now = d.withMonth(monthV - ((monthV - 1) % 6)).withDayOfMonth(1);
         return now.minusDays(1L);

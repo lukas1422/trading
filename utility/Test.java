@@ -44,9 +44,10 @@ public class Test {
 
     public static void main(String[] args) {
 
-
-        pr(Math.max(100, (int) (Math.ceil(850000 / 4.0 / 1400 / 100.0)) * 100));
-
+        for (int i = 1; i <= 12; i++) {
+            pr(i);
+            pr(getHalfYearBeginMinus1Day(LocalDate.of(2019, i, 1)));
+        }
 
 //        pr(Math.max(0.005,0.02 * Math.pow(0.8, (LocalDate.now().getDayOfMonth() - 1))));
 //        pr(LocalDate.now().getDayOfMonth());
