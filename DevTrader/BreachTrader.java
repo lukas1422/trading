@@ -464,6 +464,30 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         return true;
     }
 
+    private static void customTELCutter(Contract ct, double price, LocalDateTime t) {
+        String symbol = ibContractToSymbol(ct);
+        double pos = symbolPosMap.get(symbol);
+        boolean added = addedMap.containsKey(symbol) && addedMap.get(symbol).get();
+        boolean liquidated = liquidatedMap.containsKey(symbol) && liquidatedMap.get(symbol).get();
+
+        if (symbol.equalsIgnoreCase("TEL") && !liquidated && pos != 0.0) {
+            checkIfAdderPending(symbol);
+            liquidatedMap.put(symbol, new AtomicBoolean(true));
+            int id = devTradeID.incrementAndGet();
+
+            double offerPrice = r(Math.max(price, askMap.getOrDefault(symbol, price)));
+            offerPrice = roundToMinVariation(symbol, Direction.Short, offerPrice);
+
+            Order o = placeOfferLimitTIF(offerPrice, pos, DAY);
+
+            devOrderMap.put(id, new OrderAugmented(ct, t, o, CUSTOM_CUTTER));
+            placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
+            outputToSymbolFile(symbol, str("********", t), devOutput);
+            outputToSymbolFile(symbol, str(o.orderId(), id, "Custom Cutter Sell:",
+                    "added?" + added, devOrderMap.get(id), "pos", pos, "price", price), devOutput);
+        }
+    }
+
     private static void halfYearCutter(Contract ct, double price, LocalDateTime t, double halfYearMax) {
         String symbol = ibContractToSymbol(ct);
         double pos = symbolPosMap.get(symbol);
@@ -665,6 +689,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                             } else if (symbol.equalsIgnoreCase("GOOG")) {
                                 customAdder(ct, price, t);
                             } else {
+                                customTELCutter(ct, price, t);
                                 halfYearCutter(ct, price, t, halfYMax);
                                 if (maxHalfYearDrawdown > MAX_DRAWDOWN) {
                                     halfYearAdder(ct, price, t, halfYStart);

@@ -225,6 +225,7 @@ public enum AutoOrderType {
 
     BASE_ADDER,
     CUSTOM_ADDER,
+    CUSTOM_CUTTER,
     BREACH_ADDER,
     BREACH_CUTTER,
     FUT_TEMP_CUTTER,
