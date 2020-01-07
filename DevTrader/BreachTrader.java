@@ -464,13 +464,13 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         return true;
     }
 
-    private static void customTELCutter(Contract ct, double price, LocalDateTime t) {
+    private static void customKOCutter(Contract ct, double price, LocalDateTime t) {
         String symbol = ibContractToSymbol(ct);
         double pos = symbolPosMap.get(symbol);
         boolean added = addedMap.containsKey(symbol) && addedMap.get(symbol).get();
         boolean liquidated = liquidatedMap.containsKey(symbol) && liquidatedMap.get(symbol).get();
 
-        if (symbol.equalsIgnoreCase("TEL") && !liquidated && pos != 0.0) {
+        if (symbol.equalsIgnoreCase("KO") && !liquidated && pos != 0.0) {
             checkIfAdderPending(symbol);
             liquidatedMap.put(symbol, new AtomicBoolean(true));
             int id = devTradeID.incrementAndGet();
@@ -503,10 +503,10 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
                 bidPrice = roundToMinVariation(symbol, Direction.Long, bidPrice);
 
-                Order o = placeBidLimitTIF(bidPrice, Math.abs(pos), IOC);
+                Order o = placeBidLimitTIF(bidPrice, Math.abs(pos), DAY);
 
                 devOrderMap.put(id, new OrderAugmented(ct, t, o, BREACH_CUTTER));
-                placeOrModifyOrderCheck(apDev, ct, o, new GuaranteeDevHandler(id, apDev));
+                placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
                 outputToSymbolFile(symbol, str("********", t), devOutput);
                 outputToSymbolFile(symbol, str(o.orderId(), id, "Cutter BUY:",
                         "added?" + added, devOrderMap.get(id), "pos", pos, "half Year Max:" + halfYearMax,
@@ -516,17 +516,11 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                 checkIfAdderPending(symbol);
                 liquidatedMap.put(symbol, new AtomicBoolean(true));
                 int id = devTradeID.incrementAndGet();
-
                 double offerPrice = r(Math.max(price, askMap.getOrDefault(symbol, price)));
-
                 offerPrice = roundToMinVariation(symbol, Direction.Short, offerPrice);
-
-                Order o = placeOfferLimitTIF(offerPrice, pos, IOC);
-
+                Order o = placeOfferLimitTIF(offerPrice, pos, DAY);
                 devOrderMap.put(id, new OrderAugmented(ct, t, o, BREACH_CUTTER));
-
-                placeOrModifyOrderCheck(apDev, ct, o, new GuaranteeDevHandler(id, apDev));
-
+                placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
                 outputToSymbolFile(symbol, str("********", t), devOutput);
                 outputToSymbolFile(symbol, str(o.orderId(), id, "Cutter SELL:",
                         "added?" + added, devOrderMap.get(id), "pos", pos, "half Year Max:" + halfYearMax,
@@ -689,7 +683,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                             } else if (symbol.equalsIgnoreCase("GOOG")) {
                                 customAdder(ct, price, t);
                             } else {
-                                customTELCutter(ct, price, t);
+                                customKOCutter(ct, price, t);
                                 halfYearCutter(ct, price, t, halfYMax);
                                 if (maxHalfYearDrawdown > MAX_DRAWDOWN) {
                                     halfYearAdder(ct, price, t, halfYStart);
