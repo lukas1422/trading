@@ -646,7 +646,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                                 .orElse(halfYStart);
                         halfYMax = ytdDayData.get(symbol).entrySet().stream()
                                 .filter(e -> e.getKey().isAfter(previousHalfYearCutoff))
-                                .min(BAR_HIGH).map(Map.Entry::getValue).map(SimpleBar::getHigh)
+                                .max(BAR_HIGH).map(Map.Entry::getValue).map(SimpleBar::getHigh)
                                 .orElse(halfYStart);
                         maxHalfYearDrawdown = halfYLow / halfYStart - 1;
                     } else {
@@ -657,7 +657,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                                 .orElse(halfYStart);
                         halfYMax = ytdDayData.get(symbol).entrySet().stream()
                                 .filter(e -> e.getKey().isAfter(previousHalfYearCutoff))
-                                .min(BAR_HIGH).map(Map.Entry::getValue).map(SimpleBar::getHigh)
+                                .max(BAR_HIGH).map(Map.Entry::getValue).map(SimpleBar::getHigh)
                                 .orElse(halfYStart);
                         maxHalfYearDrawdown = halfYLow / halfYStart - 1;
                     }
@@ -695,6 +695,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                         pr(HEDGER_INDEX, price, t, "ystart", yStart,
                                 Math.round(10000d * (price / yStart - 1)) / 100d + "%",
                                 "halfYStart", halfYStart, Math.round(10000d * (price / qStart - 1)) / 100d + "%",
+                                "halfYMax", halfYMax,
                                 "qstart", qStart, Math.round(10000d * (price / qStart - 1)) / 100d + "%",
                                 "mStart", mStart, Math.round(10000d * (price / mStart - 1)) / 100d + "%",
                                 "dStart", dStart, Math.round(10000d * (price / dStart - 1)) / 100d + "%",
