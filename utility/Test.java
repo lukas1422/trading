@@ -44,10 +44,10 @@ public class Test {
 
     public static void main(String[] args) {
 
-        for (int i = 1; i <= 12; i++) {
-            pr(i);
-            pr(getHalfYearBeginMinus1Day(LocalDate.of(2019, i, 1)));
-        }
+        double excessDelta = 120000;
+        double price = 250;
+
+        pr(Math.floor(excessDelta / price / 100.0) * 100.0);
 
 //        pr(Math.max(0.005,0.02 * Math.pow(0.8, (LocalDate.now().getDayOfMonth() - 1))));
 //        pr(LocalDate.now().getDayOfMonth());

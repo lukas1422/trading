@@ -58,7 +58,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
     private static ScheduledExecutorService es = Executors.newScheduledThreadPool(10);
 
-    private static final double PTF_NAV = 850000.0;
+    private static final double PTF_NAV = 890000.0;
     private static final double MAX_DELTA_PER_TRADE = 500000;
 
     public static Map<Currency, Double> fx = new HashMap<>();
@@ -122,7 +122,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         //registerContract(getActiveA50Contract());
         registerContract(getActiveMNQContract());
         registerContract(getActiveMESContract());
-        registerContract(getUSStockContract("BRK B"));
+        //registerContract(getUSStockContract("BRK B"));
 
 
         try (BufferedReader reader1 = new BufferedReader(new InputStreamReader(
@@ -398,7 +398,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
      * @param price price
      * @param t     time
      */
-    private static void customAdder(Contract ct, double price, LocalDateTime t) {
+    private static void customGOOGAdder(Contract ct, double price, LocalDateTime t) {
         String symbol = ibContractToSymbol(ct);
         double pos = symbolPosMap.get(symbol);
         boolean added = addedMap.containsKey(symbol) && addedMap.get(symbol).get();
@@ -434,7 +434,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         boolean liquidated = liquidatedMap.containsKey(symbol) && liquidatedMap.get(symbol).get();
 
         if (!added && !liquidated && pos == 0.0 && prevClose != 0.0) {
-            if (price > halfYearOpen && totalDelta < PTF_NAV * 1.5 && ((price / halfYearOpen - 1) < MAX_ENTRY_DEV)) {
+            if (price > halfYearOpen && totalDelta < PTF_NAV && ((price / halfYearOpen - 1) < MAX_ENTRY_DEV)) {
                 addedMap.put(symbol, new AtomicBoolean(true));
                 int id = devTradeID.incrementAndGet();
                 double bidPrice = r(Math.min(price, bidMap.getOrDefault(symbol, price)));
@@ -464,27 +464,50 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         return true;
     }
 
-    private static void customKOCutter(Contract ct, double price, LocalDateTime t) {
+    private static void customBRKCutter(Contract ct, double price, LocalDateTime t) {
         String symbol = ibContractToSymbol(ct);
         double pos = symbolPosMap.get(symbol);
         boolean added = addedMap.containsKey(symbol) && addedMap.get(symbol).get();
         boolean liquidated = liquidatedMap.containsKey(symbol) && liquidatedMap.get(symbol).get();
 
-        if (symbol.equalsIgnoreCase("KO") && !liquidated && pos != 0.0) {
+        if (symbol.equalsIgnoreCase("BRK B") && !liquidated && pos != 0.0) {
             checkIfAdderPending(symbol);
             liquidatedMap.put(symbol, new AtomicBoolean(true));
             int id = devTradeID.incrementAndGet();
-
             double offerPrice = r(Math.max(price, askMap.getOrDefault(symbol, price)));
             offerPrice = roundToMinVariation(symbol, Direction.Short, offerPrice);
-
             Order o = placeOfferLimitTIF(offerPrice, pos, DAY);
-
             devOrderMap.put(id, new OrderAugmented(ct, t, o, CUSTOM_CUTTER));
             placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
             outputToSymbolFile(symbol, str("********", t), devOutput);
             outputToSymbolFile(symbol, str(o.orderId(), id, "Custom Cutter Sell:",
                     "added?" + added, devOrderMap.get(id), "pos", pos, "price", price), devOutput);
+        }
+    }
+
+    private static void trimDeltaWithETF(Contract ct, double price, LocalDateTime t) {
+        String symbol = ibContractToSymbol(ct);
+        double pos = symbolPosMap.get(symbol);
+        //boolean added = addedMap.containsKey(symbol) && addedMap.get(symbol).get();
+        boolean liquidated = liquidatedMap.containsKey(symbol) && liquidatedMap.get(symbol).get();
+
+        if (totalDelta > PTF_NAV && symbol.equalsIgnoreCase("SPY") && !liquidated) {
+            double excessDelta = totalDelta - PTF_NAV;
+            double sharesToSell = Math.floor(excessDelta / price / 100.0) * 100.0;
+
+            if (sharesToSell >= 100.0) {
+                checkIfAdderPending(symbol);
+                liquidatedMap.put(symbol, new AtomicBoolean(true));
+                int id = devTradeID.incrementAndGet();
+                double offerPrice = r(Math.max(price, askMap.getOrDefault(symbol, price)));
+                offerPrice = roundToMinVariation(symbol, Direction.Short, offerPrice);
+                Order o = placeOfferLimitTIF(offerPrice, Math.min(pos, sharesToSell), DAY);
+                devOrderMap.put(id, new OrderAugmented(ct, t, o, TRIM_CUTTER));
+                placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
+                outputToSymbolFile(symbol, str("********", t), devOutput);
+                outputToSymbolFile(symbol, str(o.orderId(), id, "Trim Cutter Sell:",
+                        devOrderMap.get(id), "sharesToSell", sharesToSell, "price", price), devOutput);
+            }
         }
     }
 
@@ -680,10 +703,11 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                         if (usStockOpen(ct, t) && ct.secType() == Types.SecType.STK) {
                             if (symbol.equalsIgnoreCase("QQQ") || symbol.equalsIgnoreCase("SPY")) {
                                 indexETFAdder(ct, price, t);
-                            } else if (symbol.equalsIgnoreCase("GOOG")) {
-                                customAdder(ct, price, t);
+                                if (t.toLocalTime().isAfter(LocalTime.of(15, 30))) {
+                                    trimDeltaWithETF(ct, price, t);
+                                }
                             } else {
-                                customKOCutter(ct, price, t);
+                                customBRKCutter(ct, price, t);
                                 halfYearCutter(ct, price, t, halfYMax);
                                 if (maxHalfYearDrawdown > MAX_DRAWDOWN) {
                                     halfYearAdder(ct, price, t, halfYStart);
