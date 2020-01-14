@@ -58,7 +58,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
     private static ScheduledExecutorService es = Executors.newScheduledThreadPool(10);
 
-    private static final double PTF_NAV = 890000.0;
+    private static final double PTF_NAV = 900000;
     private static final double MAX_DELTA_PER_TRADE = 500000;
 
     public static Map<Currency, Double> fx = new HashMap<>();
@@ -232,8 +232,6 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
     @Override
     public void positionEnd() {
-
-
         contractPosMap.keySet().stream().filter(e -> e.secType() == Types.SecType.FUT).forEach(c -> {
             String symb = ibContractToSymbol(c);
             pr(" symbol in positionEnd fut", symb);
@@ -345,38 +343,6 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         throw new IllegalStateException(str(" cannot get delta for symbol type", ct.symbol(), ct.secType()));
     }
 
-    /**
-     * add ETFs for long term holding
-     *
-     * @param ct
-     * @param price
-     * @param t
-     */
-    private static void indexETFAdder(Contract ct, double price, LocalDateTime t) {
-        String symbol = ibContractToSymbol(ct);
-        double pos = symbolPosMap.get(symbol);
-        boolean added = addedMap.containsKey(symbol) && addedMap.get(symbol).get();
-        double desiredPos = Math.max(100, (int) (Math.ceil(PTF_NAV / 4.0 / price / 100.0)) * 100);
-        double posToAdd = desiredPos - pos;
-
-        if (!added && posToAdd >= 100 && totalDelta < PTF_NAV) {
-            addedMap.put(symbol, new AtomicBoolean(true));
-            int id = devTradeID.incrementAndGet();
-            double bidPrice = r(Math.min(price, bidMap.getOrDefault(symbol, price)));
-
-            bidPrice = roundToMinVariation(symbol, Direction.Long, bidPrice);
-
-            Order o = placeBidLimitTIF(bidPrice, posToAdd, DAY);
-            if (checkDeltaImpact(ct, o)) {
-                devOrderMap.put(id, new OrderAugmented(ct, t, o, BASE_ADDER));
-                placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
-                outputToSymbolFile(symbol, str("********", t.format(f1)), devOutput);
-                outputToSymbolFile(symbol, str(o.orderId(), id, "INDEX ETF BUY:",
-                        devOrderMap.get(id), "p/b/a", price, getBid(symbol), getAsk(symbol)), devOutput);
-            }
-        }
-    }
-
 
     private static void halfYearTrader(Contract ct, double price, LocalDateTime t, double halfYOpen) {
         String symbol = ibContractToSymbol(ct);
@@ -485,28 +451,78 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         }
     }
 
-    private static void trimDeltaWithETF(Contract ct, double price, LocalDateTime t) {
+    /**
+     * add ETFs for long term holding
+     *
+     * @param ct
+     * @param price
+     * @param t
+     */
+    private static void indexETFAdder(Contract ct, double price, LocalDateTime t) {
         String symbol = ibContractToSymbol(ct);
         double pos = symbolPosMap.get(symbol);
-        //boolean added = addedMap.containsKey(symbol) && addedMap.get(symbol).get();
-        boolean liquidated = liquidatedMap.containsKey(symbol) && liquidatedMap.get(symbol).get();
+        boolean added = addedMap.containsKey(symbol) && addedMap.get(symbol).get();
 
-        if (totalDelta > PTF_NAV && symbol.equalsIgnoreCase("SPY") && !liquidated) {
-            double excessDelta = totalDelta - PTF_NAV;
-            double sharesToSell = Math.floor(excessDelta / price / 100.0) * 100.0;
-
-            if (sharesToSell >= 100.0) {
-                checkIfAdderPending(symbol);
-                liquidatedMap.put(symbol, new AtomicBoolean(true));
+        if (!added && totalDelta < PTF_NAV) {
+            double deltaToAdd = PTF_NAV - totalDelta;
+            double sharesToBuy = Math.floor(deltaToAdd / 2 / price / 100.0) * 100.0;
+            if (sharesToBuy >= 200 && totalDelta != 0.0) {
+                addedMap.put(symbol, new AtomicBoolean(true));
                 int id = devTradeID.incrementAndGet();
-                double offerPrice = r(Math.max(price, askMap.getOrDefault(symbol, price)));
-                offerPrice = roundToMinVariation(symbol, Direction.Short, offerPrice);
-                Order o = placeOfferLimitTIF(offerPrice, Math.min(pos, sharesToSell), DAY);
-                devOrderMap.put(id, new OrderAugmented(ct, t, o, TRIM_CUTTER));
-                placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
-                outputToSymbolFile(symbol, str("********", t), devOutput);
-                outputToSymbolFile(symbol, str(o.orderId(), id, "Trim Cutter Sell:",
-                        devOrderMap.get(id), "sharesToSell", sharesToSell, "price", price), devOutput);
+                double bidPrice = r(Math.min(price, bidMap.getOrDefault(symbol, price)));
+                bidPrice = roundToMinVariation(symbol, Direction.Long, bidPrice);
+                Order o = placeBidLimitTIF(bidPrice, sharesToBuy, DAY);
+                if (checkDeltaImpact(ct, o)) {
+                    devOrderMap.put(id, new OrderAugmented(ct, t, o, ETF_ADDER));
+                    placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
+                    outputToSymbolFile(symbol, str("********", t.format(f1)), devOutput);
+                    outputToSymbolFile(symbol, str(o.orderId(), id, "INDEX ETF BUY:",
+                            devOrderMap.get(id), "p/b/a", price, getBid(symbol), getAsk(symbol)), devOutput);
+                }
+            }
+        }
+    }
+
+    private static void adjustDeltaWithETF(Contract ct, double price, LocalDateTime t) {
+        String symbol = ibContractToSymbol(ct);
+        double pos = symbolPosMap.get(symbol);
+        boolean liquidated = liquidatedMap.containsKey(symbol) && liquidatedMap.get(symbol).get();
+        boolean added = addedMap.containsKey(symbol) && addedMap.get(symbol).get();
+
+        if (!liquidated && !added && totalDelta != 0.0) {
+            if (totalDelta > PTF_NAV) {
+                double excessDelta = totalDelta - PTF_NAV;
+                double sharesToSell = Math.floor(excessDelta / 2.0 / price / 100.0) * 100.0;
+                if (sharesToSell >= 200.0) {
+                    checkIfAdderPending(symbol);
+                    liquidatedMap.put(symbol, new AtomicBoolean(true));
+                    int id = devTradeID.incrementAndGet();
+                    double offerPrice = r(Math.max(price, askMap.getOrDefault(symbol, price)));
+                    offerPrice = roundToMinVariation(symbol, Direction.Short, offerPrice);
+                    Order o = placeOfferLimitTIF(offerPrice, Math.min(pos, sharesToSell), DAY);
+                    devOrderMap.put(id, new OrderAugmented(ct, t, o, ETF_CUTTER));
+                    placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
+                    outputToSymbolFile(symbol, str("********", t), devOutput);
+                    outputToSymbolFile(symbol, str(o.orderId(), id, "INDEX CUTTER SELL:",
+                            devOrderMap.get(id), "pos", pos, "sharesToSell", sharesToSell, "price", price), devOutput);
+                }
+            } else if (totalDelta < PTF_NAV) {
+                double deltaToAdd = PTF_NAV - totalDelta;
+                double sharesToBuy = Math.floor(deltaToAdd / 2.0 / price / 100.0) * 100.0;
+                if (sharesToBuy >= 200.0) {
+                    addedMap.put(symbol, new AtomicBoolean(true));
+                    int id = devTradeID.incrementAndGet();
+                    double bidPrice = r(Math.min(price, bidMap.getOrDefault(symbol, price)));
+                    bidPrice = roundToMinVariation(symbol, Direction.Long, bidPrice);
+                    Order o = placeBidLimitTIF(bidPrice, sharesToBuy, DAY);
+                    if (checkDeltaImpact(ct, o)) {
+                        devOrderMap.put(id, new OrderAugmented(ct, t, o, ETF_ADDER));
+                        placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
+                        outputToSymbolFile(symbol, str("********", t.format(f1)), devOutput);
+                        outputToSymbolFile(symbol, str(o.orderId(), id, "INDEX ETF BUY:",
+                                devOrderMap.get(id), "p/b/a", price, getBid(symbol), getAsk(symbol)), devOutput);
+                    }
+                }
             }
         }
     }
@@ -523,11 +539,8 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                 liquidatedMap.put(symbol, new AtomicBoolean(true));
                 int id = devTradeID.incrementAndGet();
                 double bidPrice = r(Math.min(price, bidMap.getOrDefault(symbol, price)));
-
                 bidPrice = roundToMinVariation(symbol, Direction.Long, bidPrice);
-
                 Order o = placeBidLimitTIF(bidPrice, Math.abs(pos), DAY);
-
                 devOrderMap.put(id, new OrderAugmented(ct, t, o, BREACH_CUTTER));
                 placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
                 outputToSymbolFile(symbol, str("********", t), devOutput);
@@ -640,25 +653,31 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
 
                     if (ytdDayData.get(symbol).firstKey().isAfter(previousHalfYearCutoff)) {
                         halfYStart = ytdDayData.get(symbol).ceilingEntry(previousHalfYearCutoff).getValue().getOpen();
+
                         halfYLow = ytdDayData.get(symbol).entrySet().stream()
                                 .filter(e -> e.getKey().isAfter(previousHalfYearCutoff))
                                 .min(BAR_LOW).map(Map.Entry::getValue).map(SimpleBar::getLow)
                                 .orElse(halfYStart);
+
                         halfYMax = ytdDayData.get(symbol).entrySet().stream()
                                 .filter(e -> e.getKey().isAfter(previousHalfYearCutoff))
                                 .max(BAR_HIGH).map(Map.Entry::getValue).map(SimpleBar::getHigh)
                                 .orElse(halfYStart);
+
                         maxHalfYearDrawdown = halfYLow / halfYStart - 1;
                     } else {
                         halfYStart = ytdDayData.get(symbol).floorEntry(previousHalfYearCutoff).getValue().getClose();
+
                         halfYLow = ytdDayData.get(symbol).entrySet().stream()
                                 .filter(e -> e.getKey().isAfter(previousHalfYearCutoff))
                                 .min(BAR_LOW).map(Map.Entry::getValue).map(SimpleBar::getLow)
                                 .orElse(halfYStart);
+
                         halfYMax = ytdDayData.get(symbol).entrySet().stream()
                                 .filter(e -> e.getKey().isAfter(previousHalfYearCutoff))
                                 .max(BAR_HIGH).map(Map.Entry::getValue).map(SimpleBar::getHigh)
                                 .orElse(halfYStart);
+
                         maxHalfYearDrawdown = halfYLow / halfYStart - 1;
                     }
 
@@ -703,12 +722,9 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                     } else {
                         if (usStockOpen(ct, t) && ct.secType() == Types.SecType.STK) {
                             if (symbol.equalsIgnoreCase("QQQ") || symbol.equalsIgnoreCase("SPY")) {
-                                indexETFAdder(ct, price, t);
-                                if (t.toLocalTime().isAfter(LocalTime.of(15, 30))) {
-                                    trimDeltaWithETF(ct, price, t);
-                                }
+                                //indexETFAdder(ct, price, t);
+                                adjustDeltaWithETF(ct, price, t);
                             } else {
-                                customBRKCutter(ct, price, t);
                                 halfYearCutter(ct, price, t, halfYMax);
                                 if (maxHalfYearDrawdown > MAX_DRAWDOWN) {
                                     halfYearAdder(ct, price, t, halfYStart);
