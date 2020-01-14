@@ -20,7 +20,9 @@ public final class TradingConstants {
 
 
     public static final String GLOBALPATH = System.getProperty("os.name").equalsIgnoreCase("linux") ?
-            "/home/l/Desktop/Trading/" : "C:\\Users\\" + System.getProperty("user.name") + "\\Desktop\\Trading\\";
+            "/home/l/Desktop/Trading/" :
+            (System.getProperty("os.name").startsWith("Mac")? "/Users/luke/Desktop/Trading/":
+                    "C:\\Users\\" + System.getProperty("user.name") + "\\Desktop\\Trading\\");
 
     public static final String DESKTOPPATH = System.getProperty("os.name").equalsIgnoreCase("linux") ?
             "/home/l/Desktop/" : "C:\\Users\\" + System.getProperty("user.name") + "\\Desktop\\";

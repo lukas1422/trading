@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="89ead1a1-7ff5-4e91-9d68-12c25b28bac3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevTrader/BreachTrader.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevTrader/BreachTrader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enums/AutoOrderType.java" beforeDir="false" afterPath="$PROJECT_DIR$/enums/AutoOrderType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/TradingConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/TradingConstants.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,14 +297,7 @@
       <workItem from="1578488712026" duration="2305000" />
       <workItem from="1578579191545" duration="2018000" />
       <workItem from="1578660779114" duration="1592000" />
-      <workItem from="1578871163310" duration="12579000" />
-    </task>
-    <task id="LOCAL-00004" summary="522">
-      <created>1558531513141</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1558531513141</updated>
+      <workItem from="1578871163310" duration="14328000" />
     </task>
     <task id="LOCAL-00005" summary="522">
       <created>1558535065092</created>
@@ -645,7 +635,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578917205802</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="2020 1 13">
+      <created>1578962880293</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1578962880293</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TodoView">
@@ -697,9 +694,9 @@
     <MESSAGE value="1 3" />
     <MESSAGE value="2020 1 6" />
     <MESSAGE value="2020 1 7" />
-    <MESSAGE value="2020 1 13" />
     <MESSAGE value="2020 1 13 correct mistake max(BAR_HIGH)" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020 1 13 correct mistake max(BAR_HIGH)" />
+    <MESSAGE value="2020 1 13" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020 1 13" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="214" key="#Project_Structure" timestamp="1578917182416">
@@ -710,10 +707,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="685" y="203" width="606" height="699" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1575728943994" />
-    <state x="350" y="135" width="1277" height="835" key="CommitChangelistDialog2" timestamp="1578917205742">
+    <state x="350" y="135" width="1277" height="835" key="CommitChangelistDialog2" timestamp="1578962880235">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="350" y="135" width="1277" height="835" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1578917205742" />
+    <state x="350" y="135" width="1277" height="835" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1578962880235" />
     <state width="1799" height="446" key="GridCell.Tab.0.bottom" timestamp="1578961983561">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -746,10 +743,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1799" height="446" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1578961983561" />
-    <state x="588" y="287" width="800" height="531" key="Vcs.Push.Dialog.v2" timestamp="1578917206434">
+    <state x="588" y="287" width="800" height="531" key="Vcs.Push.Dialog.v2" timestamp="1578962880967">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="287" width="800" height="531" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1578917206434" />
+    <state x="588" y="287" width="800" height="531" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1578962880967" />
     <state x="254" y="303" width="1469" height="498" key="caller.chooser.dialog" timestamp="1575728956514">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -762,10 +759,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="657" y="252" width="672" height="680" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1578305707339" />
-    <state x="636" y="257" width="712" height="678" key="search.everywhere.popup" timestamp="1578946751189">
+    <state x="636" y="257" width="712" height="678" key="search.everywhere.popup" timestamp="1578973396306">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="636" y="257" width="712" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1578946751189" />
+    <state x="636" y="257" width="712" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1578973396306" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
