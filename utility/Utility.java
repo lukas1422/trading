@@ -53,7 +53,8 @@ public class Utility {
     //static final Comparator<? super Entry<LocalTime,SimpleBar>> BAR_HIGH = Comparator.comparingDouble(e->e.getValue().getHigh());
 
     //@SuppressWarnings("ComparatorMethodParameterNotUsed")
-    public static final Comparator<? super Map.Entry<? extends Temporal, SimpleBar>> BAR_HIGH = Comparator.comparingDouble(e -> e.getValue().getHigh());
+    public static final Comparator<? super Map.Entry<? extends Temporal, SimpleBar>> BAR_HIGH =
+            Comparator.comparingDouble(e -> e.getValue().getHigh());
 //            (e1, e2) -> e1.getValue().getHigh() >= e2.getValue().getHigh() ? 1 : -1;
     //Map.Entry.comparingByValue(Comparator.comparingDouble(SimpleBar::getHigh));
 

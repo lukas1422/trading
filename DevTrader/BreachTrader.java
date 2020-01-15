@@ -483,14 +483,14 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         }
     }
 
-    private static void adjustDeltaWithETF(Contract ct, double price, LocalDateTime t) {
+    private static void adjustDeltaWithETF(Contract ct, double price, LocalDateTime t, double yStart) {
         String symbol = ibContractToSymbol(ct);
         double pos = symbolPosMap.get(symbol);
         boolean liquidated = liquidatedMap.containsKey(symbol) && liquidatedMap.get(symbol).get();
         boolean added = addedMap.containsKey(symbol) && addedMap.get(symbol).get();
 
         if (!liquidated && !added && totalDelta != 0.0) {
-            if (totalDelta > PTF_NAV) {
+            if (totalDelta > PTF_NAV && price < yStart) {
                 double excessDelta = totalDelta - PTF_NAV;
                 double sharesToSell = Math.floor(excessDelta / 2.0 / price / 100.0) * 100.0;
                 if (sharesToSell >= 200.0) {
@@ -503,10 +503,10 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                     devOrderMap.put(id, new OrderAugmented(ct, t, o, ETF_CUTTER));
                     placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
                     outputToSymbolFile(symbol, str("********", t), devOutput);
-                    outputToSymbolFile(symbol, str(o.orderId(), id, "INDEX CUTTER SELL:",
+                    outputToSymbolFile(symbol, str(o.orderId(), id, "ETF SELL:",
                             devOrderMap.get(id), "pos", pos, "sharesToSell", sharesToSell, "price", price), devOutput);
                 }
-            } else if (totalDelta < PTF_NAV) {
+            } else if (totalDelta < PTF_NAV && price > yStart) {
                 double deltaToAdd = PTF_NAV - totalDelta;
                 double sharesToBuy = Math.floor(deltaToAdd / 2.0 / price / 100.0) * 100.0;
                 if (sharesToBuy >= 200.0) {
@@ -519,7 +519,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                         devOrderMap.put(id, new OrderAugmented(ct, t, o, ETF_ADDER));
                         placeOrModifyOrderCheck(apDev, ct, o, new PatientDevHandler(id));
                         outputToSymbolFile(symbol, str("********", t.format(f1)), devOutput);
-                        outputToSymbolFile(symbol, str(o.orderId(), id, "INDEX ETF BUY:",
+                        outputToSymbolFile(symbol, str(o.orderId(), id, "ETF BUY:",
                                 devOrderMap.get(id), "p/b/a", price, getBid(symbol), getAsk(symbol)), devOutput);
                     }
                 }
@@ -722,8 +722,8 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
                     } else {
                         if (usStockOpen(ct, t) && ct.secType() == Types.SecType.STK) {
                             if (symbol.equalsIgnoreCase("QQQ") || symbol.equalsIgnoreCase("SPY")) {
-                                //indexETFAdder(ct, price, t);
-                                adjustDeltaWithETF(ct, price, t);
+//                                indexETFAdder(ct, price, t);
+                                adjustDeltaWithETF(ct, price, t, yStart);
                             } else {
                                 halfYearCutter(ct, price, t, halfYMax);
                                 if (maxHalfYearDrawdown > MAX_DRAWDOWN) {
