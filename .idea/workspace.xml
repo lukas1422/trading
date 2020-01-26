@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="89ead1a1-7ff5-4e91-9d68-12c25b28bac3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevTrader/BreachTrader.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevTrader/BreachTrader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/DevTrader/BreachTrader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/utility/Utility$DefaultLogger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/utility/Utility$DefaultLogger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IBJts/utility/Utility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IBJts/utility/Utility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DevTrader/DevUSNamesAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevTrader/DevUSNamesAdder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +54,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -314,13 +309,7 @@
       <workItem from="1579785678436" duration="3111000" />
       <workItem from="1579854218076" duration="825000" />
       <workItem from="1579870989086" duration="3173000" />
-    </task>
-    <task id="LOCAL-00007" summary="523">
-      <created>1558619107510</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1558619107510</updated>
+      <workItem from="1580019769934" duration="316000" />
     </task>
     <task id="LOCAL-00008" summary="524 delay reqPos by 0.5s w8 4 nextValidId">
       <created>1558698035771</created>
@@ -658,7 +647,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579051308572</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="2020 1 26">
+      <created>1580019799666</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1580019799666</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -678,7 +674,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="716" />
     <MESSAGE value="723" />
     <MESSAGE value="729" />
     <MESSAGE value="8 6" />
@@ -703,21 +698,22 @@
     <MESSAGE value="2020 1 13" />
     <MESSAGE value="2020 1 14 add folder path for mac" />
     <MESSAGE value="2020 1 15" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020 1 15" />
+    <MESSAGE value="2020 1 26" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020 1 26" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="214" key="#Project_Structure" timestamp="1578917182416">
+    <state x="552" y="214" width="872" height="677" key="#Project_Structure" timestamp="1580020070556">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="552" y="214" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1578917182416" />
+    <state x="552" y="214" width="872" height="677" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1580020070556" />
     <state x="685" y="203" width="606" height="699" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1575728943994">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="685" y="203" width="606" height="699" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1575728943994" />
-    <state x="350" y="135" width="1277" height="835" key="CommitChangelistDialog2" timestamp="1579051308440">
+    <state x="350" y="135" width="1277" height="835" key="CommitChangelistDialog2" timestamp="1580019799508">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="350" y="135" width="1277" height="835" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579051308440" />
+    <state x="350" y="135" width="1277" height="835" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1580019799508" />
     <state width="1799" height="416" key="GridCell.Tab.0.bottom" timestamp="1579912003938">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -750,10 +746,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1799" height="416" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579912003939" />
-    <state x="588" y="287" width="800" height="531" key="Vcs.Push.Dialog.v2" timestamp="1579051326220">
+    <state x="588" y="287" width="800" height="531" key="Vcs.Push.Dialog.v2" timestamp="1580019806569">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="287" width="800" height="531" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579051326220" />
+    <state x="588" y="287" width="800" height="531" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1580019806569" />
     <state x="254" y="303" width="1469" height="498" key="caller.chooser.dialog" timestamp="1575728956514">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -766,10 +762,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="657" y="252" width="672" height="680" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1578305707339" />
-    <state x="636" y="257" width="712" height="678" key="search.everywhere.popup" timestamp="1579871912517">
+    <state x="636" y="257" width="712" height="678" key="search.everywhere.popup" timestamp="1580020079182">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="636" y="257" width="712" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1579871912517" />
+    <state x="636" y="257" width="712" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1580020079182" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
