@@ -240,7 +240,6 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
             CompletableFuture.runAsync(() -> {
                 try {
                     histSemaphore.acquire();
-
                     reqHistDayData(apDev, ibStockReqId.addAndGet(5), histCompatibleCt(c), BreachTrader::ytdOpen,
                             Math.min(364, getCalendarYtdDays() + 10), Types.BarSize._1_day);
                 } catch (InterruptedException e) {
@@ -344,7 +343,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
     }
 
 
-    private static void halfYearTrader(Contract ct, double price, LocalDateTime t, double halfYOpen) {
+    private static void halfYinearTrader(Contract ct, double price, LocalDateTime t, double halfYOpen) {
         String symbol = ibContractToSymbol(ct);
         double pos = symbolPosMap.get(symbol);
         boolean added = addedMap.containsKey(symbol) && addedMap.get(symbol).get();
@@ -534,7 +533,7 @@ public class BreachTrader implements LiveHandler, ApiController.IPositionHandler
         boolean liquidated = liquidatedMap.containsKey(symbol) && liquidatedMap.get(symbol).get();
 
         if (!liquidated && pos != 0.0) {
-            if (pos < 0.0) { // && ((price / halfYearMax - 1) > -MAX_DRAWDOWN)
+            if (pos < 0.0) {
                 checkIfAdderPending(symbol);
                 liquidatedMap.put(symbol, new AtomicBoolean(true));
                 int id = devTradeID.incrementAndGet();
