@@ -1,5 +1,10 @@
 package utility;
 
+import java.util.function.Consumer;
+import java.util.function.DoubleBinaryOperator;
+import java.util.function.DoubleUnaryOperator;
+import java.util.function.Supplier;
+
 import static utility.Utility.pr;
 
 public class Test1 {
@@ -8,15 +13,12 @@ public class Test1 {
         return Math.max(0.1, Math.round(price * percent * 10d) / 10d);
     }
 
+    private static double func(double seed1,double seed2, Supplier<Double> s){
+        return s.get()+seed1;
+    }
+
     public static void main(String[] args) {
-
-        pr(computeStockOffset(10, 0.002));
-        pr(computeStockOffset(50, 0.002));
-        pr(computeStockOffset(100, 0.002));
-        pr(computeStockOffset(150, 0.002));
-        pr(computeStockOffset(200, 0.002));
-        pr(computeStockOffset(250, 0.002));
-
+        pr(func(2,3, ()->5.0));
 
     }
 }
